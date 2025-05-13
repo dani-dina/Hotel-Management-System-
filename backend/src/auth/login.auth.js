@@ -10,11 +10,8 @@ dotenv.config();
 const login = async (req, res) => {
     try {
         const { email, password } = req.body;
-
-        // Find user in User collection
         let user = await User.findOne({ email });
 
-        // If not found, search in Employee collection
         if (!user) {
             user = await Employee.findOne({ email });
         }
@@ -23,13 +20,10 @@ const login = async (req, res) => {
             return res.status(400).json({ message: "Invalid credentials" });
         }
 
-        // Compare passwords
         const isMatch = await bcrypt.compare(password, user.password);
         if (!isMatch) {
             return res.status(400).json({ message: "Invalid credentials" });
         }
-
-        // Generate token
         const token = generateToken(user._id);
 
         return res.json({
