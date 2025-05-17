@@ -27,7 +27,6 @@ const getDrinkById = async(req,res)=>{
     }
 }
 
-// Add new Drink 
 const addNewDrink = async(req,res)=>{
     try{
         const {
@@ -61,7 +60,6 @@ const addNewDrink = async(req,res)=>{
     }
 }
 
-// Update Drink by id 
 const updateDrinkById = async(req,res)=>{
     try{
         const updateDrink = await Drink.findByIdAndUpdate(req.params.id,req.body,{ new : true });
