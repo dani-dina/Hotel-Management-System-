@@ -69,7 +69,7 @@ const addNewInventery = async(req,res)=>{
         return res.status(HTTP_STATUS.SERVER_ERROR).json({ message : "Internal Server Error !"});
     }
 }
-/* update inventory by id */
+
 const updateInventoryById = async(req,res)=>{
     try{
         const updateInventory = await Inventory.findByIdAndUpdate(req.params.id,req.body,{ new : true});
@@ -79,7 +79,7 @@ const updateInventoryById = async(req,res)=>{
         return res.status(HTTP_STATUS.SERVER_ERROR).json({ message : "Internal Server Error "});
     }
 }
-/* Delete Inventory By Id */
+
 const deleteInventoryById = async(req,res)=>{
     try{
         const deleteInventory = await Inventory.findByIdAndDelete(req.params.id);

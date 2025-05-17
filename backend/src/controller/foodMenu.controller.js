@@ -70,7 +70,7 @@ const updateFoodById = async(req,res)=>{
         return res.status(HTTP_STATUS.SERVER_ERROR).json({ message : "Internal Server Error"});
     }
 }
-/
+
 const deleteFoodById = async(req,res)=>{
     try{
         const deleteFood = Food.findByIdAndDelete(req.params.id);
