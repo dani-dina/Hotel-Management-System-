@@ -22,7 +22,7 @@ const getPaymentById = async (req, res) => {
     }
 };
 
-/* Add a new Payment */
+
 const addNewPayment = async (req, res) => {
     try {
         const { orderId, userId, amount, paymentMethod, status, transactionId, paymentDate } = req.body;
@@ -42,7 +42,7 @@ const addNewPayment = async (req, res) => {
     }
 };
 
-/* Update payment by ID */
+
 const updatePaymentById = async (req, res) => {
     try {
         const updatedPayment = await Payment.findByIdAndUpdate(req.params.id, req.body, { new: true });
@@ -53,7 +53,7 @@ const updatePaymentById = async (req, res) => {
     }
 };
 
-/* Delete payment by ID */
+
 const deletePaymentById = async (req, res) => {
     try {
         const deletedPayment = await Payment.findByIdAndDelete(req.params.id);
