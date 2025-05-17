@@ -5,7 +5,7 @@ const findService = async (serviceId) => {
     return await Service.findOne({ serviceId });
 };
 
-/* Get all Services */
+
 const getAllServices = async (req, res) => {
     try {
         const services = await Service.find();
@@ -16,7 +16,7 @@ const getAllServices = async (req, res) => {
     }
 };
 
-/* Get service by ID */
+
 const getServiceById = async (req, res) => {
     try {
         const service = await Service.findById(req.params.id);
