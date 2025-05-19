@@ -7,7 +7,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const login = async (req, res) => {
+const Login = async (req, res) => {
     try {
         const { email, password } = req.body;
         let user = await User.findOne({ email });
@@ -41,4 +41,4 @@ const login = async (req, res) => {
     }
 };
 
-export default login;
+export default Login;
