@@ -1,9 +1,8 @@
 const Hero = () => {
-    return(
-        <div className='w-[80%] bg-amber-700 rounded-2xl text-red-700 flex'>
-        gkhgj
-        </div>
-    )
+  return (
+    <section className="w-full h-full bg-red-500">
+      Hero section
+    </section>
+  )
 }
-
 export default Hero;

@@ -1,10 +1,9 @@
-import React from 'react'
-import Home from './pages/Home'
+import Home from './pages/Home';
 
 
 function App() {
   return (
-    <div className='w-full h-full'>
+    <div className='w-full h-screen'>
       <Home />
     </div>
   )

@@ -1,13 +1,12 @@
-import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-
-const Home = (props)=>{
-    return (
-    <div className="w-full  bg-amber-950">
-          <Navbar />
-          <Hero />
-    </div>
-    );
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+const Home = () => {
+  return(
+    <section className='w-full h-full'>
+      <Navbar />
+      <Hero />
+    </section>
+  );
 }
 
 export default Home;
