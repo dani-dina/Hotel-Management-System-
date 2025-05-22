@@ -16,7 +16,7 @@ const Navbar = () => {
           <img src={logo} alt='LUMINARA'/>
         </a>
         <button
-          className="lg:hidden cursor-pointer text-white bg-red-700"
+          className="lg:hidden cursor-pointer text-white"
           onClick={handleToggleNavigation}
         >
           {toggleNavigation ? <span>X</span> : <span>Menu</span>}
