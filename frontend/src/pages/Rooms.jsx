@@ -1,6 +1,6 @@
 const Rooms = () => {
   return(
-    <section>Rooms</section>
+    <section></section>
   );
 }
 
