@@ -15,8 +15,6 @@ const Navbar = () => {
         <a className="w-[10rem]  p-2" href="/">
           <img src={logo} alt='LUMINARA'/>
         </a>
-
-        {/* Toggle Button */}
         <button
           className="lg:hidden cursor-pointer text-white bg-red-700"
           onClick={handleToggleNavigation}
