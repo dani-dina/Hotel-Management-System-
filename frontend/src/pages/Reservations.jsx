@@ -1,6 +1,8 @@
 const Reservations = () => {
   return (
-    <div></div>
+    <div>
+      Reservations
+    </div>
   );
 }
 
