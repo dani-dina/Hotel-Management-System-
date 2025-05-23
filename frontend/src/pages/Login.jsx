@@ -1,6 +1,10 @@
 const Login = () => {
   return (
-    <div></div>
+    <section className='w-full h-screen flex items-center justify-center bg-brand'>
+      <div className='bg-pri font-extrabold'>
+        Login page
+      </div>
+    </section>
   );
 }
 
