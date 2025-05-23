@@ -11,7 +11,6 @@ const getAllPayments = async (req, res) => {
     }
 };
 
-/* Get payment by ID */
 const getPaymentById = async (req, res) => {
     try {
         const payment = await Payment.findById(req.params.id);
