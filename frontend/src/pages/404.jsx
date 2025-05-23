@@ -1,6 +1,9 @@
 const NotFound = () => {
   return (
-    <div className="font-4xl font-bold text-center">404</div>
+    <div className="w-full h-full flex items-center justify-center">
+      <h2>OOPs Page Not Found</h2>
+      <h1>404</h1>
+    </div>
   );
 }
 
