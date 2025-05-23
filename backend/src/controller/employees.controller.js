@@ -85,7 +85,7 @@ const updateEmployeeById = async(req,res)=>{
         return res.status(HTTP_STATUS.SERVER_ERROR).json({ message : "Server Error !"});
     }
 }
-/* Delete Employee By id*/
+
 const deleteEmployeeById = async(req,res)=>{
     try{
         const deleteEmployee = await Employee.findByIdAndDelete(req.params.id);
