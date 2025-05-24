@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { navigations } from '../constants';
 import Button from './Button';
 import logo from '../assets/logo.png';
@@ -6,7 +6,7 @@ import logo from '../assets/logo.png';
 const Navbar = () => {
   const location = useLocation();
 
-  const hiddenPaths = ['/login', '/signup', '/*'];
+  const hiddenPaths = ['/login', '/sign-up', '/*'];
   const isMinimalNavbar = hiddenPaths.includes(location.pathname);
 
   return (
@@ -29,7 +29,7 @@ const Navbar = () => {
                 </a>
               ))}
             </nav>
-            <Button className='bg-primary text-white p-2' title={'Join us'} />
+            <Link to={'/sign-up'}><Button className='bg-primary text-white p-2' title={'Join us'} /></Link>
           </>
         )}
       </div>
