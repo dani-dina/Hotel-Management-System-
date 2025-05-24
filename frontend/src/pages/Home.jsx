@@ -21,7 +21,7 @@ const Home = () => {
               <h2 className='text-golden text-2xl font-bold font-sora'>
                 About us
               </h2>
-              <h1 className='text-black font-bold text-4xl font-lexury'>
+              <h1 className='text-black font-bold text-4xl font-lexury tracking-wide'>
                 Lexurious Comfort,<br /> Timeless Elegance Awaits
               </h1>
             </div>
