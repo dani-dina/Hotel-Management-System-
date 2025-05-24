@@ -16,8 +16,15 @@ const Home = () => {
 
             </div>
           </div>
-          <div className='w-1/2 h-full'>
-
+          <div className='w-1/2 h-full flex items-center justify-center'>
+            <div className='w-[75%] h-[90%] '>
+              <h2 className='text-golden text-2xl font-bold font-sora'>
+                About us
+              </h2>
+              <h1 className='text-black font-bold text-4xl font-lexury'>
+                Lexurious Comfort,<br /> Timeless Elegance Awaits
+              </h1>
+            </div>
           </div>
         </div>
       </div>
