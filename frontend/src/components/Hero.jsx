@@ -10,7 +10,7 @@ const Hero = () => {
       <div className='w-full h-[80%] flex items-center justify-around bg-black/50 '>
         <div className='w-[70%] h-[90%]  flex flex-col items-center justify-around'>
           <h1 className='text-golden font-sora text-3xl text-center font-bold'>Welcome to Luminara</h1>
-          <p className='text-center text-white w-[80%] font-sora my-4'>
+          <p className='text-center text-white w-[70%] font-sora my-4'>
             Experience seamless hotel management with Luminara — your all-in-one platform for effortless reservations,
             guest services, and luxury experiences. Designed for modern hotels that value excellence, efficiency, and
             unforgettable stays.Let your guests shine. Let Luminara handle the rest.

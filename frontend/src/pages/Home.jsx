@@ -6,7 +6,6 @@ const Home = () => {
   return(
     <section className='w-full h-full'>
       <Info />
-      <Navbar />
       <Hero />
     </section>
   );
