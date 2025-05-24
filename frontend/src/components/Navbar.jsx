@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full fixed top-0 left-0 bg-white z-50">
+    <div className="w-full fixed bg-white z-50">
       <div className="w-full flex justify-between items-center px-10">
         <a className="w-[10rem]  p-2" href="/">
           <img src={logo} alt='LUMINARA'/>
