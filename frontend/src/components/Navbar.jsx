@@ -18,9 +18,9 @@ const Navbar = () =>{
           {
             navigations.map((items) => (
               <a
+                className='font-sora '
                 key={items.id}
                 href={items.url}
-                className=''
               >
                 {items.title}
               </a>

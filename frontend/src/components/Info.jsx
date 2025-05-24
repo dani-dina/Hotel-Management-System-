@@ -26,10 +26,10 @@ const Info = () => {
           </p>
         </div>
         <div className='flex items-center'>
-          <FontAwesomeIcon icon={faTelegram} size="lg" className='text-white mx-2' />
-          <FontAwesomeIcon icon={faFacebook} size="lg" className='text-white mx-2' />
-          <FontAwesomeIcon icon={faXTwitter} size="lg" className='text-white mx-2' />
-          <FontAwesomeIcon icon={faYoutube} size="lg" className='text-white mx-2' />
+          <FontAwesomeIcon icon={faTelegram} size="lg" className='text-golden mx-2' />
+          <FontAwesomeIcon icon={faFacebook} size="lg" className='text-golden mx-2' />
+          <FontAwesomeIcon icon={faXTwitter} size="lg" className='text-golden mx-2' />
+          <FontAwesomeIcon icon={faYoutube} size="lg" className='text-golden mx-2' />
         </div>
       </div>
     </section>
