@@ -1,6 +1,7 @@
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import waiter from '../assets/waiter.jpg';
+import Rooms from '../components/Rooms';
 
 const Home = () => {
   return(
@@ -20,6 +21,10 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <div className='w-full h-[15vh] bg-primary mt-[3rem]'>
+          fdf
+      </div>
+      <Rooms/>
     </section>
   );
 }
