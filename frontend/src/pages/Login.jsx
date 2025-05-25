@@ -13,7 +13,8 @@ const Login = () => {
             <input type='text'/>
             <input type='text'/>
             <Button
-            title={'Submit'}
+              className={''}
+              title={'Submit'}
             ></Button>
           </div>
         </div>
