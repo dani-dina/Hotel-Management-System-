@@ -8,6 +8,7 @@ const Login = () => {
       <div className='w-[20%] h-[70%] bg-white/10 backdrop-blur-md rounded-md shadow-md border border-white/20 p-4'>
         <div>
           <h1 className='text-3xl font-bold text-golden'>Login</h1>
+          <div></div>
         </div>
       </div>
     </section>
