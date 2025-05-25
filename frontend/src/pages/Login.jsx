@@ -1,4 +1,5 @@
 import banner from '../assets/banner.jpg';
+import Button from '../components/Button';
 
 const Login = () => {
   return (
@@ -11,6 +12,9 @@ const Login = () => {
           <div>
             <input type='text'/>
             <input type='text'/>
+            <Button
+            title={'Submit'}
+            ></Button>
           </div>
         </div>
       </div>
