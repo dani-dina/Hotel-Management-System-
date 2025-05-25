@@ -1,6 +1,6 @@
 import banner from '../assets/banner.jpg';
 import Button from '../components/Button';
-
+import { useState } from 'react';
 const Login = () => {
   return (
     <section className='w-full h-[87vh] flex items-center justify-center bg-center bg-cover'
