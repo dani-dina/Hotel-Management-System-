@@ -5,6 +5,7 @@ import NotFound from './pages/404';
 import Navbar from './components/Navbar';
 import Info from './components/Info';
 import Footer from './components/Footer';
+import Register from './pages/Register';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/sign-up' element={<Login />} />
+        <Route path='/sign-in' element={<Register />} />
         <Route path='*' element={<NotFound />}/>
       </Routes>
     <Footer />
