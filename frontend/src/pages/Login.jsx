@@ -1,6 +1,8 @@
 import banner from '../assets/banner.jpg';
 import Button from '../components/Button';
 import { useState } from 'react';
+import axios from 'axios';
+
 const Login = () => {
 
   const inputStyle = `w-full bg-none outline-0 border-1 border-primary rounded-md p-2`;
