@@ -2,18 +2,26 @@ import banner from '../assets/banner.jpg';
 import Button from '../components/Button';
 import { useState } from 'react';
 const Login = () => {
+
+  const inputStyle = `w-full bg-none  outline-0 border-b border-golden`;
   return (
     <section className='w-full h-[87vh] flex items-center justify-center bg-center bg-cover'
              style={{backgroundImage :`url(${banner})`}}
     >
       <div className='w-[20%] h-[70%] bg-white/10 backdrop-blur-md rounded-md shadow-md border border-white/20 p-4'>
-        <div className='w-full h-[95%] bg-red-300'>
+        <div className='w-full h-[95%]'>
           <h1 className='text-3xl font-bold text-golden'>Login</h1>
-          <div className='w-[90%] h-[90%] '>
-            <input type='text'/>
-            <input type='text'/>
+          <div className='w-[90%] h-[90%] flex flex-col items-center justify-around '>
+            <input type='text'
+                   name='_userName'
+                   className={`${inputStyle}`}
+            />
+            <input type='text'
+                   name='_passWord'
+                   className={`${inputStyle}`}
+            />
             <Button
-              className={'w-full py-2 text-white bg-golden rounded-md'}
+              className={'w-full py-2 text-golden bg-primary rounded-md'}
               title={'Submit'}
             ></Button>
           </div>
