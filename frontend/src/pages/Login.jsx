@@ -11,9 +11,9 @@ const Login = () => {
              
     >
       <div className='w-[20%] h-[75%] bg-white/10 backdrop-blur-md rounded-md shadow-md border border-white/20 p-4'>
-        <div className='relative w-full h-full '>
+        <div className='relative w-full h-full flex-col items-center justify-around'>
           <h1 className='text-3xl font-bold text-primary'>Login</h1>
-          <div className='w-[90%] h-[60%] flex flex-col items-center justify-around '>
+          <div className='w-[90%] h-[65%] flex flex-col items-center justify-around bg-red-400'>
             <label htmlFor='_userName' className='w-full'>User Name</label>
             <input type='text'
                    name='_userName'
