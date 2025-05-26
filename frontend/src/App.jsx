@@ -7,6 +7,7 @@ import Info from './components/Info';
 import Footer from './components/Footer';
 import Register from './pages/Register';
 import Rooms from './pages/Rooms';
+import ContactUs from './pages/Contact';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/sign-in' element={<Register />} />
         <Route path='/rooms' element={<Rooms />} />
         <Route path='*' element={<NotFound />}/>
+        <Route path='*' element={<ContactUs />}/>
       </Routes>
     <Footer />
     </div>
