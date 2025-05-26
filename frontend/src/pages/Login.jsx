@@ -5,19 +5,21 @@ import axios from 'axios';
 
 const Login = () => {
 
-  const inputStyle = `w-full bg-none outline-0 border-b border-gray-400  p-2`;
+  const inputStyle = `w-full bg-none outline-0 border-1 border-gray-300 rounded-md py-1 px-2`;
   return (
     <section className='w-full h-[87vh] flex items-center justify-center bg-center bg-cover'
              
     >
-      <div className='w-[20%] h-[70%] bg-white/10 backdrop-blur-md rounded-md shadow-md border border-white/20 p-4'>
+      <div className='w-[20%] h-[75%] bg-white/10 backdrop-blur-md rounded-md shadow-md border border-white/20 p-4'>
         <div className='relative w-full h-full '>
           <h1 className='text-3xl font-bold text-primary'>Login</h1>
           <div className='w-[90%] h-[60%] flex flex-col items-center justify-around '>
+            <label htmlFor='_userName' className='w-full'>User Name</label>
             <input type='text'
                    name='_userName'
                    className={`${inputStyle}`}
             />
+            <label htmlFor='_userName' className='w-full'>Pass word</label>
             <input type='text'
                    name='_passWord'
                    className={`${inputStyle}`}
