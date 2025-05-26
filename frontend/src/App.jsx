@@ -20,7 +20,7 @@ function App() {
         <Route path='/sign-in' element={<Register />} />
         <Route path='/rooms' element={<Rooms />} />
         <Route path='*' element={<NotFound />}/>
-        <Route path='*' element={<ContactUs />}/>
+        <Route path='/contact-us' element={<ContactUs />}/>
       </Routes>
     <Footer />
     </div>
