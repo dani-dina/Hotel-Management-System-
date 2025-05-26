@@ -71,7 +71,7 @@ const addNewRoom = async (req, res) => {
         await newRoom.save();
         return res.status(HTTP_STATUS.CREATED).json({ message: "Successfully Added a New Room!" });
     } catch (error) {
-        return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+        return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!",err : error });
     }
 };
 
