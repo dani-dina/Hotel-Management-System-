@@ -7,13 +7,13 @@ const Login = () => {
              style={{backgroundImage :`url(${banner})`}}
     >
       <div className='w-[20%] h-[70%] bg-white/10 backdrop-blur-md rounded-md shadow-md border border-white/20 p-4'>
-        <div>
+        <div className='w-full h-[95%] bg-red-300'>
           <h1 className='text-3xl font-bold text-golden'>Login</h1>
-          <div>
+          <div className='w-[90%] h-[90%] '>
             <input type='text'/>
             <input type='text'/>
             <Button
-              className={''}
+              className={'w-full py-2 text-white bg-golden rounded-md'}
               title={'Submit'}
             ></Button>
           </div>
