@@ -116,7 +116,7 @@ const ProfilePage = () => {
         </nav>
       </div>
 
-      {/* Tab Content */}
+  
       <div className="p-6">
         {activeTab === 'posts' && (
           <div>
