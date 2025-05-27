@@ -90,8 +90,7 @@ const ProfilePage = () => {
               <span className="ml-1 text-gray-600 dark:text-gray-400">Posts</span>
             </div>
             <div className="flex items-center">
-              <span className="font-bold text-gray-800 dark:text-white">{user.stats.followers}</span>
-              <span className="ml-1 text-gray-600 dark:text-gray-400">Followers</span>
+
             </div>
             <
             </div>
