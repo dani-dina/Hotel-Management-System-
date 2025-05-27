@@ -47,24 +47,7 @@ const ProfilePage = () => {
         </div>
 
         {/* User Info */}
-        <div className="mt-8">
-          <h1 className="text-2xl font-bold text-gray-800 dark:text-white">{user.name}</h1>
-          <p className="text-gray-600 dark:text-gray-300">{user.username}</p>
-          
-          <p className="mt-3 text-gray-700 dark:text-gray-300">{user.bio}</p>
-          
-          <div className="flex flex-wrap gap-x-4 mt-3 text-gray-600 dark:text-gray-400"
-          {/* Stats */}
-          <div className="flex gap-6 mt-4">
-            <div className="flex items-center">
-              <span className="font-bold text-gray-800 dark:text-white">{user.stats.posts}</span>
-              <span className="ml-1 text-gray-600 dark:text-gray-400">Posts</span>
-            </div>
-            <div className="flex items-center">
-
-            </div>
-            <
-            </div>
+        
           </div>
         </div>
       </div>
