@@ -30,10 +30,7 @@ const ProfilePage = () => {
 
       {/* Profile Info Section */}
       <div className="px-6 py-4 relative">
-        {/* Avatar */}
-   
 
-        {/* Follow Button */}
         <div className="flex justify-end mt-4">
           <button className="px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-200 font-medium">
             Follow
