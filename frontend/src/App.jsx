@@ -11,6 +11,7 @@ import ContactUs from './pages/Contact';
 import ProfilePage from './pages/Profile';
 
 import OrderPage from './pages/Order';
+import Reservations from './pages/Reservations';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path='/contact-us' element={<ContactUs />}/>
         <Route path='/profile' element={<ProfilePage />}/>
         <Route path='/orders' element={<OrderPage />}/>
+        <Route path='/reservations' element={<Reservations />}/>
       </Routes>
     <Footer />
     </div>
