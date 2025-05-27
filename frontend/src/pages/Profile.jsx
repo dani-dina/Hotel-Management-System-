@@ -116,21 +116,8 @@ const ProfilePage = () => {
         </nav>
       </div>
 
-  
-      <div className="p-6">
-        {activeTab === 'posts' && (
-          <div>
-           
-          </div>
-        )}
-        {activeTab === 'media' && (
-          <div>
-            
-          </div>
-        )}
-        {activeTab === 'likes' && (
-
-        )}
+      {/* Tab Content */}
+      
       </div>
     </div>
   );
