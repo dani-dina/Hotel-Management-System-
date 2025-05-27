@@ -12,6 +12,7 @@ import ProfilePage from './pages/Profile';
 
 import OrderPage from './pages/Order';
 import Reservations from './pages/Reservations';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path='/profile' element={<ProfilePage />}/>
         <Route path='/orders' element={<OrderPage />}/>
         <Route path='/reservations' element={<Reservations />}/>
+        <Route path='/dashboard' element={<Dashboard />}/>
       </Routes>
     <Footer />
     </div>
