@@ -9,7 +9,8 @@ import Register from './pages/Register';
 import Rooms from './pages/Rooms';
 import ContactUs from './pages/Contact';
 import ProfilePage from './pages/Profile';
-import Order from './pages/Order';
+
+import OrderPage from './pages/Order';
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
         <Route path='*' element={<NotFound />}/>
         <Route path='/contact-us' element={<ContactUs />}/>
         <Route path='/profile' element={<ProfilePage />}/>
-        <Route path='/orders' element={<Order />}/>
+        <Route path='/orders' element={<OrderPage />}/>
       </Routes>
     <Footer />
     </div>
