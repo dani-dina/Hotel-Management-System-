@@ -129,8 +129,7 @@ const ProfilePage = () => {
       <div className="p-6">
         {activeTab === 'posts' && (
           <div>
-            <h3 className="text-lg font-medium text-gray-800 dark:text-white">Recent Posts</h3>
-            <p className="mt-2 text-gray-600 dark:text-gray-400">No posts to show</p>
+           
           </div>
         )}
         {activeTab === 'media' && (
