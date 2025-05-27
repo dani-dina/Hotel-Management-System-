@@ -31,13 +31,7 @@ const ProfilePage = () => {
       {/* Profile Info Section */}
       <div className="px-6 py-4 relative">
         {/* Avatar */}
-        <div className="absolute -top-16 left-6 border-4 border-white dark:border-gray-800 rounded-full overflow-hidden">
-          <img 
-            src={user.avatar} 
-            alt={user.name} 
-            className="h-32 w-32 object-cover"
-          />
-        </div>
+   
 
         {/* Follow Button */}
         <div className="flex justify-end mt-4">
@@ -52,19 +46,5 @@ const ProfilePage = () => {
         </div>
       </div>
 
-      {/* Tabs */}
-      <div className="border-t border-gray-200 dark:border-gray-700 mt-4">
-        <nav className="flex">
-          <button
-            onClick={() => setActiveTab('posts')}
-            className={`px-4 py-3 text-sm font-medium ${activeTab === 'posts' ? 'text-blue-500 border-b-2 border-blue-500' : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'}`}
-  
-
-      {/* Tab Content */}
-      
-      </div>
-    </div>
-  );
-};
 
 export default ProfilePage;
