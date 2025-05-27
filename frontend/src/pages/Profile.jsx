@@ -135,8 +135,7 @@ const ProfilePage = () => {
         )}
         {activeTab === 'media' && (
           <div>
-            <h3 className="text-lg font-medium text-gray-800 dark:text-white">Media</h3>
-            <p className="mt-2 text-gray-600 dark:text-gray-400">No media to show</p>
+            
           </div>
         )}
         {activeTab === 'likes' && (
