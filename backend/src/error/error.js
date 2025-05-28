@@ -1,6 +1,3 @@
-/**
- * Error utility module for consistent error handling
- */
 
 const HTTP_STATUS = require('./httpStatus'); // Import your HTTP status codes
 
