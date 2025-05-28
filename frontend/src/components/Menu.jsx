@@ -136,7 +136,6 @@ const MenuPage = () => {
         )}
       </main>
 
-      {/* Shopping Cart (floating button) */}
       {cartItems.length > 0 && (
         <div className="fixed bottom-6 right-6">
           <button className="bg-indigo-600 text-white p-4 rounded-full shadow-lg hover:bg-indigo-700 transition-colors duration-300 flex items-center">
