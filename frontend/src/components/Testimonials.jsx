@@ -168,7 +168,6 @@ const TestimonialPage = () => {
           </div>
         )}
 
-        {/* CTA Section */}
         <div className="mt-16 text-center">
           <h2 className="text-2xl font-bold text-gray-900">Want to share your experience?</h2>
           <p className="mt-4 text-lg text-gray-600">
