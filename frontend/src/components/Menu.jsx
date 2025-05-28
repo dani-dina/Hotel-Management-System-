@@ -127,8 +127,6 @@ const MenuPage = () => {
             </div>
           ))}
         </div>
-
-        {/* Empty State */}
         {filteredItems.length === 0 && (
           <div className="text-center py-12">
             <p className="text-gray-500">No items found in this category.</p>
