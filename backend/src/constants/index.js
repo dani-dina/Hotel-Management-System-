@@ -1,6 +1,4 @@
-/**
- * Comprehensive HTTP status codes with descriptions and utility methods
- */
+
 export const HTTP_STATUS = {
   // 2xx Success
   OK: {
