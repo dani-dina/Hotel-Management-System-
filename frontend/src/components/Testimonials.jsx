@@ -100,8 +100,6 @@ const TestimonialPage = () => {
             Don't just take our word for it - hear from our satisfied customers
           </p>
         </div>
-
-        {/* Category Tabs */}
         <div className="flex justify-center mb-12">
           <nav className="flex space-x-4" aria-label="Tabs">
             {categories.map((category) => (
