@@ -51,7 +51,7 @@ class InternalServerError extends AppError {
   }
 }
 
-// Error handling middleware for Express
+// Error handling middleware
 const errorHandler = (err, req, res, next) => {
   err.statusCode = err.statusCode || HTTP_STATUS.SERVER_ERROR.code;
   err.status = err.status || 'error';
