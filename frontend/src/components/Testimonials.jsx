@@ -119,8 +119,6 @@ const TestimonialPage = () => {
             ))}
           </nav>
         </div>
-
-        {/* Testimonials Grid */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {filteredTestimonials.map((testimonial) => (
             <div key={testimonial.id} className="bg-white p-6 rounded-lg shadow-md">
