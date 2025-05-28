@@ -1,5 +1,4 @@
-
-const HTTP_STATUS = require('./httpStatus'); // Import your HTTP status codes
+import { HTTP_STATUS } from "../constants";
 
 class AppError extends Error {
   constructor(message, statusCode, isOperational = true) {
