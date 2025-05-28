@@ -91,7 +91,6 @@ const TestimonialPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        {/* Page Header */}
         <div className="text-center mb-12">
           <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
             What Our Customers Say
@@ -100,6 +99,7 @@ const TestimonialPage = () => {
             Don't just take our word for it - hear from our satisfied customers
           </p>
         </div>
+
         <div className="flex justify-center mb-12">
           <nav className="flex space-x-4" aria-label="Tabs">
             {categories.map((category) => (
