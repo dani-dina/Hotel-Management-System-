@@ -80,8 +80,6 @@ const MenuPage = () => {
           <h1 className="text-3xl font-bold text-gray-900">Our Menu</h1>
         </div>
       </header>
-
-      {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
         {/* Category Filter */}
         <div className="mb-8 overflow-x-auto">
