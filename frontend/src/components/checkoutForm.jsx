@@ -1,4 +1,4 @@
-// CheckoutForm.jsx
+
 import { CardElement, useStripe, useElements } from '@stripe/stripe-js';
 import { useState } from 'react';
 
