@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { HTTP_STATUS } from '../constants/httpStatus';
+import { HTTP_STATUS } from '../constants/httpStatus.js';
 
 export const checkout = createAsyncThunk(
   'cart/checkout',

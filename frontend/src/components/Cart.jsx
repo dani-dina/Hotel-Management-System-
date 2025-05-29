@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeItem, updateQuantity, clearCart } from '../features/cart/cartSlice';
-import { HTTP_STATUS } from '../constants/httpStatus';
-import { checkout } from '../features/cart/cartThunks';
+import { removeItem, updateQuantity, clearCart } from '../store/cartSlice.js';
+import { HTTP_STATUS } from '../constants/httpStatus.js';
+import { checkout } from '../store/cartThunk.js';
 
 const CartPage = () => {
   const dispatch = useDispatch();
