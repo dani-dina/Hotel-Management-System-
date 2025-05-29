@@ -49,7 +49,7 @@ router.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
     return;
   }
 
-  // Handle the event
+  // Handle event
   switch (event.type) {
     case 'payment_intent.succeeded':
       const paymentIntent = event.data.object;
