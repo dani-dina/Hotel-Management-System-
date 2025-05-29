@@ -45,12 +45,12 @@ app.use('/api/employees', employeeRoutes);
 app.use('/api/drinks', drinkRoutes);
 app.use('/login',auth)
 
-// Root Route
+app.use('/api/payments', paymentRoutes);
+app.use('/api/paypal', paypalRoutes);
 app.get('/', (req, res) => {
     res.send('Welcome to the Hotel Management API');
 });
 
-// Start Server
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
