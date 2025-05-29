@@ -15,6 +15,7 @@ import Reservations from './pages/Reservations';
 import Dashboard from './pages/Dashboard';
 import Loading from './components/Loading';
 import MenuPage from './components/Menu';
+import CartPage from './components/Cart';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
