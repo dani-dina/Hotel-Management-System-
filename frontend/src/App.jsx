@@ -76,6 +76,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/contact-us' element={<ContactUs />} />
           <Route path='/rooms' element={<Rooms />} />
+          <Route path='/reservations' element={<Reservations/>} />
           
           {/* Auth routes */}
           <Route path='/sign-in' element={
