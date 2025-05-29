@@ -54,7 +54,7 @@ router.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
     case 'payment_intent.succeeded':
       const paymentIntent = event.data.object;
       console.log('PaymentIntent was successful:', paymentIntent.id);
-      // Update your database here
+      // Update your database 
       break;
     case 'payment_method.attached':
       const paymentMethod = event.data.object;
