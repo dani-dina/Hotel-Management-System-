@@ -75,7 +75,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Copyright */}
+      
         <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">
             &copy; {currentYear} Company Name. All rights reserved.
