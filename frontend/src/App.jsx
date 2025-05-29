@@ -80,6 +80,7 @@ function App() {
           <Route path='/rooms' element={<Rooms />} />
           <Route path='/reservations' element={<Reservations/>} />
           <Route path='/menu' element={<MenuPage/>} />
+          <Route path="/cart" element={<CartPage />} />
           
           {/* Auth routes */}
           <Route path='/sign-in' element={
