@@ -1,12 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import { BrowserRouter } from 'react-router-dom'
-createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
-    <StrictMode>
+// src/main.jsx or src/index.js
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import { Provider } from 'react-redux';
+import store from '../src/store/index.js'; // Make sure this path is correct
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <Provider store={store}>
       <App />
-    </StrictMode>,
-  </BrowserRouter>
-)
+    </Provider>
+  </React.StrictMode>
+);
