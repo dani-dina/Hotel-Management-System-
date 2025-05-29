@@ -1,4 +1,4 @@
-// config/paypal.js
+
 const paypal = require('@paypal/checkout-server-sdk');
 
 // Configure PayPal SDK
