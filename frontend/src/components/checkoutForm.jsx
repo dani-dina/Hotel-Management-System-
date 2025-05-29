@@ -41,7 +41,7 @@ export default function CheckoutForm() {
       if (stripeError) {
         setError(stripeError.message);
       } else if (paymentIntent.status === 'succeeded') {
-        // Payment succeeded - update your database
+        // Payment succeeded - update database
         console.log('Payment succeeded:', paymentIntent);
       }
     } catch (err) {
