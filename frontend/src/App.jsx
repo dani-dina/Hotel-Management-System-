@@ -14,6 +14,7 @@ import OrderPage from './pages/Order';
 import Reservations from './pages/Reservations';
 import Dashboard from './pages/Dashboard';
 import Loading from './components/Loading';
+import MenuPage from './components/Menu';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -77,6 +78,7 @@ function App() {
           <Route path='/contact-us' element={<ContactUs />} />
           <Route path='/rooms' element={<Rooms />} />
           <Route path='/reservations' element={<Reservations/>} />
+          <Route path='/menu' element={<MenuPage/>} />
           
           {/* Auth routes */}
           <Route path='/sign-in' element={
