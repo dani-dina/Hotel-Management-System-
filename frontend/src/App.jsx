@@ -83,7 +83,7 @@ function App() {
           <Route path="/cart" element={<CartPage />} />
           
           {/* Auth routes */}
-          <Route path='/sign-in' element={
+          <Route path='/auth/login' element={
             <PublicRoute>
               <Login 
                 setIsAuthenticated={setIsAuthenticated} 
