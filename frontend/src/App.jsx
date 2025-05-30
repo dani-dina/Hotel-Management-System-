@@ -91,7 +91,7 @@ function App() {
               />
             </PublicRoute>
           } />
-          <Route path='/sign-up' element={
+          <Route path='/auth/sign-in' element={
             <PublicRoute>
               <Register 
                 setIsAuthenticated={setIsAuthenticated} 
