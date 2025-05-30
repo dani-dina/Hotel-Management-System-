@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-
+import { checkout } from './cartThunk';
 const initialState = {
   items: [],
   total: 0,
