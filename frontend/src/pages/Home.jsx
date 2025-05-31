@@ -11,9 +11,9 @@ const Home = () => {
       <SupportIcon/>
       {/* About Section */}
       <section className='w-full py-12 md:py-24 px-4 sm:px-6 lg:px-8 flex items-center justify-center'>
-        <div className='w-[90%] bg-red-400'>
+        <div className='w-[90%]'>
           <div className=''>
-            <h1>Best offer this month </h1>
+            <h1 className='text-3xl font-semibold font-poppins'>Best offer this month </h1>
             <div className='w-full flex items-center justify-between'>
               <p>This can be detailed description or just a short text </p>
               <Button
