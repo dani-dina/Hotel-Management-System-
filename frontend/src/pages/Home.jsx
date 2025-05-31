@@ -30,7 +30,7 @@ const Home = () => {
                 <h1 className='text-black font-bold text-3xl md:text-4xl lg:text-5xl font-lexury leading-tight tracking-wide'>
                   Luxurious Comfort,<br />Timeless Elegance Awaits
                 </h1>
-                <p className='text-gray-600 text-base md:text-lg'>
+                <p className='text-gray-600 text-base md:text-lg font-open-sans'>
                   Discover our legacy of hospitality excellence. For over two decades, 
                   we've been redefining luxury with personalized service, exquisite 
                   accommodations, and unforgettable experiences that linger in memory 

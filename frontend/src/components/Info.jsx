@@ -29,7 +29,7 @@ const Info = () => {
   ];
 
   return (
-    <section className='w-full bg-primary py-2'>
+    <section className='hidden lg:flex w-full bg-primary py-1'>
       <div className='container mx-auto px-4'>
         <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
           {/* Contact Info - Stack on mobile */}

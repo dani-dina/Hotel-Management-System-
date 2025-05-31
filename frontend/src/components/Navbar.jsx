@@ -48,7 +48,7 @@ const Navbar = () => {
             <nav className='hidden md:flex gap-6 lg:gap-8 items-center'>
               {navigations.map((item) => (
                 <Link
-                  className={`font-sora transition-colors ${
+                  className={`font-sora font-semibold transition-colors ${
                     location.pathname === item.url 
                       ? 'text-primary font-medium' 
                       : 'hover:text-primary'
