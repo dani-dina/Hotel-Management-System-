@@ -39,13 +39,13 @@ const Home = () => {
                   src={banner}
                   className='w-[30%] rounded-md h-[60%]'
                 />
-                <div className='w-[40%] h-[60%] bg-red-400'>
-                  <h1>45 % OFF</h1>
+                <div className='w-[40%] h-[60%] flex flex-col items-center justify-around'>
+                  <h1 className='text-3xl font-semibold'>45 % OFF</h1>
                   <p>This can be detailed description or just short text</p>
                   <Button
                     className={'bg-primary'}
                     title={'Book Now'}
-                    
+
                   />
                 </div>
               </div>
