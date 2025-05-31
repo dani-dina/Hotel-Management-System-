@@ -11,9 +11,9 @@ const Home = () => {
       <Hero />
       <SupportIcon/>
       {/* About Section */}
-      <section className='w-full py-12 md:py-24 px-4 sm:px-6 lg:px-8 flex items-center justify-center'>
+      <section className='w-full py-8 px-4 sm:px-6 lg:px-8 flex items-center justify-center'>
         <div className='w-[90%]'>
-          <div className=''>
+          <div className='my-4'>
             <h1 className='text-4xl font-semibold font-poppins'>Best offer this month </h1>
             <div className='w-full flex items-center justify-between'>
               <p className='text-gray-400'>This can be detailed description or just a short text </p>
@@ -26,7 +26,7 @@ const Home = () => {
           </div>
           <div className='w-full h-[40vh] flex items-center justify-between'>
             <div className='w-[40%] h-full'>
-              <div className='w-full h-[90%] bg-gray-200 rounded-md'>
+              <div className='w-full h-[90%] bg-gray-100 rounded-md'>
                 <img
                   src={banner}
                   className='w-[65%] rounded-md h-[70%]'
@@ -34,11 +34,20 @@ const Home = () => {
               </div>
             </div>
             <div className='w-[40%] h-full '>
-              <div className='w-full h-[90%] bg-gray-200 rounded-md'>
+              <div className='w-full h-[90%] bg-gray-100 rounded-md flex items-center justify-around'>
                 <img
                   src={banner}
-                  className='w-[65%] rounded-md h-[70%]'
+                  className='w-[30%] rounded-md h-[60%]'
                 />
+                <div className='w-[40%] h-[60%] bg-red-400'>
+                  <h1>45 % OFF</h1>
+                  <p>This can be detailed description or just short text</p>
+                  <Button
+                    className={'bg-primary'}
+                    title={'Book Now'}
+                    
+                  />
+                </div>
               </div>
             </div>
           </div>
