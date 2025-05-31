@@ -17,7 +17,7 @@ const Home = () => {
             <div>
               <p>This can be detailed description or just a short text </p>
               <Button
-                className={'bg-'}
+                className={'bg-gray-200 text-primary'}
                 title={'view all'}
               />
             </div>
