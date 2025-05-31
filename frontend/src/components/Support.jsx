@@ -1,5 +1,5 @@
-import { FaHeadset } from "react-icons/fa";
 import { useState } from "react";
+import { FaHeadset, FaTimes, FaPaperPlane } from "react-icons/fa";
 
 const SupportIcon = ({ onToggleChat }) => {
   return (
@@ -24,7 +24,7 @@ const SupportChat = ({ isOpen, onClose }) => {
       <div className="flex justify-between items-center p-3 bg-blue-600 text-white">
         <h3 className="font-medium">Support Chat</h3>
         <button onClick={onClose}>
-          <FaTimes />
+          <FaTimes className="w-5 h-5" />
         </button>
       </div>
       <div className="h-48 p-3 overflow-y-auto bg-gray-50">
@@ -39,7 +39,7 @@ const SupportChat = ({ isOpen, onClose }) => {
           className="flex-1 p-2 text-sm border rounded-l focus:outline-none"
         />
         <button className="p-2 bg-blue-600 text-white rounded-r hover:bg-blue-700">
-          <FaPaperPlane />
+          <FaPaperPlane className="w-5 h-5" />
         </button>
       </div>
     </div>
