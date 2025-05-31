@@ -14,13 +14,10 @@ const Navbar = () => {
   const isMinimalNavbar = hiddenPaths.some(path => 
     location.pathname.startsWith(path)
   );
-
-  // Close mobile menu when route changes
   useEffect(() => {
     setIsOpen(false);
   }, [location]);
 
-  // Add scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -33,8 +30,8 @@ const Navbar = () => {
     <header className={`sticky top-0 left-0 w-full h-[10vh] flex items-center justify-center z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white shadow-md' : 'bg-white'
     }`}>
-      <div className='w-full px-4 md:px-8 lg:w-[90%] h-full flex items-center justify-between'>
-        <Link to='/' className='mx-4'>
+      <div className='w-[90%]  lg:w-[90%] h-full flex items-center justify-between'>
+        <Link to='/' className=''>
           <img 
             src={logo} 
             alt='Luminara' 
