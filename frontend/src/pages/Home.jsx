@@ -4,6 +4,7 @@ import waiter from '../assets/waiter.jpg';
 import Rooms from '../components/Rooms';
 import SupportIcon from '../components/Support';
 import Button from '../components/Button';
+import banner from '../assets/b1.jpg'
 const Home = () => {
   return (
     <div className='w-full overflow-hidden'>
@@ -23,8 +24,23 @@ const Home = () => {
               />
             </div>
           </div>
-          <div>
-
+          <div className='w-full h-[40vh] flex items-center justify-between'>
+            <div className='w-[40%] h-full'>
+              <div className='w-full h-[90%] bg-gray-200 rounded-md'>
+                <img
+                  src={banner}
+                  className='w-[65%] rounded-md h-[70%]'
+                />
+              </div>
+            </div>
+            <div className='w-[40%] h-full '>
+              <div className='w-full h-[90%] bg-gray-200 rounded-md'>
+                <img
+                  src={banner}
+                  className='w-[65%] rounded-md h-[70%]'
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
