@@ -10,13 +10,13 @@ const SupportChat = () => {
       {!isOpen ? (
         <button
           onClick={() => setIsOpen(true)}
-          className="p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition"
+          className="p-3 bg-primary text-white rounded-full shadow-lg hover:bg-blue-700 transition"
         >
           <FaComment size={18} />
         </button>
       ) : (
         <div className="w-72 bg-white rounded-lg shadow-xl overflow-hidden">
-          <div className="flex justify-between items-center p-3 bg-blue-600 text-white">
+          <div className="flex justify-between items-center p-3 bg-primary text-white">
             <h3 className="font-medium">Support Chat</h3>
             <button onClick={() => setIsOpen(false)}>
               <FaTimes />

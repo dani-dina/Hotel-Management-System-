@@ -68,9 +68,14 @@ const Navbar = () => {
             </button>
 
             {/* Desktop Button */}
-            <div className='hidden md:block'>
+            <div className='hidden md:flex md:gap-2'>
               <Link to='/sign-up'>
-                <Button className='bg-primary text-white px-4 py-2 hover:bg-primary-dark transition-colors' title='Join us' />
+                <Button className='bg-gray-300 text-white  py-2 hover:bg-primary-dark transition-colors ml-2 '
+                        title='Sign up' />
+              </Link>
+              <Link to='/sign-up'>
+                <Button className='bg-primary text-white px-2 py-2 hover:bg-primary-dark transition-colors'
+                        title='sign in' />
               </Link>
             </div>
 
