@@ -17,8 +17,9 @@ const Home = () => {
             <div className='w-full flex items-center justify-between'>
               <p>This can be detailed description or just a short text </p>
               <Button
-                className={'bg-gray-200 text-primary '}
+                className={'bg-gray-200'}
                 title={'view all'}
+                span={'text-primary'}
 
               />
             </div>
