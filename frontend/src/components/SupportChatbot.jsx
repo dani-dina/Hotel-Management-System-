@@ -12,7 +12,7 @@ const SupportChat = () => {
           onClick={() => setIsOpen(true)}
           className="p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition"
         >
-          <FaComment size={20} />
+          <FaComment size={18} />
         </button>
       ) : (
         <div className="w-72 bg-white rounded-lg shadow-xl overflow-hidden">
@@ -33,7 +33,7 @@ const SupportChat = () => {
               placeholder="Type your message..."
               className="flex-1 p-2 text-sm border rounded-l focus:outline-none"
             />
-            <button className="p-2 bg-blue-600 text-white rounded-r hover:bg-blue-700">
+            <button className="p-2 bg-primary text-white rounded-r hover:bg-blue-700">
               <FaPaperPlane />
             </button>
           </div>

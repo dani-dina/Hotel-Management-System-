@@ -21,10 +21,10 @@ const SupportChat = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed bottom-20 right-6 z-50 w-72 bg-white rounded-lg shadow-xl overflow-hidden">
-      <div className="flex justify-between items-center p-3 bg-blue-600 text-white">
+      <div className="flex justify-between items-center p-3 bg-primary text-white">
         <h3 className="font-medium">Support Chat</h3>
         <button onClick={onClose}>
-          <FaTimes className="w-5 h-5" />
+          <FaTimes className="w-4 h-4" />
         </button>
       </div>
       <div className="h-48 p-3 overflow-y-auto bg-gray-50">
@@ -38,8 +38,8 @@ const SupportChat = ({ isOpen, onClose }) => {
           placeholder="Type your message..."
           className="flex-1 p-2 text-sm border rounded-l focus:outline-none"
         />
-        <button className="p-2 bg-blue-600 text-white rounded-r hover:bg-blue-700">
-          <FaPaperPlane className="w-5 h-5" />
+        <button className="p-2 bg-primary text-white rounded-r hover:bg-blue-700">
+          <FaPaperPlane className="w-4 h-4" />
         </button>
       </div>
     </div>
