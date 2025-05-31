@@ -24,13 +24,21 @@ const Home = () => {
               />
             </div>
           </div>
-          <div className='w-full h-[40vh] flex items-center justify-between'>
+          <div className='w-full h-[40vh] flex items-center justify-between font-poppins'>
             <div className='w-[40%] h-full'>
-              <div className='w-full h-[90%] bg-gray-100 rounded-md'>
+              <div className='w-full h-[90%] bg-gray-100 rounded-md flex items-center justify-around'>
                 <img
                   src={banner}
-                  className='w-[65%] rounded-md h-[70%]'
+                  className='w-[30%] rounded-md h-[60%]'
                 />
+                <div className='w-[40%] h-[60%] flex flex-col items-center justify-around'>
+                  <h1 className='text-3xl font-semibold'>45 % OFF</h1>
+                  <p className='text-center text-gray-700 py-2'>This can be detailed description or just short text</p>
+                  <Button
+                    className={'bg-primary'}
+                    title={'BOOK NOW'}
+                />
+                </div>
               </div>
             </div>
             <div className='w-[40%] h-full '>
@@ -41,10 +49,10 @@ const Home = () => {
                 />
                 <div className='w-[40%] h-[60%] flex flex-col items-center justify-around'>
                   <h1 className='text-3xl font-semibold'>45 % OFF</h1>
-                  <p>This can be detailed description or just short text</p>
+                  <p className='text-center text-gray-700 py-2'>This can be detailed description or just short text</p>
                   <Button
                     className={'bg-primary'}
-                    title={'Book Now'}
+                    title={'BOOK NOW'}
 
                   />
                 </div>
