@@ -69,13 +69,16 @@ const Navbar = () => {
 
             {/* Desktop Button */}
             <div className='hidden md:flex md:gap-2'>
-              <Link to='/sign-up'>
+              <Link to='/auth/login'>
                 <Button className='bg-gray-300 text-white  py-2 hover:bg-primary-dark transition-colors ml-2 '
-                        title='Sign up' />
+                        title='Sign up' 
+                         span={'text-primary'} 
+                />
               </Link>
-              <Link to='/sign-up'>
+              <Link to='/auth/sign-up'>
                 <Button className='bg-primary text-white px-2 py-2 hover:bg-primary-dark transition-colors'
-                        title='sign in' />
+                        title='sign in'
+                 />
               </Link>
             </div>
 
