@@ -14,11 +14,12 @@ const Home = () => {
         <div className='w-[90%] bg-red-400'>
           <div className=''>
             <h1>Best offer this month </h1>
-            <div>
+            <div className='w-full flex'>
               <p>This can be detailed description or just a short text </p>
               <Button
-                className={'bg-gray-200 text-primary'}
+                className={'bg-gray-200 text-primary '}
                 title={'view all'}
+
               />
             </div>
           </div>
