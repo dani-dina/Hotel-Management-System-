@@ -15,7 +15,7 @@ const Home = () => {
           <div className=''>
             <h1 className='text-4xl font-semibold font-poppins'>Best offer this month </h1>
             <div className='w-full flex items-center justify-between'>
-              <p>This can be detailed description or just a short text </p>
+              <p className='text-gray-400'>This can be detailed description or just a short text </p>
               <Button
                 className={'bg-gray-200'}
                 title={'view all'}
