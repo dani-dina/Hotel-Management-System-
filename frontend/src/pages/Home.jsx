@@ -35,7 +35,7 @@ const Home = () => {
                   <h1 className='text-3xl font-semibold'>45 % OFF</h1>
                   <p className='text-center text-gray-700 py-2'>This can be detailed description or just short text</p>
                   <Button
-                    className={'bg-primary'}
+                    className={'bg-primary py-2'}
                     title={'BOOK NOW'}
                 />
                 </div>
@@ -51,7 +51,7 @@ const Home = () => {
                   <h1 className='text-3xl font-semibold'>45 % OFF</h1>
                   <p className='text-center text-gray-700 py-2'>This can be detailed description or just short text</p>
                   <Button
-                    className={'bg-primary'}
+                    className={'bg-primary py-2'}
                     title={'BOOK NOW'}
 
                   />

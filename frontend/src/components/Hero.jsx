@@ -1,5 +1,6 @@
 import Jumbotron from '../components/Jumbotron';
-import banner from '../assets/b1.jpg';
+import banner from '../assets/b5.jpg';
+
 const Hero = () => {
   return (
     <div className='relative w-full h-[90vh] flex justify-center my-3 '>
