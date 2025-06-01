@@ -23,7 +23,7 @@ export default function CheckoutForm() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ amount: 100 }), //  amount
+        body: JSON.stringify({ amount: 100 }), // z amount
       });
 
       const { clientSecret } = await response.json();
