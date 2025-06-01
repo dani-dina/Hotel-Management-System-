@@ -14,7 +14,7 @@ const Dashboard = () => {
   const [recentBookings, setRecentBookings] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Mock data fetch
+  // data fetch
   useEffect(() => {
     const fetchData = async () => {
       try {
