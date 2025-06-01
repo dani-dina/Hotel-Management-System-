@@ -50,7 +50,7 @@ const CheckoutPage = () => {
           address: formData.address,
         },
         items,
-        total: total + 2.99, // Including delivery fee
+        total: total + 2.99, 
         paymentMethod: formData.paymentMethod,
         deliveryInstructions: formData.deliveryInstructions,
       };
