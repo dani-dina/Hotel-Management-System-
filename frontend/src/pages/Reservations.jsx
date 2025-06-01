@@ -18,7 +18,6 @@ const Reservations = () => {
   useEffect(() => {
     const fetchReservations = async () => {
       try {
-        // Simulate API call
         setTimeout(() => {
           // Mock data
           const mockReservations = [
