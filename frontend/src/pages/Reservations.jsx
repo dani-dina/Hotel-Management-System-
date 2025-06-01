@@ -14,7 +14,7 @@ const Reservations = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [view, setView] = useState('month');
 
-  // Mock data fetch - replace with actual API call
+  //  API call
   useEffect(() => {
     const fetchReservations = async () => {
       try {
