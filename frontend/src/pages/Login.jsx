@@ -62,7 +62,7 @@ const Login = () => {
           </button>
         </div>
         
-        {/* Sign up link */}
+        {/* Sign up  */}
         <p className="mt-6 text-center text-sm text-gray-500">
           You have access to your Register for time
         </p>
