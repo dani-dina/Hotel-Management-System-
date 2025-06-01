@@ -40,8 +40,6 @@ const CheckoutPage = () => {
       if (!formData.name || !formData.email || !formData.phone || !formData.address) {
         throw new Error('Please fill in all required fields');
       }
-
-      // Create order payload
       const order = {
         customer: {
           name: formData.name,
