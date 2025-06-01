@@ -31,7 +31,7 @@ const Loading = ({ type = 'spinner', color = 'primary', size = 'medium', fullScr
     large: 'h-16 w-16 border-t-4 border-b-4'
   };
 
-  // Loading types
+  // Loading type
   const loadingTypes = {
     spinner: (
       <div className={`animate-spin rounded-full ${sizeVariants[size]} ${colorVariants[color]}`}></div>
