@@ -46,7 +46,7 @@ const CartPage = () => {
       <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl font-bold text-gray-900 mb-8">Your Order</h1>
         
-        {/* Cart Items */}
+        {/* Cart Item */}
         <div className="bg-white rounded-lg shadow-md overflow-hidden mb-6">
           {items.map((item) => (
             <div key={item.id} className="p-4 border-b border-gray-200 last:border-b-0">
