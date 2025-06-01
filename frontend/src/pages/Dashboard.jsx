@@ -188,7 +188,6 @@ const Dashboard = () => {
           </div>
         </div>
 
-        {/* Quick Actions */}
         <div className="bg-white rounded-lg shadow overflow-hidden">
           <div className="px-6 py-4 border-b border-gray-200">
             <h2 className="text-lg font-semibold text-gray-800">Quick Actions</h2>
