@@ -24,7 +24,7 @@ const Loading = ({ type = 'spinner', color = 'primary', size = 'medium', fullScr
     dark: 'text-gray-800'
   };
 
-  // Size variants
+  // Size variant
   const sizeVariants = {
     small: 'h-6 w-6 border-2',
     medium: 'h-12 w-12 border-t-2 border-b-2',
