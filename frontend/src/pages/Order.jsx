@@ -124,7 +124,6 @@ const OrderPage = () => {
   };
 
   const handleUpdateStatus = (orderId, newStatus) => {
-    // In a real app, this would call your API to update the order
     setOrders(orders.map(order => 
       order.orderId === orderId 
         ? { ...order, orderStatus: newStatus } 
