@@ -54,8 +54,6 @@ const CheckoutPage = () => {
         paymentMethod: formData.paymentMethod,
         deliveryInstructions: formData.deliveryInstructions,
       };
-
-      // Dispatch the order creation
       await dispatch(createOrder(order)).unwrap();
       dispatch(clearCart());
     
