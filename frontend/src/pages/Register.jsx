@@ -220,7 +220,7 @@ const Register = () => {
               </label>
             </div>
 
-            {/* Submit Button */}
+            {/* Submit */}
             <div>
               <button
                 type="submit"
