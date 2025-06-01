@@ -62,7 +62,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Divider */}
+      {/* Divider sec */}
       <div className='w-full h-24 bg-primary'></div>
 
       {/* Rooms Section */}
