@@ -60,8 +60,7 @@ const CheckoutPage = () => {
       
       // Clear cart on success
       dispatch(clearCart());
-      
-      // Redirect to order confirmation
+    
       navigate('/order-confirmation');
     } catch (err) {
       setError(err.message);
