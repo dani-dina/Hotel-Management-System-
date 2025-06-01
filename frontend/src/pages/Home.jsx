@@ -65,7 +65,7 @@ const Home = () => {
       {/* Divider sec */}
       <div className='w-full h-24 bg-primary'></div>
 
-      {/* Rooms Section */}
+      {/* Rooms Sec */}
       <Rooms />
     </div>
   );
