@@ -181,7 +181,6 @@ const Reservations = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
       <div className="bg-white rounded-lg shadow-md overflow-hidden">
-        {/* Header */}
         <div className="bg-gradient-to-r from-blue-600 to-blue-800 p-6 text-white">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between">
             <div>
