@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
 const NotFound = () => {
-  // Optional: Change document title when component mounts
   useEffect(() => {
     document.title = "Page Not Found | Your App Name";
   }, []);
