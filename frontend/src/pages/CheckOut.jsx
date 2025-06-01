@@ -57,8 +57,6 @@ const CheckoutPage = () => {
 
       // Dispatch the order creation
       await dispatch(createOrder(order)).unwrap();
-      
-      // Clear cart on success
       dispatch(clearCart());
     
       navigate('/order-confirmation');
