@@ -13,7 +13,6 @@ const OrderPage = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        // Simulate API call
         setTimeout(() => {
           // Mock data based on your schema
           const mockOrders = [
