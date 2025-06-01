@@ -2,7 +2,7 @@ import EventCalendar from '../components/EventCalendar';
 import EventList from '../components/EventList';
 
 const Events = () => {
-  const [view, setView] = useState('list'); // 'list' or 'calendar'
+  const [view, setView] = useState('list'); // 'lists' or 'calendar'
 
   return (
     <div className="container mx-auto px-4 py-12">
