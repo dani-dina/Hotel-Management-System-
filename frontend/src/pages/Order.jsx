@@ -14,7 +14,6 @@ const OrderPage = () => {
     const fetchOrders = async () => {
       try {
         setTimeout(() => {
-          // Mock data based on your schema
           const mockOrders = [
             {
               orderId: 'ORD-2023-001',
