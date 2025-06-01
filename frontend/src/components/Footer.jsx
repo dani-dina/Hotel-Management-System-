@@ -59,7 +59,6 @@ const Footer = () => {
             </address>
           </div>
 
-          {/* Newsletter */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Newsletter</h4>
             <p className="text-gray-400 mb-4">
