@@ -214,7 +214,6 @@ const Dashboard = () => {
         </div>
       </div>
 
-      {/* Occupancy Chart (Placeholder) */}
       <div className="mt-8 bg-white rounded-lg shadow p-6">
         <h2 className="text-lg font-semibold text-gray-800 mb-4">Monthly Occupancy</h2>
         <div className="h-64 bg-gray-100 rounded flex items-center justify-center text-gray-400">
