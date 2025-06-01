@@ -32,7 +32,7 @@ const Info = () => {
     <section className='hidden lg:flex w-full bg-primary py-1'>
       <div className='container mx-auto px-4'>
         <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
-          {/* Contact Info - Stack on mobile */}
+          {/* Contact Info - Stack on mobile view */}
           <div className='flex flex-col sm:flex-row gap-4 sm:gap-6'>
             {contactInfo.map((item, index) => (
               <a 
