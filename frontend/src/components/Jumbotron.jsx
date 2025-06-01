@@ -1,6 +1,6 @@
 const Jumbotron = () => {
   return (
-    <section>
+    <section className="">
       
     </section>
   );
