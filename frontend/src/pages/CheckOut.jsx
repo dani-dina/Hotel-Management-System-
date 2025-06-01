@@ -36,7 +36,6 @@ const CheckoutPage = () => {
     setError(null);
     
     try {
-      // Validate form
       if (!formData.name || !formData.email || !formData.phone || !formData.address) {
         throw new Error('Please fill in all required fields');
       }
