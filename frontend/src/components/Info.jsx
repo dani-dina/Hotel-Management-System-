@@ -51,7 +51,7 @@ const Info = () => {
             ))}
           </div>
 
-          {/* Social Media - Center on mobile */}
+          {/* Social Media  Center on mobile */}
           <div className='flex items-center justify-center md:justify-end gap-3 sm:gap-4'>
             {socialMedia.map((social, index) => (
               <a
