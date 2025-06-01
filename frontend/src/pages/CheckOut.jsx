@@ -125,7 +125,6 @@ const CheckoutPage = () => {
             </div>
           </div>
           
-          {/* Checkout Form */}
           <div className="bg-white rounded-lg shadow-md p-6">
             <h2 className="text-xl font-bold text-gray-900 mb-4">Delivery Information</h2>
             
