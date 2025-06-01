@@ -9,7 +9,7 @@ const OrderPage = () => {
   const [selectedOrder, setSelectedOrder] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Mock data fetch - replace with actual API call
+  //data fetch 
   useEffect(() => {
     const fetchOrders = async () => {
       try {
