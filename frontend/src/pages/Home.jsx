@@ -4,7 +4,8 @@ import waiter from '../assets/waiter.jpg';
 import Rooms from '../components/Rooms';
 import SupportIcon from '../components/Support';
 import Button from '../components/Button';
-import banner from '../assets/b1.jpg'
+import banner from '../assets/b1.jpg';
+
 const Home = () => {
   return (
     <div className='w-full overflow-hidden'>
