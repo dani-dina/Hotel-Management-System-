@@ -196,7 +196,6 @@ const Reservations = () => {
           </div>
         </div>
 
-        {/* Filters */}
         <div className="p-4 border-b border-gray-200">
           <div className="flex flex-wrap items-center gap-4">
             <span className="text-sm font-medium">View:</span>
