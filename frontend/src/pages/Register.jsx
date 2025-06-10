@@ -203,8 +203,6 @@ const Register = () => {
                 <p className="mt-2 text-sm text-red-600">{errors.confirmPassword}</p>
               )}
             </div>
-
-            {/* Terms and Conditions */}
             <div className="flex items-center">
               <input
                 id="terms"
