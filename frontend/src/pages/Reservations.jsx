@@ -14,7 +14,6 @@ const Reservations = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [view, setView] = useState('month');
 
-  //  API call
   useEffect(() => {
     const fetchReservations = async () => {
       try {
