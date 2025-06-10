@@ -3,8 +3,6 @@ import { FaGoogle, FaFacebook, FaApple } from 'react-icons/fa';
 const Login = () => {
   return (
     <div className="h-[80vh] flex flex-col items-center justify-center p-4 bg-gray-100">
-      
-      {/* Login */}
       <div className="w-full max-w-xs bg-white shadow-2xl p-4 rounded-lg">
         <h1 className="text-2xl font-bold mb-6 text-center text-primary">Welcom back</h1>
         
