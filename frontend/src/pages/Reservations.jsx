@@ -266,8 +266,6 @@ const Reservations = () => {
             />
           </div>
         </div>
-
-        {/* Reservations List */}
         <div className="p-4 border-t border-gray-200">
           <h2 className="text-lg font-semibold mb-4">Reservations List</h2>
           <div className="overflow-x-auto">
