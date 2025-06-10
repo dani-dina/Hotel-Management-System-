@@ -18,7 +18,6 @@ const Reservations = () => {
     const fetchReservations = async () => {
       try {
         setTimeout(() => {
-          // Mock data
           const mockReservations = [
             {
               id: 'RES-2023-001',
