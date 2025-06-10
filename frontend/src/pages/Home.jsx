@@ -10,7 +10,6 @@ const Home = () => {
     <div className='w-full overflow-hidden'>
       <Hero />
       <SupportIcon/>
-      {/* About */}
       <section className='w-full py-8 px-4 sm:px-6 lg:px-8 flex items-center justify-center'>
         <div className='w-[90%]'>
           <div className='my-4'>
