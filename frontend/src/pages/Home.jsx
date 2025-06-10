@@ -1,10 +1,9 @@
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
-import waiter from '../assets/waiter.jpg';
 import Rooms from '../components/Rooms';
 import SupportIcon from '../components/Support';
 import Button from '../components/Button';
-import banner from '../assets/b2.jpg';
+import banner from '../assets/b3.jpg';
 
 const Home = () => {
   return (

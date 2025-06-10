@@ -232,6 +232,7 @@ const Rooms = () => {
                     </span>
                   ))}
                 </div>
+                
               </div>
             </div>
           ))}
