@@ -1,5 +1,5 @@
 import Jumbotron from '../components/Jumbotron';
-import banner from '../assets/b5.jpg';
+import banner from '../assets/b1.jpg';
 
 const Hero = () => {
   return (
@@ -16,8 +16,10 @@ const Hero = () => {
         </p>  
       </div>
         <div className='absolute bottom-[-5%] left-1/2 transform -translate-x-1/2 w-[85%] h-[25%] rounded-2xl shadow-md
-            bg-white'>
- 
+            bg-white flex items-center justify-center'>
+          <Jumbotron
+          
+          />
         </div>
       </div>
     </div>
