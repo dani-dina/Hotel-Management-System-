@@ -61,8 +61,6 @@ const Login = () => {
             <FaApple />
           </button>
         </div>
-        
-        {/* Sign up  */}
         <p className="mt-6 text-center text-sm text-gray-500">
           You have access to your Register for time
         </p>
