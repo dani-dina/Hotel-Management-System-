@@ -56,7 +56,6 @@ const Register = () => {
     e.preventDefault();
     if (validateForm()) {
       setIsSubmitting(true);
-      // Simulate API call
       setTimeout(() => {
         console.log('Registration data:', formData);
         setIsSubmitting(false);
