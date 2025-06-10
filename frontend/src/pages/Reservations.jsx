@@ -251,8 +251,6 @@ const Reservations = () => {
             </button>
           </div>
         </div>
-
-        {/* Calendar View */}
         <div className="p-4">
           <div className="h-[600px]">
             <Calendar
