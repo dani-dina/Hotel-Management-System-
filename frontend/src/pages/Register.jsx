@@ -60,7 +60,6 @@ const Register = () => {
       setTimeout(() => {
         console.log('Registration data:', formData);
         setIsSubmitting(false);
-        // Redirect or show success message
       }, 1500);
     }
   };
