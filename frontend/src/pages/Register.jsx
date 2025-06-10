@@ -167,8 +167,6 @@ const Register = () => {
                 <p className="mt-2 text-sm text-red-600">{errors.password}</p>
               )}
             </div>
-
-            {/* Confirm Password Field */}
             <div>
               <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">
                 Confirm Password
