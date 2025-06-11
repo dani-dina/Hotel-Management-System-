@@ -7,7 +7,7 @@ const Jumbotron = () => {
         {
           jumbotronLinks.map((items) => (
             <a key={items.id}
-              className='ml-3 mb-0'
+              className='ml-3 font-poppins cursor-pointer'
             >{items.title}</a>
           ))
         }
