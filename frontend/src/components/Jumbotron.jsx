@@ -42,7 +42,10 @@ const Jumbotron = () => {
         <div className='h-full w-1/5 bg-gray-500'>
 
         </div>
-        <div className='h-full w-1/5 flex items-center justify-center'>
+        <div className='h-full w-1/5 bg-gray-500'>
+
+        </div>
+        <div className='h-full w-1/5 flex items-center justify-end'>
           <Button
             title={'Search'}
             className='w-3/5 bg-primary text-white py-3 hover:bg-primary-dark transition-colors'
