@@ -26,3 +26,22 @@ export const navigations = [
     }
 
 ];
+
+export const jumbotronLinks = [
+    {
+        id : '0',
+        title : 'Locations'
+    },
+        {
+        id : '2',
+        title : 'Rooms'
+    },
+        {
+        id : '3',
+        title : 'Support'
+    },
+        {
+        id : '4',
+        title : 'Books'
+    },
+];
