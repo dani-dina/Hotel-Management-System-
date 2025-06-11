@@ -12,9 +12,6 @@ const Jumbotron = () => {
           ))
         }
       </div>
-      <div className='w-full h-1/3 bg-blue-50'>
-
-      </div>
       <div className='w-full h-1/3 bg-yellow-200'>
 
       </div>
