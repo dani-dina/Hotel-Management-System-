@@ -1,4 +1,5 @@
 import { jumbotronLinks } from '../constants';
+import Button from './Button';
 
 const Jumbotron = () => {
   return (
@@ -12,8 +13,22 @@ const Jumbotron = () => {
           ))
         }
       </div>
-      <div className='w-full h-1/3 bg-yellow-200'>
+      <div className='w-full h-3/4 flex items-center justify-around'>
+        <div className='h-full w-1/5 bg-gray-500'>
+          
+        </div>
+        <div className='h-full w-1/5 bg-gray-500'>
 
+        </div>
+        <div className='h-full w-1/5 bg-gray-500'>
+
+        </div>
+        <div className='h-full w-1/5 bg-gray-500 flex items-center justify-center'>
+          <Button
+            title={'Search'}
+            className='w-full bg-primary text-white py-3 hover:bg-primary-dark transition-colors'
+          />
+        </div>
       </div>
     </section>
   );

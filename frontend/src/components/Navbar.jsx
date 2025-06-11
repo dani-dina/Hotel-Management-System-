@@ -101,7 +101,8 @@ const Navbar = () => {
                   ))}
                 </nav>
                 <Link to='/sign-up' className='block w-full'>
-                  <Button className='w-full bg-primary text-white py-3 hover:bg-primary-dark transition-colors' title='Join us' />
+                  <Button className='w-full bg-primary text-white py-3 hover:bg-primary-dark transition-colors' 
+                          title='Join us' />
                 </Link>
               </div>
             )}
