@@ -1,7 +1,12 @@
 import { jumbotronLinks } from '../constants';
+import { countries } from '../constants';
+import { useState } from 'react';
 import Button from './Button';
 
 const Jumbotron = () => {
+
+  const [selected, setSelected] = useState('');
+
   return (
     <section className='w-[95%] h-[90%] flex flex-col items-center justify-between'>
       <div className='w-full h-1/3'>
@@ -23,10 +28,10 @@ const Jumbotron = () => {
         <div className='h-full w-1/5 bg-gray-500'>
 
         </div>
-        <div className='h-full w-1/5 bg-gray-500 flex items-center justify-center'>
+        <div className='h-full w-1/5 flex items-center justify-center'>
           <Button
             title={'Search'}
-            className='w-full bg-primary text-white py-3 hover:bg-primary-dark transition-colors'
+            className='w-3/5 bg-primary text-white py-3 hover:bg-primary-dark transition-colors'
           />
         </div>
       </div>

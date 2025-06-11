@@ -45,3 +45,16 @@ export const jumbotronLinks = [
         title : 'Books'
     },
 ];
+
+export const countries = [
+  "United States",
+  "Canada",
+  "United Kingdom",
+  "Germany",
+  "France",
+  "India",
+  "Japan",
+  "Australia",
+  "Brazil",
+  "South Africa"
+];
