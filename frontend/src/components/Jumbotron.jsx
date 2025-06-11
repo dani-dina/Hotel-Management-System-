@@ -2,11 +2,10 @@ import { jumbotronLinks } from '../constants';
 import { countries } from '../constants';
 import { useState } from 'react';
 import Button from './Button';
-
+import DatePickerComponent from './Calendar';
 const Jumbotron = () => {
 
   const [selected, setSelected] = useState('');
-
   return (
     <section className='w-[95%] h-[90%] flex flex-col items-center justify-between'>
       <div className='w-full h-1/3'>
@@ -34,13 +33,13 @@ const Jumbotron = () => {
               </option>
             ))}
           </select>
-    </div>
+      </div>
         </div>
-        <div className='h-full w-1/5 bg-gray-500'>
-
+        <div className='h-full w-1/5'>
+          <DatePickerComponent />
         </div>
-        <div className='h-full w-1/5 bg-gray-500'>
-
+        <div className='h-full w-1/5'>
+          <DatePickerComponent />
         </div>
         <div className='h-full w-1/5 bg-gray-500'>
 
