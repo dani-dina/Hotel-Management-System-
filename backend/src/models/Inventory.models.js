@@ -7,7 +7,7 @@ const inventorySchema = new mongoose.Schema({
         type: String, 
         enum: ['Food', 'Drink', 'Cleaning Supply', 'Linen', 'Furniture', 'Electronics', 'Other'], 
         required: true 
-    }, // Category of item
+    },
     quantity: { type: Number, required: true }, // Current stock level
     unit: { 
         type: String, 
