@@ -3,7 +3,6 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import connectDB from './src/config/database.config.js';
 
-// Import routes
 import userRoutes from './src/routes/user.routes.js';
 import serviceRoutes from './src/routes/service.routes.js';
 import roomRoutes from './src/routes/room.routes.js';
