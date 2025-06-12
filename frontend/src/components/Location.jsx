@@ -16,7 +16,6 @@ const Location = () => {
     ]
   };
 
-  // Map embed URL (using Google Maps as example)
   const mapEmbedUrl = `https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=${hotelLocation.coordinates.lat},${hotelLocation.coordinates.lng}`;
 
   return (
