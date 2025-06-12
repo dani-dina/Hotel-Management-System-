@@ -1,6 +1,5 @@
 
 export const HTTP_STATUS = {
-  // 2xx Success
   OK: {
     code: 200,
     message: 'OK',
