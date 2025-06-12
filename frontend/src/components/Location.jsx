@@ -41,8 +41,7 @@ const Location = () => {
             allowFullScreen
           ></iframe>
         </div>
-
-        {/* Contact Information */}
+        
         <div className="bg-white rounded-xl shadow-lg p-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-6">Contact Information</h2>
           
