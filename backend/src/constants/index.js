@@ -20,8 +20,6 @@ export const HTTP_STATUS = {
     message: 'No Content',
     description: 'Request succeeded but no content to return.'
   },
-
-  // 3xx Redirection
   MOVED_PERMANENTLY: {
     code: 301,
     message: 'Moved Permanently',
