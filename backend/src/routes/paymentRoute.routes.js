@@ -33,7 +33,6 @@ router.post('/create-payment-intent', async (req, res) => {
   }
 });
 
-// Handle Stripe webhook for completed payments
 router.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   const sig = req.headers['stripe-signature'];
   const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
