@@ -28,7 +28,6 @@ export default function CheckoutForm() {
 
       const { clientSecret } = await response.json();
 
-      // Confirm the payment
       const { error: stripeError, paymentIntent } = await stripe.confirmCardPayment(
         clientSecret,
         {
