@@ -18,7 +18,7 @@ const inventorySchema = new mongoose.Schema({
     expiryDate: { type: Date, required: false },
     supplier: { type: String, required: false }, 
     purchasePrice: { type: Number, required: true }, // Cost per unit
-    sellingPrice: { type: Number, required: false }, // Selling price if applicable
+    sellingPrice: { type: Number, required: false },
     restockLevel: { type: Number, required: true }, 
     lastRestockDate: { type: Date, default: Date.now },
     status: { 
