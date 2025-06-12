@@ -27,7 +27,6 @@ router.post('/create-paypal-order', async (req, res) => {
   }
 });
 
-// Capture PayPal payment
 router.post('/capture-paypal-order', async (req, res) => {
   try {
     const { orderID } = req.body;
