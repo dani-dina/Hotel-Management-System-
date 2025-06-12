@@ -17,7 +17,6 @@ export default function CheckoutForm() {
     }
 
     try {
-      // Create payment intent on your servers
       const response = await fetch('/api/payments/create-payment-intent', {
         method: 'POST',
         headers: {
