@@ -33,7 +33,6 @@ userAccountSchema.pre('save', async function (next) {
     }
 });
 
-// Hash password before updating a user if the password is changed
 userAccountSchema.pre('findOneAndUpdate', async function (next) {
     const update = this.getUpdate();
     if (update.password) {
