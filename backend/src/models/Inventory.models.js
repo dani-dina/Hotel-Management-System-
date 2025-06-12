@@ -20,7 +20,7 @@ const inventorySchema = new mongoose.Schema({
     purchasePrice: { type: Number, required: true }, // Cost per unit
     sellingPrice: { type: Number, required: false }, // Selling price if applicable
     restockLevel: { type: Number, required: true }, // Minimum quantity before restocking
-    lastRestockDate: { type: Date, default: Date.now }, // Date when last restocked
+    lastRestockDate: { type: Date, default: Date.now },
     status: { 
         type: String, 
         enum: ['In Stock', 'Low Stock', 'Out of Stock'], 
