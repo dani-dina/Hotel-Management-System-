@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const inventorySchema = new mongoose.Schema({
     itemId: { type: String, required: true, unique: true },
-    itemName: { type: String, required: true }, // Name of the item
+    itemName: { type: String, required: true },
     category: { 
         type: String, 
         enum: ['Food', 'Drink', 'Cleaning Supply', 'Linen', 'Furniture', 'Electronics', 'Other'], 
