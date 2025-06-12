@@ -35,8 +35,6 @@ export const HTTP_STATUS = {
     message: 'Not Modified',
     description: 'Resource not modified since last request.'
   },
-
-  // 4xx Client Errors
   BAD_REQUEST: {
     code: 400,
     message: 'Bad Request',
