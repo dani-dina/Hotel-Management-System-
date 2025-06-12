@@ -26,8 +26,6 @@ const Location = () => {
         <h1 className="text-4xl font-bold text-gray-800 mb-4">Our Location</h1>
         <p className="text-xl text-gray-600">Find your way to the Grand Horizon Hotel</p>
       </div>
-
-      {/* Main Content Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div className="rounded-xl overflow-hidden shadow-lg h-96">
           <iframe
