@@ -1,4 +1,4 @@
-// routes/paypalRoutes.js
+
 const express = require('express');
 const router = express.Router();
 const paypal = require('@paypal/checkout-server-sdk');
