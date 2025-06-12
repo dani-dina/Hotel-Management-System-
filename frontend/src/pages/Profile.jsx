@@ -12,7 +12,6 @@ const ProfilePage = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        // Simulate API call
         setTimeout(() => {
           const mockUser = {
             accountId: accountId,
