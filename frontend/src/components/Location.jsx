@@ -1,7 +1,7 @@
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaCar, FaBus, FaSubway, FaPlane } from 'react-icons/fa';
 
 const Location = () => {
-  // Sample hotel location data
+  // hotel location data
   const hotelLocation = {
     name: "Grand Horizon Hotel",
     address: "123 Luxury Avenue, Downtown, Metropolis 10001",
