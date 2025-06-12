@@ -96,7 +96,6 @@ export const HTTP_STATUS = {
     description: 'Upstream server failed to respond in time.'
   },
 
-  // Utility Methods
   isSuccess: function(statusCode) {
     return statusCode >= 200 && statusCode < 300;
   },
