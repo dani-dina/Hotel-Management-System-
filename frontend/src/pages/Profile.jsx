@@ -14,7 +14,6 @@ const ProfilePage = () => {
       try {
         // Simulate API call
         setTimeout(() => {
-          // Mock data based on your schema
           const mockUser = {
             accountId: accountId,
             email: 'user@example.com',
