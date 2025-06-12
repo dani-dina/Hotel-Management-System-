@@ -125,7 +125,6 @@ function App() {
             </ProtectedRoute>
           } />
           
-          {/* 404 */}
           <Route path='*' element={<NotFound />}/>
         </Routes>
       </main>
