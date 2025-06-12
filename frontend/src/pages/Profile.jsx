@@ -24,7 +24,6 @@ const ProfilePage = () => {
             createdAt: new Date('2023-01-15'),
             lastLogin: new Date(),
             linkedProfile: {
-              // Different profile data based on role
               ...(Math.random() > 0.5 ? {
                 name: 'John Doe',
                 nationality: 'United States',
