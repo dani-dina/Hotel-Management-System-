@@ -25,7 +25,7 @@ const ProfilePage = () => {
             lastLogin: new Date(),
             linkedProfile: {
               // Different profile data based on role
-              ...(Math.random() > 0.5 ? { // Randomly choose between Guest/Admin/Employee for demo
+              ...(Math.random() > 0.5 ? {
                 name: 'John Doe',
                 nationality: 'United States',
                 passportNumber: 'AB1234567',
