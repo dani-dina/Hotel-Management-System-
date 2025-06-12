@@ -3,7 +3,6 @@ const express = require('express');
 const router = express.Router();
 const stripe = require('../config/stripe');
 
-// Get Stripe publishable key
 router.get('/config', (req, res) => {
   res.send({
     publishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
