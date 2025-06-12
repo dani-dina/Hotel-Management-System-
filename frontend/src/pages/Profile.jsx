@@ -7,8 +7,7 @@ const ProfilePage = () => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
-  // Mock data fetch - replace with actual API call
+  
   useEffect(() => {
     const fetchUserData = async () => {
       try {
