@@ -78,7 +78,6 @@ const Location = () => {
             </div>
           </div>
 
-          {/* Transportation Options */}
           <div className="mt-10">
             <h2 className="text-2xl font-bold text-gray-800 mb-6">Getting Here</h2>
             <div className="space-y-4">
