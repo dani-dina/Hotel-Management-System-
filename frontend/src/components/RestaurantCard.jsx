@@ -9,7 +9,6 @@ const Dining = () => {
       dressCode: "Smart Casual",
       image: "/images/restaurant-main.jpg"
     },
-    // More dining options
   ];
 
   return (
