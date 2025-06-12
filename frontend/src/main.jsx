@@ -10,7 +10,7 @@ import store from './store/store'; // Adjust path as needed
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter> {/* ← Wrap App for routing */}
+      <BrowserRouter> 
         <App />
       </BrowserRouter>
     </Provider>
