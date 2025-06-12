@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 const Loading = ({ type = 'spinner', color = 'primary', size = 'medium', fullScreen = true }) => {
   const [dots, setDots] = useState('');
 
-  // For dot animation
   useEffect(() => {
     if (type === 'dots') {
       const interval = setInterval(() => {
@@ -13,7 +12,6 @@ const Loading = ({ type = 'spinner', color = 'primary', size = 'medium', fullScr
     }
   }, [type]);
 
-  // Color variants
   const colorVariants = {
     primary: 'text-blue-600',
     secondary: 'text-gray-600',
@@ -24,14 +22,12 @@ const Loading = ({ type = 'spinner', color = 'primary', size = 'medium', fullScr
     dark: 'text-gray-800'
   };
 
-  // Size variant
   const sizeVariants = {
     small: 'h-6 w-6 border-2',
     medium: 'h-12 w-12 border-t-2 border-b-2',
     large: 'h-16 w-16 border-t-4 border-b-4'
   };
 
-  // Loading type
   const loadingTypes = {
     spinner: (
       <div className={`animate-spin rounded-full ${sizeVariants[size]} ${colorVariants[color]}`}></div>
