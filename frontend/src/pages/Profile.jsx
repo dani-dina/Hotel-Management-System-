@@ -315,8 +315,6 @@ const ProfilePage = () => {
             </div>
           </div>
         </div>
-
-        {/* Tabs */}
         <div className="border-b border-gray-200 dark:border-gray-700">
           <nav className="flex -mb-px">
             <button
