@@ -9,7 +9,6 @@ const OrderPage = () => {
   const [selectedOrder, setSelectedOrder] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  //data fetch 
   useEffect(() => {
     const fetchOrders = async () => {
       try {
