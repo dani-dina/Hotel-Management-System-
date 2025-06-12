@@ -21,7 +21,7 @@ const serviceSchema = new mongoose.Schema({
     },
     price: { type: Number, required: true },
     availability: { type: Boolean, default: true },
-    serviceDuration: { type: String, required: false }, // e.g., "30 mins", "1 hour"
+    serviceDuration: { type: String, required: false }, 
     serviceProvider: { type: String, required: false }, 
     createdAt: { type: Date, default: Date.now }
 }, { timestamps: true });
