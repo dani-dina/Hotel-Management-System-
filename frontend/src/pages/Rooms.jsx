@@ -10,6 +10,7 @@ import { BsCalendarCheck, BsCalendarX } from 'react-icons/bs';
 import { FiFilter, FiX } from 'react-icons/fi';
 
 const Rooms = () => {
+
   const [rooms, setRooms] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -22,6 +23,7 @@ const Rooms = () => {
     isSmokingAllowed: null,
     amenities: []
   });
+  
   const [showFilters, setShowFilters] = useState(false);
   const [sortOption, setSortOption] = useState('price-asc');
 
@@ -29,7 +31,7 @@ const Rooms = () => {
     const fetchRooms = async () => {
       try {
         const response = await axios.get('http://localhost:3000/api/rooms/rooms');
-        setRooms(response.data.message); // Note: your data is in the `message` array
+        setRooms(response.data.message); 
       } catch (err) {
         setError(err.message || 'Failed to fetch rooms');
       } finally {
