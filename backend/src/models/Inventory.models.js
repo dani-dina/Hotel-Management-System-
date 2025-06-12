@@ -15,7 +15,7 @@ const inventorySchema = new mongoose.Schema({
         required: true 
     },
     purchaseDate: { type: Date, required: true, default: Date.now },
-    expiryDate: { type: Date, required: false }, // Expiry date (for food & perishable items)
+    expiryDate: { type: Date, required: false },
     supplier: { type: String, required: false }, // Supplier name
     purchasePrice: { type: Number, required: true }, // Cost per unit
     sellingPrice: { type: Number, required: false }, // Selling price if applicable
