@@ -41,7 +41,6 @@ const Navbar = () => {
 
         {!isMinimalNavbar && (
           <>
-            {/* Desktop Navigations */}
             <nav className='hidden md:flex gap-6 lg:gap-8 items-center'>
               {navigations.map((item) => (
                 <Link
