@@ -7,7 +7,7 @@ const Location = () => {
     address: "123 Luxury Avenue, Downtown, Metropolis 10001",
     phone: "+1 (555) 123-4567",
     email: "info@grandhorizon.com",
-    coordinates: { lat: 40.7128, lng: -74.0060 }, // NYC coordinates as example
+    coordinates: { lat: 40.7128, lng: -74.0060 },
     transportation: [
       { type: "car", time: "15 min", details: "Free valet parking available" },
       { type: "bus", time: "25 min", details: "Bus #M5 stops directly in front" },
