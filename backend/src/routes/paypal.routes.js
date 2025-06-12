@@ -4,7 +4,6 @@ const router = express.Router();
 const paypal = require('@paypal/checkout-server-sdk');
 const paypalClient = require('../config/paypal');
 
-// Create PayPal order
 router.post('/create-paypal-order', async (req, res) => {
   try {
     const { amount, currency = 'USD' } = req.body;
