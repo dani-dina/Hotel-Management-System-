@@ -162,8 +162,6 @@ const Rooms = () => {
       {/* Filter Panel */}
       {showFilters && (
         <div className="bg-gray-50 p-6 rounded-lg mb-8 shadow-md">
-          {/* Your full filter UI from your code goes here (bedType, view, price range, etc.) */}
-          {/* ... */}
         </div>
       )}
 
