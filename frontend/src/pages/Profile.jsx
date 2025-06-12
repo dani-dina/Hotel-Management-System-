@@ -19,7 +19,7 @@ const ProfilePage = () => {
             accountId: accountId,
             email: 'user@example.com',
             phoneNumber: '+1234567890',
-            role: 'Guest', // Can be 'Guest', 'Admin', or 'Employee'
+            role: 'Guest',
             isActive: true,
             createdAt: new Date('2023-01-15'),
             lastLogin: new Date(),
