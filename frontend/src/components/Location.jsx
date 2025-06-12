@@ -29,7 +29,6 @@ const Location = () => {
 
       {/* Main Content Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        {/* Map Section */}
         <div className="rounded-xl overflow-hidden shadow-lg h-96">
           <iframe
             title="Hotel Location Map"
@@ -41,7 +40,7 @@ const Location = () => {
             allowFullScreen
           ></iframe>
         </div>
-        
+
         <div className="bg-white rounded-xl shadow-lg p-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-6">Contact Information</h2>
           
