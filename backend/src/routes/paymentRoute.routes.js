@@ -9,7 +9,6 @@ router.get('/config', (req, res) => {
   });
 });
 
-// Create payment intent
 router.post('/create-payment-intent', async (req, res) => {
   try {
     const { amount, currency = 'usd' } = req.body;
