@@ -14,7 +14,7 @@ const inventorySchema = new mongoose.Schema({
         enum: ['kg', 'liters', 'units', 'packs', 'bottles', 'boxes'], 
         required: true 
     },
-    purchaseDate: { type: Date, required: true, default: Date.now }, // Date of purchase
+    purchaseDate: { type: Date, required: true, default: Date.now },
     expiryDate: { type: Date, required: false }, // Expiry date (for food & perishable items)
     supplier: { type: String, required: false }, // Supplier name
     purchasePrice: { type: Number, required: true }, // Cost per unit
