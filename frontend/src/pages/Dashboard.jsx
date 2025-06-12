@@ -17,7 +17,6 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // API calls
         setTimeout(() => {
           setStats({
             totalGuests: 142,
