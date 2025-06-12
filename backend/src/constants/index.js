@@ -115,7 +115,6 @@ export const HTTP_STATUS = {
   }
 };
 
-// Helper function to check if a value is an HTTP status object
 HTTP_STATUS.isStatusObject = function(value) {
   return value && typeof value === 'object' && 'code' in value && 'message' in value && 'description' in value;
 };
