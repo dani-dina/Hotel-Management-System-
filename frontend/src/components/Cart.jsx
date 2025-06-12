@@ -19,7 +19,6 @@ const CartPage = () => {
     if (user) {
       dispatch(checkout(items));
     } else {
-      // Redirect to login 
       alert('Please login to complete your order');
     }
   };
