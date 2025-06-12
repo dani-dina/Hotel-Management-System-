@@ -11,7 +11,7 @@ const reservationSchema = new mongoose.Schema({
     reservationDetails: { 
         type: mongoose.Schema.Types.ObjectId, 
         required: true, 
-        refPath: 'reservationType' // Dynamically references Room, Table, or Service
+        refPath: 'reservationType'
     },
     checkInDate: { type: Date, required: function() { return this.reservationType === 'Room'; } },  
     checkOutDate: { type: Date, required: function() { return this.reservationType === 'Room'; } },  
