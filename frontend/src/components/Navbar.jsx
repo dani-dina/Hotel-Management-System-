@@ -66,8 +66,6 @@ const Navbar = () => {
             >
               {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
             </button>
-
-            {/* Desktop Button */}
             <div className='hidden md:flex md:gap-2'>
               <Link to='/auth/login'>
                 <Button className='bg-gray-300 text-white  py-2 hover:bg-primary-dark transition-colors ml-2 '
