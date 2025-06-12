@@ -165,7 +165,6 @@ const Rooms = () => {
         </div>
       )}
 
-      {/* Rooms Grid */}
       {filteredRooms.length === 0 ? (
         <div className="text-center py-12">
           <h3 className="text-xl font-medium">No rooms match your filters</h3>
