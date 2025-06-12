@@ -25,7 +25,7 @@ const inventorySchema = new mongoose.Schema({
         type: String, 
         enum: ['In Stock', 'Low Stock', 'Out of Stock'], 
         default: 'In Stock' 
-    }, // Status of item availability
+    },
     notes: { type: String, required: false } // Additional remarks
 },{timestamps : true}
 );
