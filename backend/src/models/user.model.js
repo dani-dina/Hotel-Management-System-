@@ -21,7 +21,6 @@ const userAccountSchema = new mongoose.Schema({
     lastLogin: { type: Date, default: null }  
 }, { timestamps: true });
 
-// Hash password before saving a new user or updating the password
 userAccountSchema.pre('save', async function (next) {
     if (!this.isModified('password')) return next(); 
     try {
