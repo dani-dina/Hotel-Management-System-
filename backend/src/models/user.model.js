@@ -14,7 +14,7 @@ const userAccountSchema = new mongoose.Schema({
     linkedProfile: { 
         type: mongoose.Schema.Types.ObjectId, 
         required: true, 
-        refPath: 'role' // Dynamically references 'Guest', 'Admin', or 'Employee'
+        refPath: 'role' 
     },
     isActive: { type: Boolean, default: true },  
     createdAt: { type: Date, default: Date.now },  
