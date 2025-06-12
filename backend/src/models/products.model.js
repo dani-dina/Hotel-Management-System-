@@ -21,7 +21,7 @@ const productSchema = new mongoose.Schema({
     stockQuantity: { type: Number, required: true, default: 0 },
     supplier: { type: String, required: false },
     image: { type: String, required: false },
-    expiryDate: { type: Date, required: false },  // For perishable items
+    expiryDate: { type: Date, required: false },  
     addedDate: { type: Date, default: Date.now },
     isAvailable: { type: Boolean, default: true },
 }, { timestamps: true });
