@@ -134,8 +134,6 @@ const Rooms = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold text-center mb-8">Our Rooms & Suites</h1>
-
-      {/* Filter Toggle and Sorting */}
       <div className="mb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <button
           onClick={() => setShowFilters(!showFilters)}
