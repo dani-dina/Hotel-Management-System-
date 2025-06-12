@@ -70,8 +70,6 @@ export const HTTP_STATUS = {
     message: 'Too Many Requests',
     description: 'User has sent too many requests in given time.'
   },
-
-  // 5xx Server Errors
   SERVER_ERROR: {
     code: 500,
     message: 'Internal Server Error',
