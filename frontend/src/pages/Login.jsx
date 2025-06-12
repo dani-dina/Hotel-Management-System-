@@ -45,7 +45,6 @@ const Login = () => {
           </div>
         </div>
         
-        {/* Social Login */}
         <div className="flex justify-center space-x-4">
           <button className="p-2 rounded-full border hover:bg-gray-100">
             <FaGoogle className="text-red-500" />
