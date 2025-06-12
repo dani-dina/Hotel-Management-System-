@@ -159,7 +159,6 @@ const Rooms = () => {
         </div>
       </div>
 
-      {/* Filter Panel */}
       {showFilters && (
         <div className="bg-gray-50 p-6 rounded-lg mb-8 shadow-md">
         </div>
