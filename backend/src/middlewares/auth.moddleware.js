@@ -12,18 +12,14 @@ const protectRoute = async (req, res, next) => {
         if (!token) {
             return res.status(HTTP_STATUS.UNAUTHORIZED).json({ message: "Unauthorized token!" });
         }
-
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
         let user = await User.findById(decoded.id).select("-password");
-
         if (!user) {
             user = await Employee.findById(decoded.id).select("-password");
         }
-
         if (!user) {
-            return res.status(HTTP_STATUS.UNAUTHORIZED).json({ message: "User not found!" });
+          return res.status(HTTP_STATUS.UNAUTHORIZED).json({ message: "User not found!" });
         }
-
         req.user = user;
         next();
     } catch (error) {
