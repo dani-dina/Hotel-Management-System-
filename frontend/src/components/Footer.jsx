@@ -5,12 +5,6 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   const location = useLocation();
   
-  // Define the paths where footer should be visible
-  const showFooter = ['/sign-in', '/register', '/404'].includes(location.pathname);
-
-  // Don't render footer if not on one of the specified pages
-  if (!showFooter) return null;
-
   return (
     <footer className="bg-gray-900 text-white pt-12 pb-6">
       <div className="container mx-auto px-4">

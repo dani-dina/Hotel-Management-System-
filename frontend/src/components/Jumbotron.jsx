@@ -19,6 +19,9 @@ const Jumbotron = () => {
       </div>
       <div className='w-full h-3/4 flex items-center justify-around'>
         <div className='h-full w-1/5 '>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+              Select a Date
+          </label>
           <div className="w-full max-w-sm mx-auto mt-8">
             <select
               id="country"

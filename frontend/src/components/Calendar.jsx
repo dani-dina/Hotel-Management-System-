@@ -7,11 +7,10 @@ const DatePickerComponent = () => {
   const [selectedDate, setSelectedDate] = useState(null);
 
   return (
-    <div className="  rounded-xl">
+    <div className="w-3/5 rounded-xl">
       <label className="block text-sm font-medium text-gray-700 mb-2">
         Select a Date
       </label>
-
       <DatePicker
         selected={selectedDate}
         onChange={(date) => setSelectedDate(date)}
