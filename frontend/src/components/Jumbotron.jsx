@@ -4,7 +4,7 @@ import DatePickerComponent from './Calendar';
 import CountrySelect from './CountrySelector';
 import PriceRangeSelector from './SelectPrice';
 const Jumbotron = () => {
-
+  const center = `flex justify-center`;
   return (
     <section className='w-[95%] h-[90%] flex flex-col items-center justify-between'>
       <div className='w-full h-1/3'>
@@ -18,21 +18,22 @@ const Jumbotron = () => {
       </div>
       <div className='w-full h-3/4 flex items-center justify-around'>
         <div className='h-full w-1/5'>
-          <CountrySelect
-          />
+          <PriceRangeSelector />
         </div>
-        <div className='h-full w-1/5'>
+        <div className={`h-full w-1/5 ${center}`} >
           <DatePickerComponent
             title={'Starting Date'}
           />
         </div>
-        <div className='h-full w-1/5'>
+        <div className={`h-full w-1/5 ${center}`}>
           <DatePickerComponent
             title={'Ending Date'}
           />
         </div>
-        <div className='h-full w-1/5 '>
-          <PriceRangeSelector />
+        <div className={`h-full w-1/5 ${center} `}>
+         <div className='w-4/5  flex justify-center'>
+          <CountrySelect />
+         </div>
         </div>
         <div className='h-full w-1/5 flex items-center justify-end'>
           <Button

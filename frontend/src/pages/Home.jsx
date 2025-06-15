@@ -4,6 +4,7 @@ import Rooms from '../components/Rooms';
 import SupportIcon from '../components/Support';
 import Button from '../components/Button';
 import banner from '../assets/b3.jpg';
+import StatsSection from '../components/StatsSection';
 
 const Home = () => {
   return (
@@ -60,7 +61,11 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <div className='w-full h-24 bg-primary'></div>
+      <div className='w-full h-24 bg-primary flex items-center justify-center'>
+        <div className='w-[90%] h-full flex items-center justify-between'>
+        <StatsSection />
+        </div>
+      </div>
       <Rooms />
     </div>
   );

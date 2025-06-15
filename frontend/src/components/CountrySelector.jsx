@@ -16,7 +16,7 @@ const CountrySelector = () => {
       >
         <option value="" disabled>Select a country</option>
           {countries.map((country) => (
-            <option key={country} value={country}>
+            <option key={country} value={country} className='border-0'>
               {country}
         </option>
           ))}
