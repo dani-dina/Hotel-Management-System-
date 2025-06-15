@@ -1,6 +1,5 @@
 import mongoose from 'mongoose';
 
-
 const drinkSchema = new mongoose.Schema({
     drinkId : {type : String , required : true, unique : true},
     name : {type : String , required : true},

@@ -76,6 +76,9 @@ function App() {
         <Routes>
           {/* Public routes */}
           <Route path='/' element={<Home />} />
+          <Route path='/dash' element={<Dashboard />} />
+          <Route path='/res' element={<Reservations />} />
+          <Route path='/or' element={<OrderPage />} />
           <Route path='/contact-us' element={<ContactUs />} />
           <Route path='/rooms' element={<Rooms />} />
           <Route path='/reservations' element={<Reservations/>} />

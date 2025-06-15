@@ -61,7 +61,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <div className='w-full h-24 bg-primary flex items-center justify-center'>
+      <div className='w-full h-30 bg-primary flex items-center justify-center'>
         <div className='w-[90%] h-full flex items-center justify-between'>
         <StatsSection />
         </div>

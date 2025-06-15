@@ -111,7 +111,7 @@ const Reservations = () => {
     switch (status) {
       case 'confirmed': return <span className={`${baseClasses} bg-green-100 text-green-800`}>Confirmed</span>;
       case 'pending': return <span className={`${baseClasses} bg-yellow-100 text-yellow-800`}>Pending</span>;
-      case 'checked-in': return <span className={`${baseClasses} bg-blue-100 text-blue-800`}>Checked In</span>;
+      case 'checked-in': return <span className={`${baseClasses} bg-blue-100 text-primary`}>Checked In</span>;
       case 'checked-out': return <span className={`${baseClasses} bg-purple-100 text-purple-800`}>Checked Out</span>;
       case 'cancelled': return <span className={`${baseClasses} bg-red-100 text-red-800`}>Cancelled</span>;
       default: return <span className={`${baseClasses} bg-gray-100 text-gray-800`}>Unknown</span>;
@@ -179,7 +179,7 @@ const Reservations = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
       <div className="bg-white rounded-lg shadow-md overflow-hidden">
-        <div className="bg-gradient-to-r from-blue-600 to-blue-800 p-6 text-white">
+        <div className="bg-primary p-6 text-white">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between">
             <div>
               <h1 className="text-2xl font-bold">Reservations Management</h1>
@@ -187,7 +187,7 @@ const Reservations = () => {
             </div>
             <div className="mt-4 md:mt-0">
               <button 
-                className="px-4 py-2 bg-white text-blue-600 rounded-md hover:bg-blue-50"
+                className="px-4 py-2 bg-white text-primary rounded-md hover:bg-blue-50"
                 onClick={() => setIsModalOpen(true)}
               >
                 Create New Reservation
@@ -525,7 +525,7 @@ const Reservations = () => {
                   </button>
                   <button 
                     type="submit"
-                    className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+                    className="px-4 py-2 bg-primary text-white rounded-md hover:bg-blue-700"
                   >
                     Create Reservation
                   </button>
