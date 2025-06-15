@@ -1,4 +1,4 @@
-import Navbar from '../components/Navbar';
+import HotelBranchCard from '../components/HotelBranch';
 import Hero from '../components/Hero';
 import Rooms from '../components/Rooms';
 import SupportIcon from '../components/Support';
@@ -63,7 +63,12 @@ const Home = () => {
       </section>
       <div className='w-full h-30 bg-primary flex items-center justify-center'>
         <div className='w-[90%] h-full flex items-center justify-between'>
-        <StatsSection />
+          <StatsSection />
+        </div>
+      </div>
+      <div className='w-full flex items-center justify-center'>
+        <div className='w-[90%] flex items-center justify-between'>
+          <HotelBranchCard/>
         </div>
       </div>
       <Rooms />
