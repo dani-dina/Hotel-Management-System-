@@ -13,8 +13,6 @@ const HotelBranchCard = ({ branch }) => {
           <h3 className="text-lg font-bold text-white">{branch.name}</h3>
         </div>
       </div>
-      
-      {/* Branch Details */}
       <div className="p-4">
         <div className="flex items-center mb-1">
           <svg className="w-4 h-4 text-yellow-400 mr-1" fill="currentColor" viewBox="0 0 20 20">
