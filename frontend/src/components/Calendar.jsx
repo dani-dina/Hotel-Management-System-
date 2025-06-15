@@ -3,13 +3,13 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 
-const DatePickerComponent = () => {
+const DatePickerComponent = ({title}) => {
   const [selectedDate, setSelectedDate] = useState(null);
 
   return (
     <div className="w-3/4 max-w-sm mx-auto ">
       <label className="block text-sm font-medium text-gray-700 mb-2">
-        Select a Date
+        {title}
       </label>
       <DatePicker
         selected={selectedDate}

@@ -2,6 +2,7 @@ import { jumbotronLinks } from '../constants';
 import Button from './Button';
 import DatePickerComponent from './Calendar';
 import CountrySelect from './CountrySelector';
+import PriceRangeSelector from './SelectPrice';
 const Jumbotron = () => {
 
   return (
@@ -10,23 +11,28 @@ const Jumbotron = () => {
         {
           jumbotronLinks.map((items) => (
             <a key={items.id}
-              className='ml-3 font-poppins cursor-pointer text-primary'
+              className='mr-4 font-poppins cursor-pointer text-primary font-semibold'
             >{items.title}</a>
           ))
         }
       </div>
       <div className='w-full h-3/4 flex items-center justify-around'>
         <div className='h-full w-1/5'>
-          <CountrySelect />
+          <CountrySelect
+          />
         </div>
         <div className='h-full w-1/5'>
-          <DatePickerComponent />
+          <DatePickerComponent
+            title={'Starting Date'}
+          />
         </div>
         <div className='h-full w-1/5'>
-          <DatePickerComponent />
+          <DatePickerComponent
+            title={'Ending Date'}
+          />
         </div>
-        <div className='h-full w-1/5 bg-gray-500'>
-
+        <div className='h-full w-1/5 '>
+          <PriceRangeSelector />
         </div>
         <div className='h-full w-1/5 flex items-center justify-end'>
           <Button
