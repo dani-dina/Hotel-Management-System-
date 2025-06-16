@@ -70,6 +70,9 @@ const Home = () => {
         <div className='w-[90%] flex items-center justify-between'>
           <HotelBranchCard/>
         </div>
+        <div>
+          <Testimonials />
+        </div>
       </div>
       <Rooms />
     </div>
