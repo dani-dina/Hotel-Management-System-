@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import NotFound from './pages/404';
 import Navbar from './components/Navbar';
-import Info from './components/Info';
+//import ContactUs from './pages/Contact';
 import Footer from './components/Footer';
 import Register from './pages/Register';
 import Rooms from './pages/Rooms';
@@ -75,10 +75,12 @@ function App() {
       <main className='flex-grow'>
         <Routes>
           {/* Public routes */}
+          ContactUs
           <Route path='/' element={<Home />} />
           <Route path='/dash' element={<Dashboard />} />
           <Route path='/res' element={<Reservations />} />
-          <Route path='/or' element={<OrderPage />} />
+          {/* <Route path='/contact-us' element={<ContactUs />} /> */}
+          <Route path='/' element={<OrderPage />} />
           <Route path='/contact-us' element={<ContactUs />} />
           <Route path='/rooms' element={<Rooms />} />
           <Route path='/reservations' element={<Reservations/>} />

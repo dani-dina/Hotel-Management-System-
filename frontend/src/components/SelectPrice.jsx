@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
 
 const PriceRangeSelector = ({ min = 0, max = 5000, step = 50 }) => {
-  const [minVal, setMinVal] = useState(500);
-  const [maxVal, setMaxVal] = useState(3000);
+  const [minVal, setMinVal] = useState(0);
+  const [maxVal, setMaxVal] = useState(5000);
   const range = useRef(null);
 
   // Update track fill width
