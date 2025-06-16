@@ -5,6 +5,7 @@ import SupportIcon from '../components/Support';
 import Button from '../components/Button';
 import banner from '../assets/b3.jpg';
 import StatsSection from '../components/StatsSection';
+import Testimonials from '../components/Testimonial';
 
 const Home = () => {
   return (
@@ -70,9 +71,9 @@ const Home = () => {
         <div className='w-[90%] flex items-center justify-between'>
           <HotelBranchCard/>
         </div>
-        <div>
-          <Testimonials />
-        </div>
+      </div>
+      <div>
+        <Testimonials />
       </div>
       <Rooms />
     </div>
