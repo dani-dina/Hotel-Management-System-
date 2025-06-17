@@ -70,7 +70,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="w-full py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-2">What Our Guests Say</h2>
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
@@ -119,7 +119,7 @@ const Testimonials = () => {
             className="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 bg-white p-2 rounded-full shadow-md hover:bg-blue-50 transition-colors"
             aria-label="Previous testimonial"
           >
-            <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
@@ -128,7 +128,7 @@ const Testimonials = () => {
             className="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 bg-white p-2 rounded-full shadow-md hover:bg-blue-50 transition-colors"
             aria-label="Next testimonial"
           >
-            <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 primary " fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
@@ -140,7 +140,7 @@ const Testimonials = () => {
             <button
               key={index}
               onClick={() => goToTestimonial(index)}
-              className={`w-3 h-3 mx-1 rounded-full ${index === currentIndex ? 'bg-blue-600' : 'bg-gray-300'}`}
+              className={`w-3 h-3 mx-1 rounded-full ${index === currentIndex ? 'bg-primary' : 'bg-gray-300'}`}
               aria-label={`Go to testimonial ${index + 1}`}
             />
           ))}
