@@ -7,6 +7,8 @@ import banner from '../assets/b3.jpg';
 import StatsSection from '../components/StatsSection';
 import Testimonials from '../components/Testimonial';
 import EnjoyVacation from '../components/EnjoyVacation';
+import AmenitiesSection from '../components/AmenitiesSection';
+
 const Home = () => {
   return (
     <div className='w-full overflow-hidden'>
@@ -74,6 +76,9 @@ const Home = () => {
       </div>
       <div>
         <EnjoyVacation />
+      </div>
+      <div>
+        <AmenitiesSection />
       </div>
       <div>
         <Testimonials />
