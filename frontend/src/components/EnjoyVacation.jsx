@@ -31,20 +31,20 @@ const EnjoyVacation = () => {
   };
 
   return (
-    <section className="relative py-20 bg-primary overflow-hidden">
+    <section className="relative py-20 bg-gradient-to-br from-[#0AADD2] to-[#0885a8] overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-full opacity-10">
         <div className="absolute top-20 left-10 w-40 h-40 bg-white rounded-full"></div>
-        <div className="absolute bottom-10 right-20 w-60 h-60 bg-yellow-400 rounded-full"></div>
-        <div className="absolute top-1/2 right-1/4 w-32 h-32 bg-pink-500 rounded-full"></div>
+        <div className="absolute bottom-10 right-20 w-60 h-60 bg-[#FFD166] rounded-full"></div>
+        <div className="absolute top-1/2 right-1/4 w-32 h-32 bg-[#EF476F] rounded-full"></div>
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            <span className="text-yellow-400">Enjoy</span> Your Dream Vacation With Us
+            <span className="text-[#FFD166]">Enjoy</span> Your Dream Vacation With Us
           </h2>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="text-xl text-[#c4f1ff] max-w-3xl mx-auto">
             Whether you seek relaxation, adventure, or quality family time, our resort offers unparalleled experiences tailored to your desires.
           </p>
         </div>
@@ -61,7 +61,7 @@ const EnjoyVacation = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
               <div className="absolute bottom-6 left-6">
                 <h3 className="text-2xl font-bold text-white capitalize">{activeTab} Experience</h3>
-                <button className="mt-4 px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                <button className="mt-4 px-6 py-3 bg-[#FFD166] hover:bg-[#ffdc8a] text-[#0A4466] font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                   Book Now
                 </button>
               </div>
@@ -78,7 +78,7 @@ const EnjoyVacation = () => {
                   onClick={() => setActiveTab(tab)}
                   className={`px-5 py-2 rounded-full font-medium transition-all duration-300 ${
                     activeTab === tab
-                      ? 'bg-yellow-400 text-blue-900 shadow-md'
+                      ? 'bg-[#FFD166] text-[#0A4466] shadow-md'
                       : 'bg-white/10 text-white hover:bg-white/20'
                   }`}
                 >
@@ -91,7 +91,7 @@ const EnjoyVacation = () => {
             <ul className="space-y-4 mb-10">
               {features[activeTab].map((feature, index) => (
                 <li key={index} className="flex items-start">
-                  <svg className="w-6 h-6 text-yellow-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-[#FFD166] mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span className="text-lg text-white">{feature}</span>
@@ -102,19 +102,19 @@ const EnjoyVacation = () => {
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg text-center">
-                <div className="text-3xl font-bold text-yellow-400">98%</div>
+                <div className="text-3xl font-bold text-[#FFD166]">98%</div>
                 <div className="text-white text-sm">Guest Satisfaction</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg text-center">
-                <div className="text-3xl font-bold text-yellow-400">24/7</div>
+                <div className="text-3xl font-bold text-[#FFD166]">24/7</div>
                 <div className="text-white text-sm">Concierge</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg text-center">
-                <div className="text-3xl font-bold text-yellow-400">5★</div>
+                <div className="text-3xl font-bold text-[#FFD166]">5★</div>
                 <div className="text-white text-sm">Luxury Rating</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg text-center">
-                <div className="text-3xl font-bold text-yellow-400">100+</div>
+                <div className="text-3xl font-bold text-[#FFD166]">100+</div>
                 <div className="text-white text-sm">Activities</div>
               </div>
             </div>
