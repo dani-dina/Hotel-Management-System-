@@ -6,7 +6,7 @@ import Button from '../components/Button';
 import banner from '../assets/b3.jpg';
 import StatsSection from '../components/StatsSection';
 import Testimonials from '../components/Testimonial';
-
+import EnjoyVacation from '../components/EnjoyVacation';
 const Home = () => {
   return (
     <div className='w-full overflow-hidden'>
@@ -71,6 +71,9 @@ const Home = () => {
         <div className='w-[90%] flex items-center justify-between'>
           <HotelBranchCard/>
         </div>
+      </div>
+      <div>
+        <EnjoyVacation />
       </div>
       <div>
         <Testimonials />
