@@ -77,3 +77,5 @@ const AmenitiesSection = () => {
     </section>
   );
 };
+
+export default AmenitiesSection;
