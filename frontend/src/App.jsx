@@ -23,7 +23,6 @@ function App() {
   const [userRole, setUserRole] = useState(null);
 
   useEffect(() => {
-    // Check authentication status (replace with your actual auth check)
     const checkAuth = async () => {
       try {
         const token = localStorage.getItem('authToken');
