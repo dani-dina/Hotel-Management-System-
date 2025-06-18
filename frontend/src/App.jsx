@@ -26,7 +26,6 @@ function App() {
     // Check authentication status (replace with your actual auth check)
     const checkAuth = async () => {
       try {
-        // Simulate checking token from localStorage
         const token = localStorage.getItem('authToken');
         const role = localStorage.getItem('userRole');
         
