@@ -332,8 +332,6 @@ const ProfilePage = () => {
             </button>
           </nav>
         </div>
-
-        {/* Content */}
         <div className="p-6">
           {renderTabContent()}
         </div>
