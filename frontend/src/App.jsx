@@ -4,7 +4,6 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import NotFound from './pages/404';
 import Navbar from './components/Navbar';
-//import ContactUs from './pages/Contact';
 import Footer from './components/Footer';
 import Register from './pages/Register';
 import Rooms from './pages/Rooms';
