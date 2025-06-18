@@ -72,7 +72,7 @@ const Navbar = () => {
                          span={'text-primary'} 
                 />
               </Link>
-              <Link to='/auth/sign-up'>
+              <Link to='/auth/register'>
                 <Button className='bg-primary text-white px-2 py-2 hover:bg-primary-dark transition-colors'
                         title='sign in'
                  />

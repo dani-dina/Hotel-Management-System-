@@ -104,7 +104,7 @@ const Testimonials = () => {
                         </div>
                       </div>
                     </div>
-                    <blockquote className="text-gray-700 italic pl-2 border-l-4 border-blue-500">
+                    <blockquote className="text-gray-700 italic pl-2 border-l-4 border-primary">
                       "{testimonial.content}"
                     </blockquote>
                   </div>
@@ -116,7 +116,8 @@ const Testimonials = () => {
           {/* Navigation Arrows */}
           <button 
             onClick={prevTestimonial}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 bg-white p-2 rounded-full shadow-md hover:bg-blue-50 transition-colors"
+            className="absolute left-[-10%] top-1/2 -translate-y-1/2 -ml-4 bg-white p-2 rounded-full shadow-md hover:bg-blue-50 
+                      transition-colors"
             aria-label="Previous testimonial"
           >
             <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -125,10 +126,10 @@ const Testimonials = () => {
           </button>
           <button 
             onClick={nextTestimonial}
-            className="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 bg-white p-2 rounded-full shadow-md hover:bg-blue-50 transition-colors"
+            className="absolute right-[-10%] top-1/2 -translate-y-1/2 -mr-4 bg-white p-2 rounded-full shadow-md hover:bg-blue-50 transition-colors"
             aria-label="Next testimonial"
           >
-            <svg className="w-6 h-6 primary " fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 primary text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>

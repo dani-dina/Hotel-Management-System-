@@ -23,7 +23,7 @@ const LocationSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row gap-12">
           <div className="lg:w-1/2">
@@ -137,3 +137,5 @@ const LocationSection = () => {
     </section>
   );
 };
+
+export default LocationSection;

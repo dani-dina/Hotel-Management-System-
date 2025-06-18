@@ -16,6 +16,7 @@ import Dashboard from './pages/Dashboard';
 import Loading from './components/Loading';
 import MenuPage from './components/Menu';
 import CartPage from './components/Cart';
+import Events from '../src/pages/Events';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -79,6 +80,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/dash' element={<Dashboard />} />
           <Route path='/res' element={<Reservations />} />
+          <Route path='/events' element={<Events />} />
           {/* <Route path='/contact-us' element={<ContactUs />} /> */}
           <Route path='/' element={<OrderPage />} />
           <Route path='/contact-us' element={<ContactUs />} />
@@ -96,7 +98,7 @@ function App() {
               />
             </PublicRoute>
           } />
-          <Route path='/auth/sign-in' element={
+          <Route path='/auth/register' element={
             <PublicRoute>
               <Register 
                 setIsAuthenticated={setIsAuthenticated} 

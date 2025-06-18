@@ -1,4 +1,8 @@
+import { useState } from 'react';
+
 const AmenitiesSection = () => {
+  const [showPackages, setShowPackages] = useState(false);
+  
   const amenities = [
     {
       icon: (
@@ -38,8 +42,50 @@ const AmenitiesSection = () => {
     }
   ];
 
+  const packages = [
+    {
+      id: 1,
+      name: "Romantic Getaway",
+      price: "$899",
+      duration: "3 nights",
+      description: "Perfect package for couples with champagne, roses, and private dinner",
+      includes: [
+        "Luxury suite with ocean view",
+        "Couples massage (60 mins)",
+        "Private beachfront dinner",
+        "Daily breakfast in bed"
+      ]
+    },
+    {
+      id: 2,
+      name: "Family Fun Pack",
+      price: "$1,299",
+      duration: "4 nights",
+      description: "Everything a family needs for a memorable vacation",
+      includes: [
+        "Connecting family rooms",
+        "Kids eat free at all restaurants",
+        "Daily kids club access",
+        "Family photo session"
+      ]
+    },
+    {
+      id: 3,
+      name: "Business Traveler",
+      price: "$749",
+      duration: "2 nights",
+      description: "Productivity-focused package for corporate guests",
+      includes: [
+        "Executive room with workspace",
+        "Express check-in/out",
+        "Daily laundry service",
+        "Airport transfers"
+      ]
+    }
+  ];
+
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -68,12 +114,75 @@ const AmenitiesSection = () => {
               <h3 className="text-2xl font-bold mb-2">Special Package Deal</h3>
               <p>Book 3 nights and get 1 night free plus spa credits!</p>
             </div>
-            <button className="bg-white text-[#0A4466] hover:bg-gray-100 font-semibold py-3 px-6 rounded-full shadow-md transition-all duration-300">
+            <button 
+              onClick={() => setShowPackages(true)}
+              className="bg-white text-[#0A4466] hover:bg-gray-100 font-semibold py-3 px-6 rounded-full shadow-md transition-all duration-300"
+            >
               View Packages
             </button>
           </div>
         </div>
       </div>
+
+      {/* Packages Modal */}
+      {showPackages && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="sticky top-0 bg-white p-4 border-b flex justify-between items-center">
+              <h3 className="text-2xl font-bold text-[#0A4466]">Our Special Packages</h3>
+              <button 
+                onClick={() => setShowPackages(false)}
+                className="text-gray-500 hover:text-gray-700"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            
+            <div className="p-6">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {packages.map((pkg) => (
+                  <div key={pkg.id} className="border rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <div className="bg-[#0AADD2] text-white p-4">
+                      <h4 className="text-xl font-bold">{pkg.name}</h4>
+                      <div className="flex justify-between items-center mt-2">
+                        <span className="text-2xl font-bold">{pkg.price}</span>
+                        <span className="bg-white/20 px-2 py-1 rounded-full text-sm">{pkg.duration}</span>
+                      </div>
+                    </div>
+                    <div className="p-4">
+                      <p className="text-gray-600 mb-4">{pkg.description}</p>
+                      <h5 className="font-semibold text-[#0A4466] mb-2">Includes:</h5>
+                      <ul className="space-y-2">
+                        {pkg.includes.map((item, index) => (
+                          <li key={index} className="flex items-start">
+                            <svg className="w-5 h-5 text-[#0AADD2] mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span className="text-gray-700">{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <button className="mt-4 w-full bg-[#0AADD2] hover:bg-[#0885a8] text-white py-2 px-4 rounded-lg transition-colors duration-300">
+                        Book This Package
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="mt-8 bg-gray-50 p-4 rounded-lg">
+                <h4 className="text-lg font-semibold text-[#0A4466] mb-2">Need help choosing?</h4>
+                <p className="text-gray-600 mb-4">Our concierge team can help you select the perfect package for your needs.</p>
+                <button className="bg-white border border-[#0AADD2] text-[#0AADD2] hover:bg-[#0AADD2] hover:text-white py-2 px-6 rounded-lg transition-colors duration-300">
+                  Contact Concierge
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

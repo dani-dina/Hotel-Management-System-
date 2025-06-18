@@ -96,7 +96,7 @@ const Events = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-blue-900 text-white p-4 md:p-8">
+    <div className="min-h-screen bg-white text-black p-4 md:p-8">
       {/* Header with advanced controls */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-6">
         <div>
@@ -111,7 +111,7 @@ const Events = () => {
             <input
               type="text"
               placeholder="Search events..."
-              className="bg-gray-800 border border-gray-700 rounded-full py-2 px-4 pr-10 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+              className=" rounded-full py-2 px-4 pr-10 focus:outline-none focus:ring-2 focus:ring-cyan-400"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
@@ -123,7 +123,7 @@ const Events = () => {
           </div>
           
           <select 
-            className="bg-gray-800 border border-gray-700 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+            className=" rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-cyan-400"
             value={filter}
             onChange={(e) => setFilter(e.target.value)}
           >
@@ -134,7 +134,7 @@ const Events = () => {
             <option value="meeting">Meetings</option>
           </select>
           
-          <div className="flex bg-gray-800 rounded-full p-1 border border-gray-700">
+          <div className="flex rounded-full p-1 border border-gray-700">
             <button 
               onClick={() => setView('list')} 
               className={`px-4 py-1 rounded-full transition-all ${view === 'list' ? 'bg-cyan-600 shadow-lg shadow-cyan-500/20' : 'hover:bg-gray-700'}`}
@@ -173,7 +173,7 @@ const Events = () => {
           
           <button 
             onClick={() => setIs3D(!is3D)}
-            className={`p-2 rounded-full ${is3D ? 'bg-purple-600' : 'bg-gray-800'} border border-gray-700 hover:bg-gray-700 transition-all`}
+            className={`p-2 rounded-full ${is3D ? 'bg-purple-600' : 'bg-gray-800'} border  hover:bg-gray-700 transition-all`}
             title="Toggle 3D Mode"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -203,7 +203,7 @@ const Events = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    className={`bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-cyan-400 transition-all ${is3D ? 'transform hover:-translate-y-2 hover:rotate-x-2' : ''}`}
+                    className={` rounded-xl overflow-hidden border border-gray-700 hover:border-cyan-400 transition-all ${is3D ? 'transform hover:-translate-y-2 hover:rotate-x-2' : ''}`}
                     onClick={() => setSelectedEvent(event)}
                   >
                     <div className="flex flex-col md:flex-row">
@@ -272,8 +272,8 @@ const Events = () => {
           )}
 
           {view === 'calendar' && (
-            <div className={`bg-gray-800 rounded-xl overflow-hidden border border-gray-700 ${is3D ? 'transform rotate-x-2' : ''}`}>
-              <div className="p-4 bg-gray-900 border-b border-gray-700 flex justify-between items-center">
+            <div className={` rounded-xl overflow-hidden border border-gray-700 ${is3D ? 'transform rotate-x-2' : ''}`}>
+              <div className="p-4  border-b border-gray-700 flex justify-between items-center">
                 <div className="flex items-center gap-4">
                   <h2 className="text-xl font-semibold">
                     {format(selectedDate, 'MMMM yyyy')}
@@ -353,7 +353,7 @@ const Events = () => {
                         {dayEvents.slice(0, 2).map(event => (
                           <div 
                             key={event.id}
-                            className="text-xs p-1.5 bg-gray-700 rounded truncate hover:bg-cyan-600 hover:text-white cursor-pointer transition-colors"
+                            className="text-xs p-1.5  rounded truncate hover:bg-cyan-600 hover:text-white cursor-pointer transition-colors"
                             onClick={(e) => {
                               e.stopPropagation();
                               setSelectedEvent(event);
@@ -376,7 +376,7 @@ const Events = () => {
           )}
 
           {view === 'map' && (
-            <div className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 h-96 relative">
+            <div className=" rounded-xl overflow-hidden border border-gray-700 h-96 relative">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-gray-900 flex items-center justify-center">
                 <div className="text-center">
                   <div className="text-6xl mb-4">🗺️</div>
@@ -391,11 +391,11 @@ const Events = () => {
 
       {/* Event Details Modal */}
       {selectedEvent && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50">
+        <div className="fixed inset-0 bg-opacity-75 flex items-center justify-center p-4 z-50">
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="bg-gray-800 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-gray-700"
+            className=" rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-gray-700"
           >
             <div className="relative">
               <img 
@@ -405,7 +405,7 @@ const Events = () => {
               />
               <button 
                 onClick={() => setSelectedEvent(null)}
-                className="absolute top-4 right-4 bg-gray-900 bg-opacity-70 rounded-full p-2 hover:bg-opacity-100 transition-all"
+                className="absolute top-4 right-4 bg-opacity-70 rounded-full p-2 hover:bg-opacity-100 transition-all"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -465,7 +465,7 @@ const Events = () => {
                     <h3 className="text-xl font-semibold mb-3">Tags</h3>
                     <div className="flex flex-wrap gap-2">
                       {selectedEvent.tags.map(tag => (
-                        <span key={tag} className="px-3 py-1.5 bg-gray-700 rounded-full text-sm">
+                        <span key={tag} className="px-3 py-1.5 rounded-full text-sm">
                           #{tag}
                         </span>
                       ))}
@@ -474,7 +474,7 @@ const Events = () => {
                 </div>
                 
                 <div className="space-y-6">
-                  <div className="bg-gray-700 p-4 rounded-lg">
+                  <div className=" p-4 rounded-lg">
                     <h3 className="text-lg font-semibold mb-3">Event Details</h3>
                     <div className="space-y-3">
                       <div className="flex items-start">

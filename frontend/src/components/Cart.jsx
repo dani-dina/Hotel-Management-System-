@@ -14,7 +14,6 @@ const CartPage = () => {
       dispatch(updateQuantity({ id, quantity: newQuantity }));
     }
   };
-
   const handleCheckout = () => {
     if (user) {
       dispatch(checkout(items));

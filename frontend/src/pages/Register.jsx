@@ -72,7 +72,7 @@ const Register = () => {
         <p className="mt-2 text-center text-sm text-gray-600">
           Already have an account?{' '}
           <Link 
-            to="/login" 
+            to="/auth/login" 
             className="font-medium text-primary hover:text-primary-dark"
           >
             Sign in here

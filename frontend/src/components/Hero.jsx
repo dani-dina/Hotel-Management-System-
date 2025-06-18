@@ -10,12 +10,12 @@ const Hero = () => {
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${banner})`
         }}
       >
-        <div className='h-full w-full'>
-          <h1 className='text-white text-4xl font-bold font-poppins text-center pt-25'>
+        <div className='h-full w-full flex flex-col items-center justify-center px-4'>
+          <h1 className='text-white text-2xl md:text-3xl lg:text-4xl font-bold font-poppins text-center'>
             Where Luxury Meets Serenity <br />
             in Every Stay
           </h1>
-          <p className='text-white text-center pt-5'>
+          <p className='text-white text-center pt-5 text-sm md:text-base'>
             Discover bespoke hospitality, exquisite dining, and unforgettable moments crafted just for you.
           </p>
         </div>

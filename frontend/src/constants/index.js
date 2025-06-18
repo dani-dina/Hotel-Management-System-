@@ -11,8 +11,8 @@ export const navigations = [
     },
     {
       id: '2',
-      title: 'Pricing',
-      url: '/pricing'
+      title: 'Events',
+      url: '/events'
     },
     {
       id: '3',

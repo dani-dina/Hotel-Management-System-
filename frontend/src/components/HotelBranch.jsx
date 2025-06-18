@@ -233,7 +233,7 @@ const App = () => {
 
   return (
     <div className="min-h-screen p-6">
-      <h1 className="text-2xl font-bold text-primary mb-6">Our Hotel Branches</h1>
+      <h1 className="text-2xl font-bold text-primary mb-6 md:my-20 ">Our Hotel Branches</h1>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {hotelBranches.map((branch) => (

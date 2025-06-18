@@ -8,6 +8,8 @@ import StatsSection from '../components/StatsSection';
 import Testimonials from '../components/Testimonial';
 import EnjoyVacation from '../components/EnjoyVacation';
 import AmenitiesSection from '../components/AmenitiesSection';
+import LocationSection from '../components/LocationSection';
+import Events from '../components/Events';
 
 const Home = () => {
   return (
@@ -83,7 +85,10 @@ const Home = () => {
       <div>
         <Testimonials />
       </div>
-      <Rooms />
+      <div>
+        <LocationSection />
+      </div>
+      {/* <Events /> */}
     </div>
   );
 }
