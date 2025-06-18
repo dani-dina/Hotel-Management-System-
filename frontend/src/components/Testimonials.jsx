@@ -141,8 +141,6 @@ const TestimonialPage = () => {
             </div>
           ))}
         </div>
-
-      
         {filteredTestimonials.length === 0 && (
           <div className="text-center py-12">
             <svg

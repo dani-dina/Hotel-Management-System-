@@ -112,8 +112,6 @@ const Testimonials = () => {
               ))}
             </div>
           </div>
-          
-          {/* Navigation Arrows */}
           <button 
             onClick={prevTestimonial}
             className="absolute left-[-10%] top-1/2 -translate-y-1/2 -ml-4 bg-white p-2 rounded-full shadow-md hover:bg-blue-50 
@@ -134,8 +132,6 @@ const Testimonials = () => {
             </svg>
           </button>
         </div>
-        
-        {/* Dots Indicator */}
         <div className="flex justify-center mt-8">
           {testimonials.map((_, index) => (
             <button
