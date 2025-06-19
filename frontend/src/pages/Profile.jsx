@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { FiUser, FiMail, FiPhone, FiLock, FiCalendar, FiClock, FiEdit2, FiSettings, FiActivity, FiShield, FiKey } from 'react-icons/fi';
+import { motion } from 'framer-motion';
 
 const ProfilePage = () => {
   const { accountId } = useParams();
   const [activeTab, setActiveTab] = useState('profile');
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   
   useEffect(() => {
     const fetchUserData = async () => {
@@ -14,42 +15,29 @@ const ProfilePage = () => {
         setTimeout(() => {
           const mockUser = {
             accountId: accountId,
-            email: 'user@example.com',
-            phoneNumber: '+1234567890',
+            email: 'guest@luxuryhaven.com',
+            phoneNumber: '+1 (555) 123-4567',
             role: 'Guest',
             isActive: true,
             createdAt: new Date('2023-01-15'),
             lastLogin: new Date(),
             linkedProfile: {
-              ...(Math.random() > 0.5 ? {
-                name: 'John Doe',
-                nationality: 'United States',
-                passportNumber: 'AB1234567',
-                preferences: ['Non-smoking', 'King bed', 'High floor'],
-                loyaltyPoints: 1250,
-                bookings: [],
-                __t: 'Guest'
-              } : Math.random() > 0.5 ? {
-                employeeId: 'EMP-2023-001',
-                department: 'Front Desk',
-                position: 'Manager',
-                shift: 'Day',
-                permissions: ['check-in', 'check-out', 'room-assignment'],
-                __t: 'Employee'
-              } : {
-                adminId: 'ADM-2021-001',
-                accessLevel: 'Super Admin',
-                lastAccess: new Date(),
-                managedProperties: ['Main Hotel', 'Beach Resort'],
-                __t: 'Admin'
-              })
+              name: 'Alex Johnson',
+              nationality: 'United States',
+              passportNumber: 'US12345678',
+              preferences: ['Non-smoking', 'King bed', 'High floor', 'Ocean view'],
+              loyaltyPoints: 2450,
+              bookings: [
+                { id: 'BK-2023-0456', date: '2023-05-15', room: 'Deluxe Suite', status: 'Completed' },
+                { id: 'BK-2023-0789', date: '2023-07-22', room: 'Executive Suite', status: 'Upcoming' }
+              ],
+              __t: 'Guest'
             }
           };
           setUser(mockUser);
           setLoading(false);
-        }, 1000);
+        }, 800);
       } catch (err) {
-        setError(err.message);
         setLoading(false);
       }
     };
@@ -57,285 +45,407 @@ const ProfilePage = () => {
     fetchUserData();
   }, [accountId]);
 
-  if (loading) return <div className="flex justify-center items-center h-64">Loading...</div>;
-  if (error) return <div className="text-red-500 p-4">Error: {error}</div>;
-  if (!user) return <div className="p-4">User not found</div>;
-
-  const renderRoleSpecificContent = () => {
-    switch (user.role) {
-      case 'Guest':
-        return (
-          <div className="mt-6">
-            <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Guest Information</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-              <div>
-                <p className="text-sm text-gray-500 dark:text-gray-400">Nationality</p>
-                <p className="text-gray-800 dark:text-white">{user.linkedProfile.nationality || 'Not specified'}</p>
-              </div>
-              <div>
-                <p className="text-sm text-gray-500 dark:text-gray-400">Passport Number</p>
-                <p className="text-gray-800 dark:text-white">{user.linkedProfile.passportNumber || 'Not provided'}</p>
-              </div>
-              <div>
-                <p className="text-sm text-gray-500 dark:text-gray-400">Loyalty Points</p>
-                <p className="text-gray-800 dark:text-white">{user.linkedProfile.loyaltyPoints || 0}</p>
-              </div>
-              <div>
-                <p className="text-sm text-gray-500 dark:text-gray-400">Preferences</p>
-                <div className="flex flex-wrap gap-2 mt-1">
-                  {user.linkedProfile.preferences?.length > 0 ? (
-                    user.linkedProfile.preferences.map((pref, i) => (
-                      <span key={i} className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">
-                        {pref}
-                      </span>
-                    ))
-                  ) : (
-                    <p className="text-gray-500">No preferences specified</p>
-                  )}
-                </div>
-              </div>
-            </div>
+  if (loading) return (
+    <div className="flex justify-center items-center h-screen">
+      <div className="animate-pulse flex space-x-4">
+        <div className="rounded-full bg-gray-200 h-12 w-12"></div>
+        <div className="flex-1 space-y-4 py-1">
+          <div className="h-4 bg-gray-200 rounded w-3/4"></div>
+          <div className="space-y-2">
+            <div className="h-4 bg-gray-200 rounded"></div>
+            <div className="h-4 bg-gray-200 rounded w-5/6"></div>
           </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  if (!user) return <div className="text-center py-20">User not found</div>;
+
+  const renderRoleBadge = () => {
+    const baseClasses = "px-3 py-1 rounded-full text-xs font-semibold flex items-center";
+    
+    switch(user.role) {
+      case 'Admin':
+        return (
+          <span className={`${baseClasses} bg-purple-100 text-purple-800`}>
+            <FiShield className="mr-1" /> Administrator
+          </span>
         );
       case 'Employee':
         return (
-          <div className="mt-6">
-            <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Employee Details</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-              <div>
-                <p className="text-sm text-gray-500 dark:text-gray-400">Employee ID</p>
-                <p className="text-gray-800 dark:text-white">{user.linkedProfile.employeeId}</p>
-              </div>
-              <div>
-                <p className="text-sm text-gray-500 dark:text-gray-400">Department</p>
-                <p className="text-gray-800 dark:text-white">{user.linkedProfile.department}</p>
-              </div>
-              <div>
-                <p className="text-sm text-gray-500 dark:text-gray-400">Position</p>
-                <p className="text-gray-800 dark:text-white">{user.linkedProfile.position}</p>
-              </div>
-              <div>
-                <p className="text-sm text-gray-500 dark:text-gray-400">Shift</p>
-                <p className="text-gray-800 dark:text-white">{user.linkedProfile.shift}</p>
-              </div>
-              <div className="md:col-span-2">
-                <p className="text-sm text-gray-500 dark:text-gray-400">Permissions</p>
-                <div className="flex flex-wrap gap-2 mt-1">
-                  {user.linkedProfile.permissions.map((perm, i) => (
-                    <span key={i} className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">
-                      {perm}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        );
-      case 'Admin':
-        return (
-          <div className="mt-6">
-            <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Administrator Details</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-              <div>
-                <p className="text-sm text-gray-500 dark:text-gray-400">Admin ID</p>
-                <p className="text-gray-800 dark:text-white">{user.linkedProfile.adminId}</p>
-              </div>
-              <div>
-                <p className="text-sm text-gray-500 dark:text-gray-400">Access Level</p>
-                <p className="text-gray-800 dark:text-white">{user.linkedProfile.accessLevel}</p>
-              </div>
-              <div>
-                <p className="text-sm text-gray-500 dark:text-gray-400">Last Access</p>
-                <p className="text-gray-800 dark:text-white">
-                  {new Date(user.linkedProfile.lastAccess).toLocaleString()}
-                </p>
-              </div>
-              <div className="md:col-span-2">
-                <p className="text-sm text-gray-500 dark:text-gray-400">Managed Properties</p>
-                <div className="flex flex-wrap gap-2 mt-1">
-                  {user.linkedProfile.managedProperties.map((prop, i) => (
-                    <span key={i} className="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded-full">
-                      {prop}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+          <span className={`${baseClasses} bg-green-100 text-green-800`}>
+            <FiUser className="mr-1" /> Employee
+          </span>
         );
       default:
-        return null;
+        return (
+          <span className={`${baseClasses} bg-blue-100 text-blue-800`}>
+            <FiUser className="mr-1" /> Guest
+          </span>
+        );
     }
   };
 
-  const renderTabContent = () => {
-    switch (activeTab) {
-      case 'profile':
-        return (
-          <div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Account Information</h3>
-                <div className="mt-4 space-y-4">
-                  <div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Account ID</p>
-                    <p className="text-gray-800 dark:text-white">{user.accountId}</p>
+  const renderProfileTab = () => (
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="bg-gray-50 rounded-xl p-6">
+        <h3 className="text-lg font-semibold text-gray-800 mb-6 flex items-center">
+          <FiUser className="mr-2 text-blue-500" /> Basic Information
+        </h3>
+        <div className="space-y-5">
+          <div className="flex items-start">
+            <div className="w-1/3 text-sm text-gray-500">Account ID</div>
+            <div className="w-2/3 font-medium">{user.accountId}</div>
+          </div>
+          <div className="flex items-start">
+            <div className="w-1/3 text-sm text-gray-500">Email</div>
+            <div className="w-2/3 font-medium">{user.email}</div>
+          </div>
+          <div className="flex items-start">
+            <div className="w-1/3 text-sm text-gray-500">Phone</div>
+            <div className="w-2/3 font-medium">{user.phoneNumber}</div>
+          </div>
+          <div className="flex items-start">
+            <div className="w-1/3 text-sm text-gray-500">Status</div>
+            <div className="w-2/3">
+              <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${user.isActive ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+                {user.isActive ? 'Active' : 'Inactive'}
+              </span>
+            </div>
+          </div>
+          <div className="flex items-start">
+            <div className="w-1/3 text-sm text-gray-500">Created</div>
+            <div className="w-2/3 text-gray-700">{new Date(user.createdAt).toLocaleDateString()}</div>
+          </div>
+          <div className="flex items-start">
+            <div className="w-1/3 text-sm text-gray-500">Last Login</div>
+            <div className="w-2/3 text-gray-700">
+              {user.lastLogin ? new Date(user.lastLogin).toLocaleString() : 'Never'}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-gray-50 rounded-xl p-6">
+        <h3 className="text-lg font-semibold text-gray-800 mb-6 flex items-center">
+          {user.role === 'Guest' ? (
+            <>
+              <FiUser className="mr-2 text-blue-500" /> Guest Details
+            </>
+          ) : user.role === 'Employee' ? (
+            <>
+              <FiUser className="mr-2 text-green-500" /> Employee Details
+            </>
+          ) : (
+            <>
+              <FiShield className="mr-2 text-purple-500" /> Admin Details
+            </>
+          )}
+        </h3>
+
+        {user.role === 'Guest' && (
+          <div className="space-y-5">
+            <div className="flex items-start">
+              <div className="w-1/3 text-sm text-gray-500">Full Name</div>
+              <div className="w-2/3 font-medium">{user.linkedProfile.name}</div>
+            </div>
+            <div className="flex items-start">
+              <div className="w-1/3 text-sm text-gray-500">Nationality</div>
+              <div className="w-2/3">{user.linkedProfile.nationality}</div>
+            </div>
+            <div className="flex items-start">
+              <div className="w-1/3 text-sm text-gray-500">Passport</div>
+              <div className="w-2/3 font-mono">{user.linkedProfile.passportNumber}</div>
+            </div>
+            <div className="flex items-start">
+              <div className="w-1/3 text-sm text-gray-500">Loyalty Points</div>
+              <div className="w-2/3">
+                <div className="flex items-center">
+                  <div className="w-full bg-gray-200 rounded-full h-2.5 mr-2">
+                    <div 
+                      className="bg-blue-600 h-2.5 rounded-full" 
+                      style={{ width: `${Math.min(user.linkedProfile.loyaltyPoints / 50, 100)}%` }}
+                    ></div>
                   </div>
-                  <div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Email</p>
-                    <p className="text-gray-800 dark:text-white">{user.email}</p>
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Phone Number</p>
-                    <p className="text-gray-800 dark:text-white">{user.phoneNumber}</p>
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Account Status</p>
-                    <p className="flex items-center">
-                      <span className={`inline-block w-2 h-2 rounded-full mr-2 ${user.isActive ? 'bg-green-500' : 'bg-red-500'}`}></span>
-                      <span className="text-gray-800 dark:text-white">{user.isActive ? 'Active' : 'Inactive'}</span>
-                    </p>
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Created At</p>
-                    <p className="text-gray-800 dark:text-white">{new Date(user.createdAt).toLocaleDateString()}</p>
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Last Login</p>
-                    <p className="text-gray-800 dark:text-white">
-                      {user.lastLogin ? new Date(user.lastLogin).toLocaleString() : 'Never logged in'}
-                    </p>
-                  </div>
+                  <span className="text-blue-600 font-medium">{user.linkedProfile.loyaltyPoints}</span>
                 </div>
               </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Role: {user.role}</h3>
-                {renderRoleSpecificContent()}
+            </div>
+            <div className="flex items-start">
+              <div className="w-1/3 text-sm text-gray-500">Preferences</div>
+              <div className="w-2/3">
+                <div className="flex flex-wrap gap-2">
+                  {user.linkedProfile.preferences.map((pref, i) => (
+                    <span key={i} className="px-2.5 py-1 bg-blue-50 text-blue-700 text-xs rounded-full">
+                      {pref}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-        );
-      case 'activity':
-        return (
-          <div>
-            <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Recent Activity</h3>
-            <div className="mt-4 space-y-4">
-              {user.role === 'Guest' && user.linkedProfile.bookings?.length > 0 ? (
-                user.linkedProfile.bookings.map((booking, i) => (
-                  <div key={i} className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg">
-                    Booking #{i+1}
-                  </div>
-                ))
-              ) : (
-                <p className="text-gray-500 dark:text-gray-400">No recent activity to display</p>
-              )}
+        )}
+
+        {user.role === 'Employee' && (
+          <div className="space-y-5">
+            <div className="flex items-start">
+              <div className="w-1/3 text-sm text-gray-500">Employee ID</div>
+              <div className="w-2/3 font-medium">EMP-{user.accountId.slice(-4)}</div>
             </div>
-          </div>
-        );
-      case 'settings':
-        return (
-          <div>
-            <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Account Settings</h3>
-            <div className="mt-4 space-y-4">
-              <div className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg">
-                <h4 className="font-medium text-gray-800 dark:text-white">Change Password</h4>
-                <form className="mt-2 space-y-3">
-                  <div>
-                    <label className="block text-sm text-gray-500 dark:text-gray-400">Current Password</label>
-                    <input 
-                      type="password" 
-                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm dark:bg-gray-700 dark:border-gray-600"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm text-gray-500 dark:text-gray-400">New Password</label>
-                    <input 
-                      type="password" 
-                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm dark:bg-gray-700 dark:border-gray-600"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm text-gray-500 dark:text-gray-400">Confirm New Password</label>
-                    <input 
-                      type="password" 
-                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm dark:bg-gray-700 dark:border-gray-600"
-                    />
-                  </div>
-                  <button 
-                    type="button" 
-                    className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
-                  >
-                    Update Password
-                  </button>
-                </form>
+            <div className="flex items-start">
+              <div className="w-1/3 text-sm text-gray-500">Department</div>
+              <div className="w-2/3">{user.linkedProfile.department}</div>
+            </div>
+            <div className="flex items-start">
+              <div className="w-1/3 text-sm text-gray-500">Position</div>
+              <div className="w-2/3 font-medium">{user.linkedProfile.position}</div>
+            </div>
+            <div className="flex items-start">
+              <div className="w-1/3 text-sm text-gray-500">Shift</div>
+              <div className="w-2/3">
+                <span className="px-2.5 py-1 bg-green-100 text-green-800 text-xs rounded-full">
+                  {user.linkedProfile.shift}
+                </span>
               </div>
             </div>
           </div>
-        );
-      default:
-        return null;
-    }
-  };
+        )}
+
+        {user.role === 'Admin' && (
+          <div className="space-y-5">
+            <div className="flex items-start">
+              <div className="w-1/3 text-sm text-gray-500">Admin ID</div>
+              <div className="w-2/3 font-medium">ADM-{user.accountId.slice(-4)}</div>
+            </div>
+            <div className="flex items-start">
+              <div className="w-1/3 text-sm text-gray-500">Access Level</div>
+              <div className="w-2/3">
+                <span className="px-2.5 py-1 bg-purple-100 text-purple-800 text-xs rounded-full">
+                  {user.linkedProfile.accessLevel}
+                </span>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+
+  const renderActivityTab = () => (
+    <div className="bg-gray-50 rounded-xl p-6">
+      <h3 className="text-lg font-semibold text-gray-800 mb-6 flex items-center">
+        <FiActivity className="mr-2 text-blue-500" /> Recent Activity
+      </h3>
+      
+      {user.role === 'Guest' && user.linkedProfile.bookings?.length > 0 ? (
+        <div className="space-y-4">
+          {user.linkedProfile.bookings.map((booking, i) => (
+            <motion.div 
+              key={i}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+              className="p-4 border border-gray-200 rounded-lg hover:shadow-sm transition-shadow"
+            >
+              <div className="flex justify-between items-start">
+                <div>
+                  <h4 className="font-medium text-gray-800">{booking.room}</h4>
+                  <p className="text-sm text-gray-500 mt-1">Booking #{booking.id}</p>
+                </div>
+                <div className="text-right">
+                  <span className={`px-2.5 py-1 rounded-full text-xs font-medium ${
+                    booking.status === 'Completed' ? 'bg-green-100 text-green-800' :
+                    booking.status === 'Upcoming' ? 'bg-blue-100 text-blue-800' :
+                    'bg-gray-100 text-gray-800'
+                  }`}>
+                    {booking.status}
+                  </span>
+                  <p className="text-sm text-gray-500 mt-1">{booking.date}</p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      ) : (
+        <div className="text-center py-10 text-gray-500">
+          No recent activity to display
+        </div>
+      )}
+    </div>
+  );
+
+  const renderSettingsTab = () => (
+    <div className="bg-gray-50 rounded-xl p-6">
+      <h3 className="text-lg font-semibold text-gray-800 mb-6 flex items-center">
+        <FiSettings className="mr-2 text-blue-500" /> Account Settings
+      </h3>
+      
+      <div className="space-y-6">
+        <div className="border border-gray-200 rounded-lg p-5">
+          <h4 className="font-medium text-gray-800 mb-4 flex items-center">
+            <FiKey className="mr-2 text-blue-500" /> Change Password
+          </h4>
+          <form className="space-y-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Current Password</label>
+              <div className="relative">
+                <input
+                  type="password"
+                  className="block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="Enter current password"
+                />
+              </div>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">New Password</label>
+              <input
+                type="password"
+                className="block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                placeholder="Enter new password"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Confirm New Password</label>
+              <input
+                type="password"
+                className="block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                placeholder="Confirm new password"
+              />
+            </div>
+            <div className="pt-2">
+              <button
+                type="button"
+                className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+              >
+                Update Password
+              </button>
+            </div>
+          </form>
+        </div>
+
+        {user.role === 'Guest' && (
+          <div className="border border-gray-200 rounded-lg p-5">
+            <h4 className="font-medium text-gray-800 mb-4">Notification Preferences</h4>
+            <div className="space-y-3">
+              <div className="flex items-center">
+                <input
+                  type="checkbox"
+                  id="promo-notifications"
+                  className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                />
+                <label htmlFor="promo-notifications" className="ml-2 block text-sm text-gray-700">
+                  Promotional Offers
+                </label>
+              </div>
+              <div className="flex items-center">
+                <input
+                  type="checkbox"
+                  id="booking-notifications"
+                  className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                  defaultChecked
+                />
+                <label htmlFor="booking-notifications" className="ml-2 block text-sm text-gray-700">
+                  Booking Confirmations
+                </label>
+              </div>
+              <div className="flex items-center">
+                <input
+                  type="checkbox"
+                  id="loyalty-notifications"
+                  className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                  defaultChecked
+                />
+                <label htmlFor="loyalty-notifications" className="ml-2 block text-sm text-gray-700">
+                  Loyalty Program Updates
+                </label>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
-        <div className="bg-gradient-to-r from-blue-600 to-blue-800 p-6 text-white">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="bg-white rounded-xl shadow-sm overflow-hidden"
+      >
+        {/* Profile Header */}
+        <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-6 md:p-8 text-white">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between">
             <div className="flex items-center">
               <div className="relative">
-                <div className="h-20 w-20 rounded-full bg-white flex items-center justify-center text-blue-600 text-2xl font-bold">
-                  {user.email.charAt(0).toUpperCase()}
+                <div className="h-20 w-20 rounded-full bg-white bg-opacity-20 backdrop-blur-sm flex items-center justify-center text-white text-2xl font-bold border-2 border-white border-opacity-30">
+                  {user.linkedProfile?.name?.charAt(0) || user.email.charAt(0).toUpperCase()}
                 </div>
-                <span className={`absolute bottom-0 right-0 h-4 w-4 rounded-full border-2 border-white ${user.isActive ? 'bg-green-500' : 'bg-red-500'}`}></span>
+                <span className={`absolute bottom-0 right-0 h-4 w-4 rounded-full border-2 border-white ${user.isActive ? 'bg-green-400' : 'bg-red-400'}`}></span>
               </div>
               <div className="ml-4">
                 <h1 className="text-2xl font-bold">
-                  {user.role === 'Guest' ? user.linkedProfile?.name || 'Guest User' : 
-                   user.role === 'Employee' ? user.linkedProfile?.position || 'Employee' : 
+                  {user.role === 'Guest' ? user.linkedProfile?.name : 
+                   user.role === 'Employee' ? user.linkedProfile?.position : 
                    'Administrator'}
                 </h1>
-                <p className="text-blue-100">{user.role} Account</p>
+                <div className="flex items-center mt-1">
+                  {renderRoleBadge()}
+                  <span className="ml-3 text-blue-100 text-sm flex items-center">
+                    <FiMail className="mr-1" /> {user.email}
+                  </span>
+                </div>
               </div>
             </div>
-            <div className="mt-4 md:mt-0">
-              <button className="px-4 py-2 bg-white text-blue-600 rounded-md hover:bg-blue-50 mr-2">
-                Edit Profile
+            <div className="mt-4 md:mt-0 flex space-x-3">
+              <button className="px-4 py-2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white rounded-lg flex items-center transition-all">
+                <FiEdit2 className="mr-2" /> Edit Profile
               </button>
               {user.role === 'Admin' && (
-                <button className="px-4 py-2 bg-blue-700 text-white rounded-md hover:bg-blue-800">
+                <button className="px-4 py-2 bg-blue-700 hover:bg-blue-800 text-white rounded-lg flex items-center transition-all">
                   Admin Dashboard
                 </button>
               )}
             </div>
           </div>
         </div>
-        <div className="border-b border-gray-200 dark:border-gray-700">
+
+        {/* Tab Navigation */}
+        <div className="border-b border-gray-200">
           <nav className="flex -mb-px">
             <button
               onClick={() => setActiveTab('profile')}
-              className={`px-6 py-4 text-sm font-medium ${activeTab === 'profile' ? 'text-blue-600 border-b-2 border-blue-600 dark:text-blue-400 dark:border-blue-400' : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'}`}
+              className={`px-6 py-4 text-sm font-medium flex items-center ${activeTab === 'profile' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-500 hover:text-gray-700'}`}
             >
+              <FiUser className={`mr-2 ${activeTab === 'profile' ? 'text-blue-600' : 'text-gray-400'}`} />
               Profile
             </button>
             <button
               onClick={() => setActiveTab('activity')}
-              className={`px-6 py-4 text-sm font-medium ${activeTab === 'activity' ? 'text-blue-600 border-b-2 border-blue-600 dark:text-blue-400 dark:border-blue-400' : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'}`}
+              className={`px-6 py-4 text-sm font-medium flex items-center ${activeTab === 'activity' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-500 hover:text-gray-700'}`}
             >
+              <FiActivity className={`mr-2 ${activeTab === 'activity' ? 'text-blue-600' : 'text-gray-400'}`} />
               Activity
             </button>
             <button
               onClick={() => setActiveTab('settings')}
-              className={`px-6 py-4 text-sm font-medium ${activeTab === 'settings' ? 'text-blue-600 border-b-2 border-blue-600 dark:text-blue-400 dark:border-blue-400' : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'}`}
+              className={`px-6 py-4 text-sm font-medium flex items-center ${activeTab === 'settings' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-500 hover:text-gray-700'}`}
             >
+              <FiSettings className={`mr-2 ${activeTab === 'settings' ? 'text-blue-600' : 'text-gray-400'}`} />
               Settings
             </button>
           </nav>
         </div>
-        <div className="p-6">
-          {renderTabContent()}
+
+        {/* Tab Content */}
+        <div className="p-6 md:p-8">
+          {activeTab === 'profile' && renderProfileTab()}
+          {activeTab === 'activity' && renderActivityTab()}
+          {activeTab === 'settings' && renderSettingsTab()}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

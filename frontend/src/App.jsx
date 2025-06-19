@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 import Register from './pages/Register';
 import Rooms from './pages/Rooms';
 import ContactUs from './pages/Contact';
-import ProfilePage from './pages/Profile';
+// import ProfilePage from './pages/Profile';
 import OrderPage from './pages/Order';
 import Reservations from './pages/Reservations';
 import Dashboard from './pages/Dashboard';
@@ -16,6 +16,7 @@ import Loading from './components/Loading';
 import MenuPage from './components/Menu';
 import CartPage from './components/Cart';
 import Events from '../src/pages/Events';
+import ProfilePage from '../src/pages/Profile';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -77,6 +78,7 @@ function App() {
         <Routes>
           {/* Public routes */}
           <Route path='/' element={<Home />} />
+          <Route path='/users/profile' element={<ProfilePage />} />
           <Route path='/dash' element={<Dashboard />} />
           <Route path='/res' element={<Reservations />} />
           <Route path='/events' element={<Events />} />
