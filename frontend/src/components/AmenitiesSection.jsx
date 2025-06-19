@@ -142,7 +142,7 @@ const AmenitiesSection = () => {
             <div className="p-6">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {packages.map((pkg) => (
-                  <div key={pkg.id} className="border rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                  <div key={pkg.id} className=" rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
                     <div className="bg-[#0AADD2] text-white p-4">
                       <h4 className="text-xl font-bold">{pkg.name}</h4>
                       <div className="flex justify-between items-center mt-2">

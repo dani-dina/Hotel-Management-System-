@@ -47,9 +47,9 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
             <address className="not-italic text-gray-400">
               <p className="mb-2">123 Business Ave</p>
-              <p className="mb-2">New York, NY 10001</p>
-              <p className="mb-2">Email: info@company.com</p>
-              <p>Phone: (123) 456-7890</p>
+              <p className="mb-2">Bahir Dar, AM 6000</p>
+              <p className="mb-2">Email: info@luminara.com</p>
+              <p>Phone: (+251) 975-1878-62</p>
             </address>
           </div>
 
@@ -62,12 +62,12 @@ const Footer = () => {
               <input 
                 type="email" 
                 placeholder="Your email" 
-                className="px-4 py-2 w-full rounded-l-md focus:outline-none text-gray-900"
+                className="px-4 py-2 w-full bg-gray-300 rounded-l-md focus:outline-none text-gray-900"
                 required
               />
               <button 
                 type="submit" 
-                className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-md transition-colors"
+                className="bg-primary hover:bg-blue-700 px-4 py-2 rounded-r-md transition-colors"
               >
                 Subscribe
               </button>
@@ -78,7 +78,7 @@ const Footer = () => {
         {/* copyright and legal links */}
         <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">
-            &copy; {currentYear} Company Name. All rights reserved.
+            &copy; {currentYear} Luminara. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link to="/privacy" className="text-gray-500 hover:text-white text-sm transition-colors">
