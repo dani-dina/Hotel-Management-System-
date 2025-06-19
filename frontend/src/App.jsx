@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -21,6 +21,7 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loading, setLoading] = useState(true);
   const [userRole, setUserRole] = useState(null);
+  const location = useLocation();
 
   useEffect(() => {
     const checkAuth = async () => {
@@ -44,7 +45,7 @@ function App() {
 
   const ProtectedRoute = ({ children, roles = [] }) => {
     if (loading) return <Loading />;
-    if (!isAuthenticated) return <Navigate to="/sign-in" />;
+    if (!isAuthenticated) return <Navigate to="/auth/login" />;
     if (roles.length > 0 && !roles.includes(userRole)) {
       return <Navigate to="/" />;
     }
@@ -56,6 +57,9 @@ function App() {
     if (isAuthenticated) return <Navigate to="/profile" />;
     return children;
   };
+
+  // Check if current route is auth page (login/register)
+  const isAuthPage = ['/auth/login', '/auth/register'].includes(location.pathname);
 
   if (loading) {
     return <Loading />;
@@ -72,12 +76,10 @@ function App() {
       <main className='flex-grow'>
         <Routes>
           {/* Public routes */}
-          ContactUs
           <Route path='/' element={<Home />} />
           <Route path='/dash' element={<Dashboard />} />
           <Route path='/res' element={<Reservations />} />
           <Route path='/events' element={<Events />} />
-          {/* <Route path='/contact-us' element={<ContactUs />} /> */}
           <Route path='/' element={<OrderPage />} />
           <Route path='/contact-us' element={<ContactUs />} />
           <Route path='/rooms' element={<Rooms />} />
@@ -132,7 +134,8 @@ function App() {
         </Routes>
       </main>
       
-      <Footer />
+      {/* Only show footer if not on auth pages */}
+      {!isAuthPage && <Footer />}
     </div>
   );
 }

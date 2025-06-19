@@ -127,7 +127,7 @@ const AmenitiesSection = () => {
       {showPackages && (
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-            <div className="sticky top-0 bg-white p-4 border-b flex justify-between items-center">
+            <div className="sticky top-0 bg-white p-4 flex justify-between items-center">
               <h3 className="text-2xl font-bold text-[#0A4466]">Our Special Packages</h3>
               <button 
                 onClick={() => setShowPackages(false)}
@@ -142,8 +142,8 @@ const AmenitiesSection = () => {
             <div className="p-6">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {packages.map((pkg) => (
-                  <div key={pkg.id} className=" rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                    <div className="bg-[#0AADD2] text-white p-4">
+                  <div key={pkg.id} className=" rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div className="bg-white text-primary p-4">
                       <h4 className="text-xl font-bold">{pkg.name}</h4>
                       <div className="flex justify-between items-center mt-2">
                         <span className="text-2xl font-bold">{pkg.price}</span>

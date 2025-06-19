@@ -9,9 +9,9 @@ const findRoom = async (roomId) => {
 const getAllRooms = async (req, res) => {
   try {
     const rooms = await Room.find();
-    return res.status(HTTP_STATUS.OK).json({ message: rooms });
+    return res.status(HTTP_STATUS.OK.code).json({ message: rooms });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!", error });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!", error });
   }
 };
 
@@ -19,10 +19,10 @@ const getAllRooms = async (req, res) => {
 const getRoomById = async (req, res) => {
   try {
     const room = await Room.findById(req.params.id);
-    if (!room) return res.status(HTTP_STATUS.NOT_FOUND).json({ message: "Room Not Found!" });
-    return res.status(HTTP_STATUS.OK).json({ message: room });
+    if (!room) return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "Room Not Found!" });
+    return res.status(HTTP_STATUS.OK.code).json({ message: room });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!", error });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!", error });
   }
 };
 
@@ -48,7 +48,7 @@ const addNewRoom = async (req, res) => {
 
     const existingRoom = await findRoom(roomId);
     if (existingRoom) {
-      return res.status(HTTP_STATUS.CONFLICT).json({ message: "Room Already Exists!" });
+      return res.status(HTTP_STATUS.CONFLICT.code).json({ message: "Room Already Exists!" });
     }
 
     const newRoom = new Room({
@@ -69,9 +69,9 @@ const addNewRoom = async (req, res) => {
     });
 
     await newRoom.save();
-    return res.status(HTTP_STATUS.CREATED).json({ message: "Successfully Added a New Room!" });
+    return res.status(HTTP_STATUS.CREATED.code).json({ message: "Successfully Added a New Room!" });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!", error });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!", error });
   }
 };
 
@@ -80,9 +80,9 @@ const updateRoomById = async (req, res) => {
   try {
     const updatedRoom = await Room.findByIdAndUpdate(req.params.id, req.body, { new: true });
     if (!updatedRoom) {
-      return res.status(HTTP_STATUS.NOT_FOUND).json({ message: "Room Not Found!" });
+      return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "Room Not Found!" });
     }
-    return res.status(HTTP_STATUS.OK).json({ message: "Room was successfully updated!" });
+    return res.status(HTTP_STATUS.OK.code).json({ message: "Room was successfully updated!" });
   } catch (error) {
     return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!", error });
   }
@@ -93,11 +93,11 @@ const deleteRoomById = async (req, res) => {
   try {
     const deletedRoom = await Room.findByIdAndDelete(req.params.id);
     if (!deletedRoom) {
-      return res.status(HTTP_STATUS.NOT_FOUND).json({ message: "Room Not Found!" });
+      return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "Room Not Found!" });
     }
-    return res.status(HTTP_STATUS.OK).json({ message: "Room was successfully deleted!" });
+    return res.status(HTTP_STATUS.OK.code).json({ message: "Room was successfully deleted!" });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!", error });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!", error });
   }
 };
 

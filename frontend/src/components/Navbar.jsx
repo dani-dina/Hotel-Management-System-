@@ -10,7 +10,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const hiddenPaths = ['/auth/login', '/auth/sign-up'];
+  const hiddenPaths = ['/auth/login', '/auth/register'];
   const isMinimalNavbar = hiddenPaths.some(path => 
     location.pathname.startsWith(path)
   );
