@@ -2,7 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import connectDB from './src/config/database.config.js';
-
+import { PORT } from './src/config/env.js';
 import userRoutes from './src/routes/user.routes.js';
 import serviceRoutes from './src/routes/service.routes.js';
 import roomRoutes from './src/routes/room.routes.js';
@@ -17,11 +17,7 @@ import employeeRoutes from './src/routes/employee.routes.js';
 import drinkRoutes from './src/routes/drinks.routes.js';
 import auth from  './src/auth/login.auth.js';
 
-dotenv.config();
-
 const app = express();
-const PORT = process.env.PORT || 5000;
-
 app.use(cors());
 app.use(express.json());
 

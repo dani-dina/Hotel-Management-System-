@@ -11,9 +11,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Company Name</h3>
+            <h3 className="text-xl font-bold mb-4">Luminara</h3>
             <p className="mb-4 text-gray-400">
-              Bringing innovative solutions to your doorstep since {currentYear - 5}.
+              Bringing innovative solutions to your doorstep since {currentYear - 1}.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
