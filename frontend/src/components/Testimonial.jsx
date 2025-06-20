@@ -55,7 +55,6 @@ const Testimonials = () => {
     setCurrentIndex(index);
   };
 
-  // Render star ratings
   const renderStars = (rating) => {
     return [...Array(5)].map((_, i) => (
       <svg
