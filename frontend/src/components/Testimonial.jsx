@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
 const Testimonials = () => {
-  // Testimonial data
   const testimonials = [
     {
       id: 1,
