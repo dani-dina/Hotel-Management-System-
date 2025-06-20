@@ -6,8 +6,8 @@ export const navigations = [
     },
     {
       id: '1',
-      title: 'Books',
-      url: '/books'
+      title: 'Reservations',
+      url: '/reservations'
     },
     {
       id: '2',

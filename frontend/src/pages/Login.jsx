@@ -201,7 +201,7 @@ const Login = () => {
                     id="remember-me"
                     name="remember-me"
                     type="checkbox"
-                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                    className="h-4 w-4 text-primary focus:ring-lightPrimary border-gray-300 rounded"
                   />
                   <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-700">
                     Remember me
@@ -209,7 +209,7 @@ const Login = () => {
                 </div>
 
                 <div className="text-sm">
-                  <Link to="/auth/forgot-password" className="font-medium text-blue-600 hover:text-blue-500">
+                  <Link to="/auth/forgot-password" className="font-medium text-primary hover:text-lightPrimary">
                     Forgot password?
                   </Link>
                 </div>
@@ -221,7 +221,9 @@ const Login = () => {
                   disabled={isSubmitting}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className={`w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200 ${isSubmitting ? 'opacity-80 cursor-not-allowed' : ''}`}
+                  className={`w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm 
+                              font-medium text-white bg-primary hover:bg-darkPrimary focus:outline-none focus:ring-2
+                            focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200 ${isSubmitting ? 'opacity-80 cursor-not-allowed' : ''}`}
                 >
                   {isSubmitting ? (
                     <span className="flex items-center">
@@ -275,7 +277,7 @@ const Login = () => {
 
             <p className="mt-6 text-center text-sm text-gray-500">
               Don't have an account?{' '}
-              <Link to="/auth/register" className="font-medium text-blue-600 hover:text-blue-500">
+              <Link to="/auth/register" className="font-medium text-primary hover:text-lightPrimary">
                 Register now
               </Link>
             </p>

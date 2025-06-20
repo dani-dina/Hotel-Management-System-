@@ -8,6 +8,8 @@
 @theme {
   /* Colors */
   --color-primary: #0AADD2;
+  --color-lightPrimary : #1FB5DA;
+  --color-darkPrimary : #0899B8;
   --color-golden: #D4AF37;
 
   /* Font Families */
