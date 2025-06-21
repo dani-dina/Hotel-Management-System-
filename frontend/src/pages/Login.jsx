@@ -111,8 +111,8 @@ const Login = () => {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="w-full max-w-md"
         >
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">
+          <div className="text-center mb-5">
+            <h2 className="text-2xl font-bold text-gray-900 mt-2">
               Welcome Back
             </h2>
             <p className="text-gray-600">
