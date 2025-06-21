@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaGoogle, FaFacebook, FaApple, FaEnvelope, FaLock, FaArrowRight } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import hotelImage from '../assets/b1.jpg';
+import hotelImage from '../assets/b5.jpg';
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -104,7 +104,7 @@ const Login = () => {
       </div>
 
       {/* Right side - Login Form */}
-      <div className="w-full md:w-1/2 flex items-center justify-center p-8 bg-gray-50">
+      <div className="h-[90%] w-full md:w-1/2 flex items-center justify-center p-1 bg-gray-50">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -119,8 +119,7 @@ const Login = () => {
               Sign in to access your account and bookings
             </p>
           </div>
-
-          <div className="bg-white py-8 px-6 shadow-lg rounded-xl sm:px-10">
+          <div className="bg-white py-5 px-6 shadow-lg rounded-xl sm:px-10">
             <form className="space-y-5" onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
