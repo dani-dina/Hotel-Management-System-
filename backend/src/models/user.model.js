@@ -16,7 +16,7 @@ const userAccountSchema = new mongoose.Schema({
         required: true, 
         refPath: 'role' 
     },
-    isActive: { type: Boolean, default: true },  
+    isActive : { type: Boolean, default: true },  
     createdAt: { type: Date, default: Date.now },  
     lastLogin: { type: Date, default: null }  
 }, { timestamps: true });

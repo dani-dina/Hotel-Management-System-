@@ -1,9 +1,7 @@
 import mongoose from "mongoose";
-import {NODE_ENV} from './env.js'
+import dotenv from 'dotenv';
 
-if(!MONGO_URI) {
-  throw new Error('Please Define the MONGO URI');
-}
+dotenv.config();
 const connectDB = async () => {
   try {
     const conn = await mongoose.connect(process.env.MONGO_URI, {
