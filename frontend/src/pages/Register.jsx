@@ -293,13 +293,13 @@ const Register = () => {
                     type="checkbox"
                     checked={acceptedTerms}
                     onChange={() => setAcceptedTerms(!acceptedTerms)}
-                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                    className="h-4 w-4 text-primary focus:ring-lightPrimary border-gray-300 rounded"
                   />
                 </div>
                 <div className="ml-3 text-sm">
                   <label htmlFor="terms" className="font-medium text-gray-700">
                     I agree to the{' '}
-                    <a href="#" className="text-blue-600 hover:text-blue-500">
+                    <a href="#" className="text-primary hover:text-lightPrimary">
                       Terms and Conditions
                     </a>
                   </label>
@@ -321,7 +321,9 @@ const Register = () => {
                   disabled={isSubmitting}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className={`w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200 ${isSubmitting ? 'opacity-80 cursor-not-allowed' : ''}`}
+                  className={`w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm font-medium
+                             text-white bg-primary hover:bg-darkPrimary focus:outline-none focus:ring-2 focus:ring-lightPrimary
+                             focus:ring-offset-2 transition-all duration-200 ${isSubmitting ? 'opacity-80 cursor-not-allowed' : ''}`}
                 >
                   {isSubmitting ? (
                     <span className="flex items-center">
@@ -342,7 +344,7 @@ const Register = () => {
 
             <p className="mt-6 text-center text-sm text-gray-500">
               Already have an account?{' '}
-              <Link to="/auth/login" className="font-medium text-blue-600 hover:text-blue-500">
+              <Link to="/auth/login" className="font-medium text-primary hover:text-darkPrimary">
                 Sign in here
               </Link>
             </p>
