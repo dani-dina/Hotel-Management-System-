@@ -16,6 +16,9 @@ import foodRoutes from './src/routes/food.routes.js';
 import employeeRoutes from './src/routes/employee.routes.js';
 import drinkRoutes from './src/routes/drinks.routes.js';
 import auth from  './src/auth/login.auth.js';
+import passport from 'passport';
+import './src/auth/passport.js';
+import session from 'cookie-session';
 
 const app = express();
 app.use(cors());
