@@ -4,6 +4,7 @@ import { FaGoogle, FaFacebook, FaApple, FaEnvelope, FaLock, FaArrowRight } from 
 import { motion } from 'framer-motion';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import hotelImage from '../assets/b5.jpg';
+import axios from 'axios';
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -15,6 +16,20 @@ const Login = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
+  const handleLogin = async() => {
+    const res = await axios.post('http://localhost:5000/auth/login/',{
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, password }),
+    })
+
+    const data =  await res.json();
+    if(data.token){
+      localStorage.setItem('authToken', data.token);
+      alert('Logged in!');
+    }else{
+      alert('Invalid credentials');
+    }
+  }
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
