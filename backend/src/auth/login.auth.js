@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import passport from 'passport';
 import User from '../models/user.model.js';
 import Employee from '../models/employees.model.js';
 import bcrypt from 'bcryptjs';
