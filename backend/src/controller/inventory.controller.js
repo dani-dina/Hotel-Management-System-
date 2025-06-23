@@ -9,9 +9,9 @@ const findInventory = async (itemName) => {
 const getAllInventory = async (req, res) => {
   try {
     const inventories = await Inventory.find();
-    return res.status(HTTP_STATUS.OK).json({ message: inventories });
+    return res.status(HTTP_STATUS.OK.code).json({ message: inventories });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
 
@@ -20,14 +20,13 @@ const getInventoryById = async (req, res) => {
   try {
     const inventory = await Inventory.findById(req.params.id);
     if (!inventory) {
-      return res.status(HTTP_STATUS.NOT_FOUND).json({ message: "Inventory Not Found!" });
+      return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "Inventory Not Found!" });
     }
-    return res.status(HTTP_STATUS.OK).json({ message: inventory });
+    return res.status(HTTP_STATUS.OK.code).json({ message: inventory });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
-
 /* Add a new Inventory */
 const addNewInventory = async (req, res) => {
   try {
@@ -50,7 +49,7 @@ const addNewInventory = async (req, res) => {
 
     const existingInventory = await findInventory(itemName);
     if (existingInventory) {
-      return res.status(HTTP_STATUS.CONFLICT).json({ message: "This Inventory Already Exists" });
+      return res.status(HTTP_STATUS.CONFLICT.code).json({ message: "This Inventory Already Exists" });
     }
 
     const newInventory = new Inventory({
@@ -71,9 +70,9 @@ const addNewInventory = async (req, res) => {
     });
 
     await newInventory.save();
-    return res.status(HTTP_STATUS.CREATED).json({ message: "Successfully Added!" });
+    return res.status(HTTP_STATUS.CREATED.code).json({ message: "Successfully Added!" });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
 
@@ -81,11 +80,11 @@ const updateInventoryById = async (req, res) => {
   try {
     const updateInventory = await Inventory.findByIdAndUpdate(req.params.id, req.body, { new: true });
     if (!updateInventory) {
-      return res.status(HTTP_STATUS.NOT_FOUND).json({ message: "Inventory Not Found!" });
+      return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "Inventory Not Found!" });
     }
-    return res.status(HTTP_STATUS.OK).json({ message: "Successfully Updated!" });
+    return res.status(HTTP_STATUS.OK.code).json({ message: "Successfully Updated!" });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
 
@@ -93,11 +92,11 @@ const deleteInventoryById = async (req, res) => {
   try {
     const deleteInventory = await Inventory.findByIdAndDelete(req.params.id);
     if (!deleteInventory) {
-      return res.status(HTTP_STATUS.NOT_FOUND).json({ message: "Inventory Not Found!" });
+      return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "Inventory Not Found!" });
     }
-    return res.status(HTTP_STATUS.OK).json({ message: "Successfully Deleted!" });
+    return res.status(HTTP_STATUS.OK.code).json({ message: "Successfully Deleted!" });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
 
