@@ -9,22 +9,21 @@ const findReservation = async (reservationId) => {
 const getAllReservations = async (req, res) => {
   try {
     const reservations = await Reservation.find();
-    return res.status(HTTP_STATUS.OK).json({ message: reservations });
+    return res.status(HTTP_STATUS.OK.code).json({ message: reservations });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
-
 /* Get reservation by ID */
 const getReservationById = async (req, res) => {
   try {
     const reservation = await Reservation.findById(req.params.id);
     if (!reservation) {
-      return res.status(HTTP_STATUS.NOT_FOUND).json({ message: "Reservation Not Found!" });
+      return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "Reservation Not Found!" });
     }
-    return res.status(HTTP_STATUS.OK).json({ message: reservation });
+    return res.status(HTTP_STATUS.OK.code).json({ message: reservation });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
 
@@ -49,7 +48,7 @@ const addNewReservation = async (req, res) => {
 
     const existingReservation = await findReservation(reservationId);
     if (existingReservation) {
-      return res.status(HTTP_STATUS.CONFLICT).json({ message: "Reservation Already Exists!" });
+      return res.status(HTTP_STATUS.CONFLICT.code).json({ message: "Reservation Already Exists!" });
     }
 
     const newReservation = new Reservation({
@@ -69,9 +68,9 @@ const addNewReservation = async (req, res) => {
     });
 
     await newReservation.save();
-    return res.status(HTTP_STATUS.CREATED).json({ message: "New Reservation Successfully Added!" });
+    return res.status(HTTP_STATUS.CREATED.code).json({ message: "New Reservation Successfully Added!" });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
 
@@ -80,11 +79,11 @@ const updateReservationById = async (req, res) => {
   try {
     const updatedReservation = await Reservation.findByIdAndUpdate(req.params.id, req.body, { new: true });
     if (!updatedReservation) {
-      return res.status(HTTP_STATUS.NOT_FOUND).json({ message: "Reservation Not Found!" });
+      return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "Reservation Not Found!" });
     }
-    return res.status(HTTP_STATUS.OK).json({ message: "Successfully Updated!" });
+    return res.status(HTTP_STATUS.OK.code).json({ message: "Successfully Updated!" });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
 
@@ -93,11 +92,11 @@ const deleteReservationById = async (req, res) => {
   try {
     const deletedReservation = await Reservation.findByIdAndDelete(req.params.id);
     if (!deletedReservation) {
-      return res.status(HTTP_STATUS.NOT_FOUND).json({ message: "Reservation Not Found!" });
+      return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "Reservation Not Found!" });
     }
-    return res.status(HTTP_STATUS.OK).json({ message: "Successfully Deleted!" });
+    return res.status(HTTP_STATUS.OK.code).json({ message: "Successfully Deleted!" });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
 
