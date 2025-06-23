@@ -5,9 +5,9 @@ import Order from "../models/orders.model.js";
 const getAllOrders = async (req, res) => {
   try {
     const orders = await Order.find();
-    return res.status(HTTP_STATUS.OK).json({ message: orders });
+    return res.status(HTTP_STATUS.OK.code).json({ message: orders });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
 
@@ -16,11 +16,11 @@ const getOrderById = async (req, res) => {
   try {
     const order = await Order.findById(req.params.id);
     if (!order) {
-      return res.status(HTTP_STATUS.NOT_FOUND).json({ message: "Order Not Found!" });
+      return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "Order Not Found!" });
     }
-    return res.status(HTTP_STATUS.OK).json({ message: order });
+    return res.status(HTTP_STATUS.OK.code).json({ message: order });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
 
@@ -40,9 +40,9 @@ const addNewOrder = async (req, res) => {
 
     await newOrder.save();
 
-    return res.status(HTTP_STATUS.CREATED).json({ message: "Successfully Added!" });
+    return res.status(HTTP_STATUS.CREATED.code).json({ message: "Successfully Added!" });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
 
@@ -51,11 +51,11 @@ const updateOrderById = async (req, res) => {
   try {
     const updatedOrder = await Order.findByIdAndUpdate(req.params.id, req.body, { new: true });
     if (!updatedOrder) {
-      return res.status(HTTP_STATUS.NOT_FOUND).json({ message: "Order Not Found!" });
+      return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "Order Not Found!" });
     }
-    return res.status(HTTP_STATUS.OK).json({ message: "Successfully Updated!" });
+    return res.status(HTTP_STATUS.OK.code).json({ message: "Successfully Updated!" });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
 
@@ -64,11 +64,11 @@ const deleteOrderById = async (req, res) => {
   try {
     const deletedOrder = await Order.findByIdAndDelete(req.params.id);
     if (!deletedOrder) {
-      return res.status(HTTP_STATUS.NOT_FOUND).json({ message: "Order Not Found!" });
+      return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "Order Not Found!" });
     }
-    return res.status(HTTP_STATUS.OK).json({ message: "Successfully Deleted!" });
+    return res.status(HTTP_STATUS.OK.code).json({ message: "Successfully Deleted!" });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
 

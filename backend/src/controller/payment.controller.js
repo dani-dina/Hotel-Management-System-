@@ -5,22 +5,21 @@ import Payment from "../models/payment.model.js";
 const getAllPayments = async (req, res) => {
   try {
     const payments = await Payment.find();
-    return res.status(HTTP_STATUS.OK).json({ message: payments });
+    return res.status(HTTP_STATUS.OK.code).json({ message: payments });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
-
 /* Get Payment by ID */
 const getPaymentById = async (req, res) => {
   try {
     const payment = await Payment.findById(req.params.id);
     if (!payment) {
-      return res.status(HTTP_STATUS.NOT_FOUND).json({ message: "Payment Not Found!" });
+      return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "Payment Not Found!" });
     }
-    return res.status(HTTP_STATUS.OK).json({ message: payment });
+    return res.status(HTTP_STATUS.OK.code).json({ message: payment });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
 
@@ -41,9 +40,9 @@ const addNewPayment = async (req, res) => {
 
     await newPayment.save();
 
-    return res.status(HTTP_STATUS.CREATED).json({ message: "Payment Successfully Added!" });
+    return res.status(HTTP_STATUS.CREATED.code).json({ message: "Payment Successfully Added!" });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
 
@@ -52,11 +51,11 @@ const updatePaymentById = async (req, res) => {
   try {
     const updatedPayment = await Payment.findByIdAndUpdate(req.params.id, req.body, { new: true });
     if (!updatedPayment) {
-      return res.status(HTTP_STATUS.NOT_FOUND).json({ message: "Payment Not Found!" });
+      return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "Payment Not Found!" });
     }
-    return res.status(HTTP_STATUS.OK).json({ message: "Payment Successfully Updated!" });
+    return res.status(HTTP_STATUS.OK.code).json({ message: "Payment Successfully Updated!" });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
 
@@ -65,11 +64,11 @@ const deletePaymentById = async (req, res) => {
   try {
     const deletedPayment = await Payment.findByIdAndDelete(req.params.id);
     if (!deletedPayment) {
-      return res.status(HTTP_STATUS.NOT_FOUND).json({ message: "Payment Not Found!" });
+      return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "Payment Not Found!" });
     }
-    return res.status(HTTP_STATUS.OK).json({ message: "Payment Successfully Deleted!" });
+    return res.status(HTTP_STATUS.OK.code).json({ message: "Payment Successfully Deleted!" });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
 
