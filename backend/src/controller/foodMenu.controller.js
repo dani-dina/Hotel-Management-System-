@@ -18,7 +18,7 @@ const getFoodById = async (req, res) => {
   try {
     const food = await Food.findById(req.params.id);
     if (!food) {
-      return res.status(HTTP_STATUS.NOT_FOUND).json({ message: "Food Not Found!" });
+      return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "Food Not Found!" });
     }
     return res.status(HTTP_STATUS.OK).json({ message: food });
   } catch (error) {
