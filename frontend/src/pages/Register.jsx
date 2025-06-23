@@ -4,6 +4,7 @@ import { FaUser, FaEnvelope, FaLock, FaEye, FaEyeSlash, FaArrowRight } from 'rea
 import { motion } from 'framer-motion';
 import axios from 'axios';
 import hotelImage from '../assets/b2.jpg';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -18,6 +19,7 @@ const Register = () => {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [acceptedTerms, setAcceptedTerms] = useState(false);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -81,6 +83,7 @@ const Register = () => {
         confirmPassword: ''
       });
       setAcceptedTerms(false);
+      navigate('/auth/login'); 
     } catch (err) {
       console.error(err);
       alert(err.response?.data?.message || 'Registration failed.');

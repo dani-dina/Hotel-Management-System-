@@ -1,9 +1,10 @@
 import { HTTP_STATUS } from "../constants/index.js";
 import User from "../models/user.model.js";
 import bcrypt from "bcryptjs";
+import { v4 as uuidv4 } from 'uuid';
 
-const findUser = async (accountId) => {
-  return await User.findOne({ accountId });
+const findUser = async (email) => {
+  return await User.findOne({ email });
 };
 
 /* Get all users */
@@ -35,10 +36,9 @@ const getUserById = async (req, res) => {
 const addNewUser = async (req, res) => {
   try {
     const {
-      accountId,
       email,
       phoneNumber,
-      password, // Changed from passWord to match schema
+      password, 
       role,
       linkedProfile,
       isActive,
@@ -47,14 +47,14 @@ const addNewUser = async (req, res) => {
     } = req.body;
 
     // Check if the user already exists
-    const existingUser = await findUser(accountId);
+    const existingUser = await findUser(email);
     if (existingUser) {
       return res.status(HTTP_STATUS.CONFLICT.code).json({ message: "User Already Exists!" });
     }
 
     // Hash password before saving
     const hashedPassword = await bcrypt.hash(password, 10);
-
+    const accountId = uuidv4();
     const newUser = new User({
       accountId,
       email,
