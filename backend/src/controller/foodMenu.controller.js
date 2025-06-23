@@ -8,9 +8,9 @@ const findFood = async (name) => {
 const getAllFoods = async (req, res) => {
   try {
     const foods = await Food.find();
-    return res.status(HTTP_STATUS.OK).json(foods);
+    return res.status(HTTP_STATUS.OK.code).json(foods);
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
 
