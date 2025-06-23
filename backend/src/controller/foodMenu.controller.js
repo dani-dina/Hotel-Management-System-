@@ -22,7 +22,7 @@ const getFoodById = async (req, res) => {
     }
     return res.status(HTTP_STATUS.OK.code).json({ message: food });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error" });
   }
 };
 
