@@ -66,11 +66,11 @@ const updateFoodById = async (req, res) => {
   try {
     const updateFood = await Food.findByIdAndUpdate(req.params.id, req.body, { new: true });
     if (!updateFood) {
-      return res.status(HTTP_STATUS.NOT_FOUND).json({ message: "Food Not Found!" });
+      return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "Food Not Found!" });
     }
-    return res.status(HTTP_STATUS.OK).json({ message: "Successfully Updated!" });
+    return res.status(HTTP_STATUS.OK.code).json({ message: "Successfully Updated!" });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error" });
   }
 };
 
