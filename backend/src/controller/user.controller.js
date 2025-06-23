@@ -10,10 +10,10 @@ const findUser = async (accountId) => {
 const getAllUsers = async (req, res) => {
   try {
     const users = await User.find();
-    return res.status(HTTP_STATUS.OK).json({ message: users });
+    return res.status(HTTP_STATUS.OK.code).json({ message: users });
   } catch (error) {
     console.error("Error fetching users:", error);
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
 
@@ -22,12 +22,12 @@ const getUserById = async (req, res) => {
   try {
     const user = await User.findById(req.params.id);
     if (!user) {
-      return res.status(HTTP_STATUS.NOT_FOUND).json({ message: "User Not Found!" });
+      return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "User Not Found!" });
     }
-    return res.status(HTTP_STATUS.OK).json({ message: user });
+    return res.status(HTTP_STATUS.OK.code).json({ message: user });
   } catch (error) {
     console.error("Error fetching user by ID:", error);
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
 
@@ -49,7 +49,7 @@ const addNewUser = async (req, res) => {
     // Check if the user already exists
     const existingUser = await findUser(accountId);
     if (existingUser) {
-      return res.status(HTTP_STATUS.CONFLICT).json({ message: "User Already Exists!" });
+      return res.status(HTTP_STATUS.CONFLICT.code).json({ message: "User Already Exists!" });
     }
 
     // Hash password before saving
@@ -68,10 +68,10 @@ const addNewUser = async (req, res) => {
     });
 
     await newUser.save();
-    return res.status(HTTP_STATUS.CREATED).json({ message: "User successfully added!" });
+    return res.status(HTTP_STATUS.CREATED.code).json({ message: "User successfully added!" });
   } catch (error) {
     console.error("Error adding new user:", error);
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
 
@@ -84,12 +84,12 @@ const updateUserById = async (req, res) => {
 
     const updatedUser = await User.findByIdAndUpdate(req.params.id, req.body, { new: true });
     if (!updatedUser) {
-      return res.status(HTTP_STATUS.NOT_FOUND).json({ message: "User Not Found!" });
+      return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "User Not Found!" });
     }
-    return res.status(HTTP_STATUS.OK).json({ message: "User successfully updated!" });
+    return res.status(HTTP_STATUS.OK.code).json({ message: "User successfully updated!" });
   } catch (error) {
     console.error("Error updating user:", error);
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
 
@@ -98,12 +98,12 @@ const deleteUserById = async (req, res) => {
   try {
     const deletedUser = await User.findByIdAndDelete(req.params.id);
     if (!deletedUser) {
-      return res.status(HTTP_STATUS.NOT_FOUND).json({ message: "User Not Found!" });
+      return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "User Not Found!" });
     }
-    return res.status(HTTP_STATUS.OK).json({ message: "User successfully deleted!" });
+    return res.status(HTTP_STATUS.OK.code).json({ message: "User successfully deleted!" });
   } catch (error) {
     console.error("Error deleting user:", error);
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
 

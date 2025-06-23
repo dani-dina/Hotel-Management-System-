@@ -9,9 +9,9 @@ const findEmployee = async (fin) => {
 const getAllEmployees = async (req, res) => {
   try {
     const employees = await Employee.find();
-    return res.status(HTTP_STATUS.OK).json({ message: employees });
+    return res.status(HTTP_STATUS.OK.code).json({ message: employees });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Server Error" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Server Error" });
   }
 };
 
@@ -20,10 +20,10 @@ const getEmployeeById = async (req, res) => {
   try {
     const employee = await Employee.findById(req.params.id);
     if (!employee)
-      return res.status(HTTP_STATUS.NOT_FOUND).json({ message: "Employee not found" });
-    return res.status(HTTP_STATUS.OK).json({ employee });
+      return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "Employee not found" });
+    return res.status(HTTP_STATUS.OK.code).json({ employee });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error" });
   }
 };
 
@@ -51,7 +51,7 @@ const addNewEmployee = async (req, res) => {
 
     const existingEmployee = await findEmployee(fin);
     if (existingEmployee) {
-      return res.status(HTTP_STATUS.CONFLICT).json({ message: "Employee Already Exists" });
+      return res.status(HTTP_STATUS.CONFLICT.code).json({ message: "Employee Already Exists" });
     }
 
     const newEmployee = new Employee({
@@ -74,9 +74,9 @@ const addNewEmployee = async (req, res) => {
     });
 
     await newEmployee.save();
-    return res.status(HTTP_STATUS.CREATED).json({ message: "Successfully added!" });
+    return res.status(HTTP_STATUS.CREATED.code).json({ message: "Successfully added!" });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({
       message: "Internal Server Error!",
       error: error.message,
     });
@@ -88,11 +88,11 @@ const updateEmployeeById = async (req, res) => {
   try {
     const updateEmployee = await Employee.findByIdAndUpdate(req.params.id, req.body, { new: true });
     if (!updateEmployee) {
-      return res.status(HTTP_STATUS.NOT_FOUND).json({ message: "Employee Not Found!" });
+      return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "Employee Not Found!" });
     }
-    return res.status(HTTP_STATUS.OK).json({ message: "Successfully updated!" });
+    return res.status(HTTP_STATUS.OK.code).json({ message: "Successfully updated!" });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Server Error!" });
   }
 };
 
@@ -101,11 +101,11 @@ const deleteEmployeeById = async (req, res) => {
   try {
     const deleteEmployee = await Employee.findByIdAndDelete(req.params.id);
     if (!deleteEmployee) {
-      return res.status(HTTP_STATUS.NOT_FOUND).json({ message: "Employee Not Found!" });
+      return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "Employee Not Found!" });
     }
-    res.status(HTTP_STATUS.OK).json({ message: "Successfully Deleted!" });
+    res.status(HTTP_STATUS.OK.code).json({ message: "Successfully Deleted!" });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
 
