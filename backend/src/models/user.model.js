@@ -2,18 +2,18 @@ import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
 
 const userAccountSchema = new mongoose.Schema({
-    accountId: { type: String, required: true, unique: true },  
+    accountId: { type: String, required: false, unique: true },  
     email: { type: String, required: true, unique: true },  
-    phoneNumber: { type: String, required: true, unique: true },  
+    phoneNumber: { type: String, required: false, unique: false },  
     password: { type: String, required: true },
     role: { 
         type: String, 
-        required: true, 
+        required: false, 
         enum: ['Guest', 'Admin', 'Employee']  
     },
     linkedProfile: { 
         type: mongoose.Schema.Types.ObjectId, 
-        required: true, 
+        required: false, 
         refPath: 'role' 
     },
     isActive : { type: Boolean, default: true },  
