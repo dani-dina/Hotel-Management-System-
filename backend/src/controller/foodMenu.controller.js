@@ -41,7 +41,7 @@ const addNewFood = async (req, res) => {
 
     const existingFood = await findFood(name);
     if (existingFood) {
-      return res.status(HTTP_STATUS.CONFLICT).json({ message: "Food Already Exists" });
+      return res.status(HTTP_STATUS.CONFLICT.code).json({ message: "Food Already Exists" });
     }
 
     const newFood = new Food({
