@@ -78,11 +78,11 @@ const deleteFoodById = async (req, res) => {
   try {
     const deleteFood = await Food.findByIdAndDelete(req.params.id);
     if (!deleteFood) {
-      return res.status(HTTP_STATUS.NOT_FOUND).json({ message: "Food Not Found!" });
+      return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "Food Not Found!" });
     }
-    return res.status(HTTP_STATUS.OK).json({ message: "Food Successfully Deleted!" });
+    return res.status(HTTP_STATUS.OK.code).json({ message: "Food Successfully Deleted!" });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
 

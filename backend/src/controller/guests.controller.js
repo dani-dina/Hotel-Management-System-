@@ -9,9 +9,9 @@ const findGuest = async (email) => {
 const getAllGuests = async (req, res) => {
   try {
     const guests = await Guest.find();
-    return res.status(HTTP_STATUS.OK).json({ message: guests });
+    return res.status(HTTP_STATUS.OK.code).json({ message: guests });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
 
@@ -19,10 +19,10 @@ const getAllGuests = async (req, res) => {
 const getGuestById = async (req, res) => {
   try {
     const guest = await Guest.findById(req.params.id);
-    if (!guest) return res.status(HTTP_STATUS.NOT_FOUND).json({ message: "User Not Found!" });
-    return res.status(HTTP_STATUS.OK).json({ message: guest });
+    if (!guest) return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "User Not Found!" });
+    return res.status(HTTP_STATUS.OK.code).json({ message: guest });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
 
@@ -46,7 +46,7 @@ const addNewGuest = async (req, res) => {
 
     const getGuest = await findGuest(email);
     if (getGuest)
-      return res.status(HTTP_STATUS.CONFLICT).json({ message: "Guest Already Registered!" });
+      return res.status(HTTP_STATUS.CONFLICT.code).json({ message: "Guest Already Registered!" });
 
     const newGuest = new Guest({
       firstName,
@@ -64,9 +64,9 @@ const addNewGuest = async (req, res) => {
     });
 
     await newGuest.save();
-    return res.status(HTTP_STATUS.CREATED).json({ message: "Successfully Added!" });
+    return res.status(HTTP_STATUS.CREATED.code).json({ message: "Successfully Added!" });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
 
@@ -74,10 +74,10 @@ const addNewGuest = async (req, res) => {
 const updateGuestById = async (req, res) => {
   try {
     const updateGuest = await Guest.findByIdAndUpdate(req.params.id, req.body, { new: true });
-    if (!updateGuest) return res.status(HTTP_STATUS.NOT_FOUND).json({ message: "Guest Not Found!" });
-    return res.status(HTTP_STATUS.OK).json({ message: "Successfully Updated!" });
+    if (!updateGuest) return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "Guest Not Found!" });
+    return res.status(HTTP_STATUS.OK.code).json({ message: "Successfully Updated!" });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
 
@@ -85,10 +85,10 @@ const updateGuestById = async (req, res) => {
 const deleteGuestById = async (req, res) => {
   try {
     const deleteGuest = await Guest.findByIdAndDelete(req.params.id);
-    if (!deleteGuest) return res.status(HTTP_STATUS.NOT_FOUND).json({ message: "Guest Not Found!" });
-    return res.status(HTTP_STATUS.OK).json({ message: "Successfully Deleted!" });
+    if (!deleteGuest) return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "Guest Not Found!" });
+    return res.status(HTTP_STATUS.OK.code).json({ message: "Successfully Deleted!" });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error!" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error!" });
   }
 };
 
