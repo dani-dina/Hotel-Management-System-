@@ -20,7 +20,7 @@ const getFoodById = async (req, res) => {
     if (!food) {
       return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "Food Not Found!" });
     }
-    return res.status(HTTP_STATUS.OK).json({ message: food });
+    return res.status(HTTP_STATUS.OK.code).json({ message: food });
   } catch (error) {
     return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error" });
   }
