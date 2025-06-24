@@ -17,6 +17,7 @@ import MenuPage from './components/Menu';
 import CartPage from './components/Cart';
 import Events from '../src/pages/Events';
 import ProfilePage from '../src/pages/Profile';
+import VerifyEmailPage from '../src/pages/VerifyEmail';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -88,7 +89,7 @@ function App() {
           <Route path='/reservations' element={<Reservations/>} />
           <Route path='/menu' element={<MenuPage/>} />
           <Route path="/cart" element={<CartPage />} />
-          
+          <Route path="/mail" element={<VerifyEmailPage />} />
           {/* Auth routes */}
           <Route path='/auth/login' element={
             <PublicRoute>
