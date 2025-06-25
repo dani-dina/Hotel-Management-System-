@@ -21,6 +21,7 @@ import './src/auth/passport.js';
 import session from 'cookie-session';
 import cookieParser from 'cookie-parser';
 
+dotenv.config();
 const app = express();
 
 app.use(cors({

@@ -13,9 +13,15 @@ const userAccountSchema = new mongoose.Schema({
     required: true,
     unique: true
   },
+  userName : {
+    type : String,
+    required : true,
+    unique : true
+  },
   phoneNumber: {
     type: String,
-    default : '09'
+    required: true,
+    unique: true
   },
   password: {
     type: String,
