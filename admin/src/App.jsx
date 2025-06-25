@@ -8,7 +8,7 @@ const App = () => {
     <div> 
       <AdminLayout children={<Dashboard />} />
        <Routes>
-        <Route path='/admin/reports' element={<AnalyticsPage />} />
+        {/* <Route path='/admin/reports' element={<AnalyticsPage />} /> */}
        </Routes>
     </div>
   );

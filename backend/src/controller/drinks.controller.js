@@ -9,9 +9,9 @@ const findDrink = async (drinkId) => {
 const getAllDrinks = async (req, res) => {
   try {
     const drinks = await Drink.find();
-    return res.status(HTTP_STATUS.OK).json(drinks);
+    return res.status(HTTP_STATUS.OK.code).json(drinks);
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Internal Server Error" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Internal Server Error" });
   }
 };
 
@@ -20,11 +20,11 @@ const getDrinkById = async (req, res) => {
   try {
     const drink = await Drink.findById(req.params.id);
     if (!drink) {
-      return res.status(HTTP_STATUS.NOT_FOUND).json({ message: "Not Found" });
+      return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "Not Found" });
     }
-    return res.status(HTTP_STATUS.OK).json(drink);
+    return res.status(HTTP_STATUS.OK.code).json(drink);
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Server Error" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Server Error" });
   }
 };
 
@@ -43,7 +43,7 @@ const addNewDrink = async (req, res) => {
 
     const existingDrink = await findDrink(drinkId);
     if (existingDrink) {
-      return res.status(HTTP_STATUS.CONFLICT).json({ message: "Drink Already Exists" });
+      return res.status(HTTP_STATUS.CONFLICT.code).json({ message: "Drink Already Exists" });
     }
 
     const newDrink = new Drink({
@@ -58,9 +58,9 @@ const addNewDrink = async (req, res) => {
     });
 
     await newDrink.save();
-    return res.status(HTTP_STATUS.CREATED).json({ message: "Successfully added" });
+    return res.status(HTTP_STATUS.CREATED.code).json({ message: "Successfully added" });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Server Error" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Server Error" });
   }
 };
 
@@ -68,11 +68,11 @@ const updateDrinkById = async (req, res) => {
   try {
     const updateDrink = await Drink.findByIdAndUpdate(req.params.id, req.body, { new: true });
     if (!updateDrink) {
-      return res.status(HTTP_STATUS.NOT_FOUND).json({ message: "Not Found!" });
+      return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "Not Found!" });
     }
-    return res.status(HTTP_STATUS.OK).json({ message: "Successfully updated!" });
+    return res.status(HTTP_STATUS.OK.code).json({ message: "Successfully updated!" });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Server Error" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Server Error" });
   }
 };
 
@@ -81,11 +81,11 @@ const deleteDrinkById = async (req, res) => {
   try {
     const deleteDrink = await Drink.findByIdAndDelete(req.params.id);
     if (!deleteDrink) {
-      return res.status(HTTP_STATUS.NOT_FOUND).json({ message: "Not Found!" });
+      return res.status(HTTP_STATUS.NOT_FOUND.code).json({ message: "Not Found!" });
     }
-    return res.status(HTTP_STATUS.OK).json({ message: "Successfully Deleted!" });
+    return res.status(HTTP_STATUS.OK.code).json({ message: "Successfully Deleted!" });
   } catch (error) {
-    return res.status(HTTP_STATUS.SERVER_ERROR).json({ message: "Server Error" });
+    return res.status(HTTP_STATUS.SERVER_ERROR.code).json({ message: "Server Error" });
   }
 };
 
