@@ -1,6 +1,10 @@
+import AdminLayout from '../src/layout/AdminLayout';
+
 const App = () => {
   return (
-    <div> Admin Section </div>
+    <div> 
+      <AdminLayout />
+    </div>
   );
 }
 
