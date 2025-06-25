@@ -1,10 +1,14 @@
 // src/components/AdminNavbar.jsx
 import { Link, useLocation } from "react-router-dom";
 import { ADMIN_NAV_LINKS } from '../constant/index.js';
+import logo from '../../../frontend/src/assets/logo.png';
+import { useState } from 'react';
 
 const AdminNavbar = () => {
   const location = useLocation();
+  const toggleNavigation = useState(false);
 
+  const handleNa
   return (
     <nav className="bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,21 +16,11 @@ const AdminNavbar = () => {
           {/* Logo/Brand */}
           <div className="flex items-center">
             <Link to="/admin/dashboard" className="flex-shrink-0 flex items-center">
-              <svg
-                className="h-8 w-8 text-indigo-600"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                />
-              </svg>
-              <span className="ml-2 text-xl font-bold text-gray-800">Hotel Admin</span>
+              <img src={logo}
+                   alt="LUMINARA ADMIN"
+                   width={200}
+                   height={200}
+              />
             </Link>
           </div>
 
@@ -38,7 +32,7 @@ const AdminNavbar = () => {
                 to={link.path}
                 className={`${
                   location.pathname === link.path
-                    ? "border-indigo-500 text-gray-900"
+                    ? "border-lightPrimary text-gray-900"
                     : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700"
                 } inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium`}
               >
@@ -99,7 +93,7 @@ const AdminNavbar = () => {
               to={link.path}
               className={`${
                 location.pathname === link.path
-                  ? "bg-indigo-50 border-indigo-500 text-indigo-700"
+                  ? "bg-indigo-50 border-lightPrimary text-primary"
                   : "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700"
               } block pl-3 pr-4 py-2 border-l-4 text-base font-medium`}
             >
