@@ -9,7 +9,7 @@ const Navbar = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
+  const [isLogedIn, setIsLogedIn] = useState(true);
   const hiddenPaths = ['/auth/login', '/auth/register'];
   const isMinimalNavbar = hiddenPaths.some(path => 
     location.pathname.startsWith(path)
@@ -65,20 +65,26 @@ const Navbar = () => {
             >
               {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
             </button>
-            <div className='hidden md:flex md:gap-2'>
-              <Link to='/auth/login'>
-                <Button className='bg-gray-300 text-white  py-2 hover:bg-primary-dark transition-colors ml-2 '
-                        title='Sign up' 
-                         span={'text-primary'} 
-                />
-              </Link>
-              <Link to='/auth/register'>
-                <Button className='bg-primary text-white px-2 py-2 hover:bg-primary-dark transition-colors'
-                        title='sign in'
-                 />
-              </Link>
-            </div>
-
+            {!isLogedIn && (
+                <div className="hidden md:flex md:gap-2">
+                  <Link to="/auth/login">
+                    <Button
+                      className="bg-gray-300 text-white py-2 hover:bg-primary-dark transition-colors ml-2"
+                      title="Sign up"
+                      span="text-primary"
+                    />
+                  </Link>
+                  <Link to="/auth/register">
+                    <Button
+                      className="bg-primary text-white px-2 py-2 hover:bg-primary-dark transition-colors"
+                      title="sign in"
+                    />
+                  </Link>
+                </div>
+              )}
+              {isLogedIn && (
+                <div>My Account</div>
+              )}
             {/* Mobile Menu */}
             {isOpen && (
               <div className='md:hidden absolute top-[10vh] left-0 w-full bg-white shadow-lg py-4 px-6 animate-slideDown'>
