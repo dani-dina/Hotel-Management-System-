@@ -60,7 +60,7 @@ const VerifyEmailPage = () => {
             <h2 className="text-xl font-semibold text-gray-800">Email Verified Successfully!</h2>
             <p className="text-gray-600 mt-2">Your email address has been successfully verified.</p>
             <button
-              onClick={() => navigate('/dashboard')} // Replace with your desired redirect path
+              onClick={() => navigate('/dashboard')} 
               className="mt-6 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
               Go to Dashboard
