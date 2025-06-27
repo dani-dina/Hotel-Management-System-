@@ -21,7 +21,7 @@ const VerifyEmailPage = () => {
 
     const verify = async () => {
       try {
-        // Call your backend API to verify the email
+        // Call your backend API to verify  email
         await verifyEmail({ email, token });
         setStatus('verified');
       } catch (err) {
