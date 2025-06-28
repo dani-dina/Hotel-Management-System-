@@ -184,7 +184,7 @@ const Events = () => {
           </div>
         </div>
 
-        {/* Main Content Area */}
+        {/* Main Content */}
         <AnimatePresence mode="wait">
           <motion.div
             key={view}
