@@ -80,7 +80,7 @@ const Events = () => {
     end: endOfMonth(selectedDate)
   });
 
-  // Group events by day for calendar view
+  // sort events by day for calendar view
   const eventsByDay = filteredEvents.reduce((acc, event) => {
     const day = format(parseISO(event.date), 'yyyy-MM-dd');
     if (!acc[day]) acc[day] = [];
