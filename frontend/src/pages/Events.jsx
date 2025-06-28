@@ -390,7 +390,7 @@ const Events = () => {
           </motion.div>
         </AnimatePresence>
 
-        {/* Event Details Modal */}
+        {/* Event Detail Modal */}
         {selectedEvent && (
           <div className="fixed inset-0 bg-opacity-75 flex items-center justify-center p-4 z-50">
             <motion.div 
