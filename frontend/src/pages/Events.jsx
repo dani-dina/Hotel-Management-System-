@@ -88,7 +88,7 @@ const Events = () => {
     return acc;
   }, {});
 
-  // View transitions
+  // View transitions history
   const viewVariants = {
     hidden: { opacity: 0, x: -50 },
     visible: { opacity: 1, x: 0 },
