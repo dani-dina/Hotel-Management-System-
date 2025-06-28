@@ -522,7 +522,7 @@ const Events = () => {
           </div>
         )}
 
-        {/* Create Event Panel */}
+        {/* Create Events Panel */}
         <div className="mt-12 bg-gradient-to-r from-gray-800 to-gray-900 p-6 md:p-8 rounded-xl border border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
             <div>
