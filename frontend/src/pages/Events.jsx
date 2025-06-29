@@ -559,7 +559,7 @@ const Events = () => {
             <div className="bg-gray-800 bg-opacity-50 p-4 rounded-lg border border-gray-700">
               <div className="text-green-400 text-2xl mb-2">4K</div>
               <h3 className="font-medium">Holographic</h3>
-              <p className="text-gray-400 text-sm mt-1">3D projection mapping</p>
+              <p className="text-gray-400 text-sm mt-1">projection mapping</p>
             </div>
             <div className="bg-gray-800 bg-opacity-50 p-4 rounded-lg border border-gray-700">
               <div className="text-yellow-400 text-2xl mb-2">IoT</div>
