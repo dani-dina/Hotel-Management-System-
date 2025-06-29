@@ -553,7 +553,7 @@ const Events = () => {
             </div>
             <div className="bg-gray-800 bg-opacity-50 p-4 rounded-lg border border-gray-700">
               <div className="text-purple-400 text-2xl mb-2">AI</div>
-              <h3 className="font-medium">AI Assistants</h3>
+              <h3 className="font-medium">AI Assistant</h3>
               <p className="text-gray-400 text-sm mt-1">Smart event management</p>
             </div>
             <div className="bg-gray-800 bg-opacity-50 p-4 rounded-lg border border-gray-700">
