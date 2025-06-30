@@ -66,7 +66,7 @@ const Login = () => {
 
   return (
     <div className="h-[90vh] flex flex-col md:flex-row">
-      {/* Left Side */}
+      {/* Left Side starting */}
       <div className="w-full md:w-1/2 bg-gray-900 relative">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-90"
