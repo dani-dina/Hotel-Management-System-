@@ -84,7 +84,7 @@ const Login = () => {
         </div>
       </div>
 
-      {/* Right Side - Login Form */}
+      {/* Right Side  */}
       <div className="h-[90%] w-full md:w-1/2 flex items-center justify-center p-4 bg-gray-50">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
