@@ -4,4 +4,4 @@ const Terms = () =>{
   );
 }
 
-export default Terms
+export default Terms;
