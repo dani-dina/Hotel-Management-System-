@@ -1,3 +1,5 @@
 const Terms = () =>{
-  return ();
+  return (
+    <></>
+  );
 }
