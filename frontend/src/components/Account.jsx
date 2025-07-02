@@ -1,3 +1,5 @@
 const Account = () => {
-  return();
+  return(
+    <></>
+  );
 }
