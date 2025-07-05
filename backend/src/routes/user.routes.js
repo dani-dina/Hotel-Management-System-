@@ -7,7 +7,8 @@ const {
     getUserById, 
     addNewUser, 
     updateUserById, 
-    deleteUserById 
+    deleteUserById,
+    Login
 } = userController;
 
 const router = express.Router();
@@ -17,5 +18,6 @@ router.get('/users/:id',auth, getUserById);
 router.post('/users', addNewUser);
 router.put('/users/:id',auth, updateUserById);
 router.delete('/users/:id',auth, deleteUserById);
+router.post('/login',Login);
 
 export default router;

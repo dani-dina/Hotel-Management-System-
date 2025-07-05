@@ -15,7 +15,7 @@ import guestRoutes from './src/routes/guest.routes.js';
 import foodRoutes from './src/routes/food.routes.js';
 import employeeRoutes from './src/routes/employee.routes.js';
 import drinkRoutes from './src/routes/drinks.routes.js';
-import auth from  './src/auth/login.auth.js';
+// import auth from  './src/auth/login.auth.js';
 import passport from 'passport';
 import './src/auth/passport.js';
 import session from 'cookie-session';
@@ -46,7 +46,7 @@ app.use('/api/guests', guestRoutes);
 app.use('/api/food', foodRoutes);
 app.use('/api/employees', employeeRoutes);
 app.use('/api/drinks', drinkRoutes);
-app.use('/login',auth)
+// app.use('/login',auth)
 
 // app.use('/api/payments', paymentRoutes);
 // app.use('/api/paypal', paypalRoutes);

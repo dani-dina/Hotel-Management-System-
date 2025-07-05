@@ -43,7 +43,7 @@ const Login = () => {
 
       const data = response.data;
       if (data.token) {
-        localStorage.setItem('authToken', data.token);
+        localStorage.setItem('Token', data.token);
         alert('Login successful!');
         navigate('/dashboard');
       } else {
