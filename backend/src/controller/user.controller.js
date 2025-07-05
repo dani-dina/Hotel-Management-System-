@@ -142,7 +142,7 @@ const Login = async (req, res) => {
     // Try to find user in User collection first, then Employee
     let user = await User.findOne({ email }) || await Employee.findOne({ email });
     if (!user) {
-      return res.status(400).json({ message: "Invalid credentials" });
+      return res.status(400).json({ message: "Invalid credentialss" });
     }
 
     const isMatch = await bcrypt.compare(password, user.password);
