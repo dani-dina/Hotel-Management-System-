@@ -46,7 +46,6 @@ app.use('/api/guests', guestRoutes);
 app.use('/api/food', foodRoutes);
 app.use('/api/employees', employeeRoutes);
 app.use('/api/drinks', drinkRoutes);
-// app.use('/login',auth)
 
 // app.use('/api/payments', paymentRoutes);
 // app.use('/api/paypal', paypalRoutes);
