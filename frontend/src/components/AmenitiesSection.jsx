@@ -111,7 +111,7 @@ const AmenitiesSection = () => {
         <div className="mt-12 bg-gradient-to-r from-[#0AADD2] to-[#0885a8] rounded-xl p-8 text-white">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="mb-4 md:mb-0">
-              <h3 className="text-2xl font-bold mb-2">Special Package Deal</h3>
+              <h3 className="text-2xl font-bold mb-2">Special Package Deals</h3>
               <p>Book 3 nights and get 1 night free plus spa credits!</p>
             </div>
             <button 
