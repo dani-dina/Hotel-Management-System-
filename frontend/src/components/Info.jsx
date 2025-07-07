@@ -23,7 +23,7 @@ const Info = () => {
 
   const socialMedia = [
     { icon: faTelegram, url: 'https://t.me/dan' },
-    { icon: faFacebook, url: 'https://facebook.com/' },
+    { icon: faFacebook, url: 'https://facebook.com/dan' },
     { icon: faXTwitter, url: 'https://twitter.com/' },
     { icon: faYoutube, url: 'https://youtube.com/' }
   ];
