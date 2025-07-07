@@ -13,7 +13,7 @@ const InventoryManagement = () => {
             onClick={() => setActiveTab('list')}
             className={`px-4 py-2 ${activeTab === 'list' ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}
           >
-            List View
+            List Views
           </button>
           <button 
             onClick={() => setActiveTab('analytics')}
