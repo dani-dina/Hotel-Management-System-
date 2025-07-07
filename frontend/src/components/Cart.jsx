@@ -27,7 +27,7 @@ const CartPage = () => {
       <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8 text-center">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Your Cart is Empty</h2>
-          <p className="text-gray-600 mb-6">Looks like you haven't added any items yet</p>
+          <p className="text-gray-600 mb-6">Looks like you haven't added any items yet.</p>
           <a 
             href="/menu" 
             className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition-colors"
