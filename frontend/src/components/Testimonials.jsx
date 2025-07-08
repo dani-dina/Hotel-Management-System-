@@ -63,7 +63,7 @@ const TestimonialPage = () => {
   const categories = [
     { id: 'all', name: 'All Testimonial' },
     { id: 'food', name: 'Food Quality' },
-    { id: 'service', name: 'Service' },
+    { id: 'service', name: 'Services' },
     { id: 'experience', name: 'Dining Experience' },
   ];
 
