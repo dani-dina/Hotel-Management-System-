@@ -76,7 +76,7 @@ const Testimonials = () => {
         </p>
         
         <div className="relative max-w-4xl mx-auto">
-          {/* Testimonials Carousel */}
+          {/* Testimonials  */}
           <div className="overflow-hidden">
             <div 
               className="flex transition-transform duration-300 ease-in-out"
