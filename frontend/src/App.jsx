@@ -90,7 +90,7 @@ function App() {
           <Route path='/menu' element={<MenuPage/>} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/mail" element={<VerifyEmailPage />} />
-          {/* Auth routes */}
+          {/* Auth route */}
           <Route path='/auth/login' element={
             <PublicRoute>
               <Login 
