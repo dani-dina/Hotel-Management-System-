@@ -165,7 +165,7 @@ const TestimonialPage = () => {
         <div className="mt-16 text-center">
           <h2 className="text-2xl font-bold text-gray-900">Want to share your experience?</h2>
           <p className="mt-4 text-lg text-gray-600">
-            We'd love to hear about your dining experience with us.
+            We'd love to hear about your dining experience with us
           </p>
           <div className="mt-6">
             <button className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
