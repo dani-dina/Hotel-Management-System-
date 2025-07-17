@@ -66,7 +66,6 @@ function App() {
   if (loading) {
     return <Loading />;
   }
-
   return (
     <div className='flex flex-col min-h-screen'>
       <Navbar 
@@ -77,7 +76,7 @@ function App() {
       
       <main className='flex-grow'>
         <Routes>
-          {/* Public route */}
+          {/* Public routes */}
           <Route path='/' element={<Home />} />
           <Route path='/users/profile' element={<ProfilePage />} />
           <Route path='/dash' element={<Dashboard />} />
