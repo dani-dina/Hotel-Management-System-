@@ -47,7 +47,6 @@ app.use('/api/employees', employeeRoutes);
 app.use('/api/drinks', drinkRoutes);
 
 // app.use('/api/payments', paymentRoutes);
- app.use('/api/paypal', paypalRoutes);
 app.get('/', (req, res) => {
     res.send('Welcome to the Hotel Management API');
 });
