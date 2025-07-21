@@ -32,7 +32,7 @@ app.use(cookieParser());
 
 connectDB();
 
-// Route
+// Routess
 app.use('/api/users', userRoutes);
 app.use('/api/services', serviceRoutes);
 app.use('/api/rooms', roomRoutes);
