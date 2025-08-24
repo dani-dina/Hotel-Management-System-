@@ -22,7 +22,7 @@ const NotFound = () => {
           className="inline-block px-6 py-3 bg-primary text-white rounded-lg 
                     hover:bg-primary/50 transition-colors duration-200"
         >
-          Return to Home
+          Return to Home Page
         </Link>
       </div>
     </div>
