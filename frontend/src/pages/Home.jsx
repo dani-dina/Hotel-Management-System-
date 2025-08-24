@@ -38,7 +38,7 @@ const Home = () => {
                 />
                 <div className='w-[40%] h-[60%] flex flex-col items-center justify-around'>
                   <h1 className='text-3xl font-semibold'>45 % OFF</h1>
-                  <p className='text-center text-gray-700 py-2'>This can be detailed description or just short text</p>
+                  <p className='text-center text-gray-700 py-2'>This can be detailed description or just short txt</p>
                   <Button
                     className={'bg-primary py-2'}
                     title={'BOOK NOW'}
