@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-// import { verifyEmail } from '../api/auth'; 
+import { verifyEmail } from '../api/auth'; 
 
 const VerifyEmailPage = () => {
   const [status, setStatus] = useState('verifying');
