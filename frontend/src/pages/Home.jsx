@@ -88,7 +88,7 @@ const Home = () => {
       <div>
         <LocationSection />
       </div>
-      {/* <Events /> */}
+      <Events />
     </div>
   );
 }
